@@ -17,7 +17,7 @@ header {
 header img {
     width: auto;
     height: auto;
-    max-width: 50%;
+    max-width: 470px;
     margin-bottom: 1rem;
 }
 
@@ -44,7 +44,7 @@ h1, h2 {
 }
 
 .paper img {
-    max-width: 500px; /* Default smaller size for mobile and small screens */
+    max-width: 40%; /* Default smaller size for mobile and small screens */
     height: auto;
     transition: max-width 0.3s ease;
 }
