@@ -44,8 +44,9 @@ h1, h2 {
 }
 
 .paper img {
-    max-width: 500px;
+    max-width: 250px; /* Default smaller size for mobile and small screens */
     height: auto;
+    transition: max-width 0.3s ease;
 }
 
 .paper div {
