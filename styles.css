@@ -53,6 +53,24 @@ h1, h2 {
     flex: 1;
 }
 
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    gap: 2rem;
+}
+
+.project img {
+    max-width: 50%; /* Default smaller size for mobile and small screens */
+    height: auto;
+    transition: max-width 0.5s ease;
+}
+
+.project div {
+    flex: 1;
+}
+
 /* Mobile Responsive Layout */
 @media (max-width: 768px) {
     .paper {
