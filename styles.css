@@ -71,6 +71,14 @@ h1, h2 {
     flex: 1;
 }
 
+.inline-image {
+    display: inline-block; /* Make the image inline with text */
+    width: 100px; /* Control the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align the image vertically with the text */
+    margin-right: 10px; /* Optional: add space between the image and text */
+}
+
 /* Mobile Responsive Layout */
 @media (max-width: 768px) {
     .paper {
