@@ -17,12 +17,12 @@ header {
 header img {
     width: auto;
     height: auto;
-    max-width: 470px;
+    max-width: 300px;
     margin-bottom: 1rem;
 }
 
 section {
-    padding: 2rem;
+    padding: 3rem;
 }
 
 h1, h2 {
