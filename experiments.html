@@ -12,6 +12,9 @@
         input { margin-bottom: 10px; width: 100%; padding: 8px; }
     </style>
 </head>
+<p>
+    <a href="bubble_plot.html">Plotting</a>
+</p>
 <body>
     <h2>Neutrino & Dark Matter Experiments</h2>
     <input type="text" id="search" placeholder="Search experiments...">
@@ -33,14 +36,18 @@
                     const fieldTypes = data.field_types;
                     delete data.field_types;
 
-                    let columns = Object.keys(fieldTypes);
+                    // Get all keys from fieldTypes and remove the duplicate experiment name if it exists.
+                    let columns = Object.keys(fieldTypes).filter(col => col.toLowerCase() !== "experiment name");
+
+                    // Build the header row: first column for the experiment name,
+                    // then one column for each field in the filtered list.
                     let headerRow = $("#tableHeader");
                     headerRow.append(`<th onclick="sortTable(0)">Experiment Name</th>`);
-                    
                     columns.forEach((col, index) => {
                         headerRow.append(`<th onclick="sortTable(${index + 1})">${col}</th>`);
                     });
 
+                    // Populate the table body with data.
                     let tableBody = $("#experimentTable tbody");
                     Object.entries(data).forEach(([experiment, details]) => {
                         let row = `<tr><td>${experiment}</td>`;
