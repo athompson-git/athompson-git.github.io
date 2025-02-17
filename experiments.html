@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Data</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        th { cursor: pointer; background-color: #f2f2f2; }
+        input { margin-bottom: 10px; width: 100%; padding: 8px; }
+    </style>
+</head>
+<body>
+    <h2>Neutrino & Dark Matter Experiments</h2>
+    <input type="text" id="search" placeholder="Search experiments...">
+
+    <table id="experimentTable">
+        <thead>
+            <tr id="tableHeader"></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script type="text/javascript" language="javascript" src="jquery-1.8.2.min.js"></script>        
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.getJSON("data/experiments.json")
+                .done(function(data) {
+                    console.log("JSON loaded successfully:", data); // Debugging
+                    const fieldTypes = data.field_types;
+                    delete data.field_types;
+
+                    let columns = Object.keys(fieldTypes);
+                    let headerRow = $("#tableHeader");
+                    headerRow.append(`<th onclick="sortTable(0)">Experiment Name</th>`);
+                    
+                    columns.forEach((col, index) => {
+                        headerRow.append(`<th onclick="sortTable(${index + 1})">${col}</th>`);
+                    });
+
+                    let tableBody = $("#experimentTable tbody");
+                    Object.entries(data).forEach(([experiment, details]) => {
+                        let row = `<tr><td>${experiment}</td>`;
+                        columns.forEach(col => {
+                            row += `<td>${details[col] || ""}</td>`;
+                        });
+                        row += "</tr>";
+                        tableBody.append(row);
+                    });
+
+                    // Search filter functionality
+                    $("#search").on("keyup", function() {
+                        let value = $(this).val().toLowerCase();
+                        $("#experimentTable tbody tr").each(function() {
+                            let rowText = $(this).text().toLowerCase();
+                            $(this).toggle(rowText.includes(value));
+                        });
+                    });
+                })
+                .fail(function(jqxhr, textStatus, error) {
+                    console.error("Error loading JSON:", textStatus, error);
+                });
+        });
+
+        function sortTable(n) {
+            let table = document.getElementById("experimentTable");
+            let rows, switching, i, x, y, shouldSwitch, dir = "asc", switchcount = 0;
+            switching = true;
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+                    if ((dir === "asc" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) ||
+                        (dir === "desc" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount++;
+                } else if (switchcount === 0 && dir === "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+
