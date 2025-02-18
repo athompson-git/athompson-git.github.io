@@ -5,18 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiment Data</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <style>
         table { width: 100%; border-collapse: collapse; }
-        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        th, td { border: 1px solid black; padding: 8px; text-align: center; }
         th { cursor: pointer; background-color: #f2f2f2; }
         input { margin-bottom: 10px; width: 100%; padding: 8px; }
     </style>
+
+    <style>
+        /* Ensure the canvas container is centered and takes 80% of the page width */
+        #chartContainer {
+        width: 80%;
+        margin: 0 auto;
+        }
+        /* Let the canvas fill the container */
+        #bubbleChart {
+        width: 100% !important;
+        height: auto !important;
+        }
+    </style>
+
+    <style>
+        .experiment-name {
+        position: relative;
+        cursor: default;
+        }
+        .experiment-name .tooltip {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        background-color: rgb(233, 212, 182);
+        border: 5px solid #182aca;
+        padding: 5px;
+        color: black;
+        font-size: 0.9em;
+        white-space: normal;
+        z-index: 100;
+        left: 110%; /* position it to the right of the cell */
+        top: 50%;
+        transform: translateY(-50%);
+        transition: opacity 0s; /* no delay */
+        /* Set max width to the smaller of 100px or 40% of the viewport width */
+        width: min(500px, 80vw);
+        /* Allow text wrapping if necessary */
+        word-wrap: break-word;
+        }
+        .experiment-name:hover .tooltip {
+        visibility: visible;
+        opacity: 0.9;
+        }
+    </style>
+    
 </head>
+
+
+
+
 <p>
     <a href="bubble_plot.html">Plotting</a>
 </p>
+
+
+
+
 <body>
-    <h2>Neutrino & Dark Matter Experiments</h2>
+    <h2>Fixed Target and Reactor Experiments</h2>
+    <p>
+        Disclaimer: This table is maintained individually and supported by community feedback.
+        The information within is sourced only by public references. If find any errors in the data below, please contact the author:
+    </p>
     <input type="text" id="search" placeholder="Search experiments...">
 
     <table id="experimentTable">
@@ -37,22 +97,62 @@
                     delete data.field_types;
 
                     // Get all keys from fieldTypes and remove the duplicate experiment name if it exists.
-                    let columns = Object.keys(fieldTypes).filter(col => col.toLowerCase() !== "experiment name");
+                    let columns = Object.keys(fieldTypes);//.filter(col => col.toLowerCase() !== "experiment name");
 
                     // Build the header row: first column for the experiment name,
                     // then one column for each field in the filtered list.
                     let headerRow = $("#tableHeader");
                     headerRow.append(`<th onclick="sortTable(0)">Experiment Name</th>`);
                     columns.forEach((col, index) => {
+                        if (col === "Notes") return;
                         headerRow.append(`<th onclick="sortTable(${index + 1})">${col}</th>`);
                     });
 
                     // Populate the table body with data.
                     let tableBody = $("#experimentTable tbody");
                     Object.entries(data).forEach(([experiment, details]) => {
-                        let row = `<tr><td>${experiment}</td>`;
+
+                        // Row colors
+                        let status = details["Status"] || "";
+                        let rowColor = "";
+                        if (status === "Running") {
+                            rowColor = ' style="background-color: rgba(0, 128, 0, 0.2);"'
+                        } else if (status === "Future") {
+                            rowColor = ' style="background-color: rgba(255, 255, 0, 0.2)"';
+                        }
+
+                        // Get the "Notes" field if it exists.
+                        let notes = details["Notes"] || "";
+
+                        // Build tooltip
+                        let row = `<tr${rowColor}>
+                            <td class="experiment-name">
+                                ${experiment}
+                                ${notes ? `<span class="tooltip">${notes}</span>` : ""}
+                            </td>`;
+
                         columns.forEach(col => {
-                            row += `<td>${details[col] || ""}</td>`;
+
+                            if (col === "Notes") return;
+                            
+                            // Add hyperlinking for references
+                            let cellData = details[col] || "";
+                            if (col === "Reference" && cellData) {
+                                let refs = cellData.split(",").map(ref => {
+                                    let trimmedRef = ref.trim();
+                                    return `<a href="${trimmedRef}" target="_blank">${trimmedRef}</a>`;
+                                });
+                                cellData = refs.join(", ");
+                            }
+
+                            if (col === "POT") {
+                                let potValue = parseFloat(cellData);
+                                if (!isNaN(potValue)) {
+                                    cellData = potValue.toExponential(2);
+                                }
+                            }
+                            
+                            row += `<td>${cellData}</td>`;
                         });
                         row += "</tr>";
                         tableBody.append(row);
@@ -100,7 +200,101 @@
             }
         }
     </script>
+
+
+    <h2>Beam Energy vs. POT Bubble Plot</h2>
+    <div id="chartContainer">
+        <canvas id="bubbleChart"></canvas>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+        $.getJSON("data/experiments.json")
+            .done(function(data) {
+            // Remove the field_types entry if present.
+            delete data.field_types;
+            
+            // Prepare data points for the bubble plot.
+            // x: Beam Energy (GeV)
+            // y: POT/EOT or Runtime
+            // r: Fixed bubble radius (adjust as needed)
+            let dataPoints = [];
+            $.each(data, function(experiment, details) {
+                // Convert strings to numbers
+                let beamEnergy = parseFloat(details["Beam Energy (GeV)"]);
+                let pot = parseFloat(details["POT"]);
+                if (!isNaN(beamEnergy) && !isNaN(pot)) {
+                dataPoints.push({
+                    x: beamEnergy,
+                    y: pot,
+                    r: 5  // fixed bubble radius; adjust if desired
+                });
+                }
+            });
+            
+            // Create the bubble chart
+            var ctx = document.getElementById('bubbleChart').getContext('2d');
+            var bubbleChart = new Chart(ctx, {
+                type: 'bubble',
+                data: {
+                datasets: [{
+                    label: 'Beam Energy vs POT',
+                    data: dataPoints,
+                    backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+                },
+                options: {
+                scales: {
+                    x: {
+                    type: 'logarithmic',
+                    title: {
+                        display: true,
+                        text: 'Beam Energy (GeV)'
+                    }
+                    },
+                    y: {
+                    type: 'logarithmic',
+                    title: {
+                        display: true,
+                        text: 'POT/EOT or Runtime'
+                    }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                            return 'Beam Energy: ' + context.raw.x + 
+                                    ', POT: ' + context.raw.y;
+                            }
+                        }
+                    }
+                },
+                // Configure datalabels to show experiment names.
+                datalabels: {
+                    display: true,
+                    align: 'end',
+                    anchor: 'end',
+                    formatter: function(value, context) {
+                        return value.experiment;
+                    },
+                    font: {
+                        size: 10
+                    },
+                    color: '#000'
+                }
+                }
+            });
+            })
+            .fail(function(jqxhr, textStatus, error) {
+            console.error("Error loading JSON:", textStatus, error);
+            });
+        });
+    </script>
 </body>
+
 </html>
 
 

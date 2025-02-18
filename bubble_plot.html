@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beam Energy vs. POT Bubble Plot</title>
+  <!-- jQuery for JSON loading -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <style>
+    /* Ensure the canvas container is centered and takes 80% of the page width */
+    #chartContainer {
+      width: 80%;
+      margin: 0 auto;
+    }
+    /* Let the canvas fill the container */
+    #bubbleChart {
+      width: 100% !important;
+      height: auto !important;
+    }
+  </style>
+
+</head>
+<body>
+  <h2>Beam Energy vs. POT Bubble Plot</h2>
+  <div id="chartContainer">
+    <canvas id="bubbleChart"></canvas>
+  </div>
+  
+  <script>
+    $(document).ready(function(){
+      $.getJSON("data/experiments.json")
+        .done(function(data) {
+          // Remove the field_types entry if present.
+          delete data.field_types;
+          
+          // Prepare data points for the bubble plot.
+          // x: Beam Energy (GeV)
+          // y: POT/EOT or Runtime
+          // r: Fixed bubble radius (adjust as needed)
+          let dataPoints = [];
+          $.each(data, function(experiment, details) {
+            // Convert strings to numbers
+            let beamEnergy = parseFloat(details["Beam Energy (GeV)"]);
+            let pot = parseFloat(details["POT"]);
+            console.log("Got pot, energy, exp:", beamEnergy, pot, experiment)
+            if (!isNaN(beamEnergy) && !isNaN(pot)) {
+              dataPoints.push({
+                x: beamEnergy,
+                y: pot,
+                r: 5  // fixed bubble radius; adjust if desired
+              });
+            }
+          });
+          
+          // Create the bubble chart
+          var ctx = document.getElementById('bubbleChart').getContext('2d');
+          var bubbleChart = new Chart(ctx, {
+            type: 'bubble',
+            data: {
+              datasets: [{
+                label: 'Beam Energy vs POT',
+                data: dataPoints,
+                backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                x: {
+                  type: 'logarithmic',
+                  title: {
+                    display: true,
+                    text: 'Beam Energy (GeV)'
+                  }
+                },
+                y: {
+                  type: 'logarithmic',
+                  title: {
+                    display: true,
+                    text: 'POT/EOT or Runtime'
+                  }
+                }
+              },
+              plugins: {
+                tooltip: {
+                  callbacks: {
+                    label: function(context) {
+                      return 'Beam Energy: ' + context.raw.x + 
+                             ', POT: ' + context.raw.y;
+                    }
+                  }
+                }
+              }
+            }
+          });
+        })
+        .fail(function(jqxhr, textStatus, error) {
+          console.error("Error loading JSON:", textStatus, error);
+        });
+    });
+  </script>
+</body>
+</html>
