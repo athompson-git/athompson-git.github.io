@@ -1040,9 +1040,9 @@
         "Energy Threshold": "160 eV",
         "Location": "Leibstadt, Switzerland (KKL)",
         "Status": "Running",
-        "Reference": "",
+        "Reference": "https://arxiv.org/abs/2501.05206",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "CONUS+, the upgrade to CONUS operating by the KKL power reactor. Claimed the first statistically significant (3.7sigma) CEvNS measurement in 2025."
     },
     "nucleus": {
         "Class": "Reactor",
