@@ -32,7 +32,9 @@
           <a href="gw.html">Gravitational Wave and Axion Searches</a>
         </nav>
     </header>
-
+    <p>
+        Here we collect fixed target, beam dump, and reactor neutrino and/or dark matter experiments. <b>Hover over experiment names for more information.</b>
+    </p>
     <p>
         Disclaimer: This table is maintained individually and supported by community feedback.
         The information within is sourced only by public references and please, look to the source references for the most accurate representation of the aggragate information here.
@@ -111,7 +113,7 @@
                                     let trimmedRef = ref.trim();
                                     return `<a href="${trimmedRef}" target="_blank">${trimmedRef}</a>`;
                                 });
-                                cellData = refs.join(", ");
+                                cellData = refs.join("<br>");
                             }
 
                             if (col === "POT") {
