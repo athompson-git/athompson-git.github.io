@@ -1,0 +1,106 @@
+/* style.css */
+
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global body styling */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+  }
+  
+  /* Header styling */
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #357be6;
+    font-weight: bold;
+  }
+  
+  header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Chart container styling */
+  #chartContainer {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  #bubbleChart {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  input#search {
+    width: 100%;
+    padding: 12px;       /* Increase vertical padding for a larger field */
+    font-size: 16px;     /* Increase font size for better readability */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  table th,
+  table td {
+    border: 1px solid black;;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
+  
+  /* Experiment name and tooltip styling */
+  .experiment-name {
+    position: relative;
+    cursor: default;
+  }
+  
+  .experiment-name .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: rgb(233, 212, 182);
+    border: 5px solid #182aca;
+    padding: 5px;
+    color: #333;
+    font-size: 0.9em;
+    white-space: normal;
+    z-index: 100;
+    left: 105%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0s;
+    
+    /* Allow tooltip to expand horizontally, up to 40% of the viewport */
+    width: min(500px, 80vw);
+    word-wrap: break-word;
+  }
+  
+  .experiment-name:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  
