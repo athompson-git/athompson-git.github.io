@@ -14,7 +14,7 @@
         "Energy Threshold": "~0.75 GeV",
         "Location": "Fermilab",
         "Status": "Running",
-        "Reference": "https://arxiv.org/pdf/2409.04553",
+        "Reference": "https://arxiv.org/abs/2409.04553",
         "Anomalies?": "",
         "Notes": "14.6 mrad off-axis"
     },
@@ -33,7 +33,7 @@
         "Energy Threshold": "~0.75 GeV",
         "Location": "Fermilab",
         "Status": "Running",
-        "Reference": "https://arxiv.org/pdf/2409.04553",
+        "Reference": "https://arxiv.org/abs/2409.04553",
         "Anomalies?": "",
         "Notes": ""
     },
@@ -90,7 +90,7 @@
         "Energy Threshold": "",
         "Location": "JPARC",
         "Status": "Running",
-        "Reference": "https://arxiv.org/pdf/1902.07598, https://pos.sissa.it/441/220",
+        "Reference": "https://arxiv.org/abs/1902.07598, https://pos.sissa.it/441/220",
         "Anomalies?": "",
         "Notes": "off-axis, 2.5deg, 12.34E+20 (nu) 6.28E+20 (nubar)"
     },
@@ -204,7 +204,7 @@
         "Energy Threshold": "20 MeV",
         "Location": "Fermilab",
         "Status": "Running",
-        "Reference": "https://indico.cern.ch/event/466934/contributions/2583853/attachments/1489221/2314081/EPS_SBND.pdf https://arxiv.org/pdf/1903.04608.pdf",
+        "Reference": "https://inspirehep.net/experiments/1607955",
         "Anomalies?": "",
         "Notes": "BNB / Beryllium target"
     },
@@ -223,7 +223,7 @@
         "Energy Threshold": "",
         "Location": "Fermilab",
         "Status": "Complete",
-        "Reference": "https://arxiv.org/pdf/1108.0015, https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.091803",
+        "Reference": "https://arxiv.org/abs/1108.0015, https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.091803",
         "Anomalies?": "",
         "Notes": "MINOS+ (Proposed: 2011, Started: 2013, Completed: Jun 29, 2016) is a proposal to continue to expose the two MINOS detectors to the NuMI muon neutrino beam for three years starting in 2013. The medium energy setting of the NuMI beam projected for NOVA will deliver about 18 x 10^20 protons-on-target during the first three years of operation.This will allow the MINOS Far Detector to collect more than 10,000 charged current muon neutrino events in the 4-10 GeV energy range and provide a stringent test for non-standard neutrino interactions, sterile neutrinos, extra dimensions, neutrino life-time, and perhaps more. In addition there will be more than 3,000 neutral current events which will be particularly useful in extending the sterile neutrino search range."
     },
@@ -242,7 +242,7 @@
         "Energy Threshold": "",
         "Location": "Fermilab",
         "Status": "Complete",
-        "Reference": "https://arxiv.org/pdf/1108.0015, https://www.sciencedirect.com/science/article/pii/S0168900208011613",
+        "Reference": "https://arxiv.org/abs/1108.0015, https://www.sciencedirect.com/science/article/pii/S0168900208011613",
         "Anomalies?": "",
         "Notes": ""
     },
@@ -280,7 +280,7 @@
         "Energy Threshold": "",
         "Location": "ORNL",
         "Status": "Running",
-        "Reference": "https://arxiv.org/pdf/2003.10630",
+        "Reference": "https://arxiv.org/abs/2003.10630",
         "Anomalies?": "",
         "Notes": "Hg target"
     },
@@ -546,7 +546,7 @@
         "Energy Threshold": "",
         "Location": "CERN",
         "Status": "Running",
-        "Reference": "https://arxiv.org/pdf/2307.02404",
+        "Reference": "https://arxiv.org/abs/2307.02404",
         "Anomalies?": "",
         "Notes": ""
     },
@@ -565,7 +565,7 @@
         "Energy Threshold": "",
         "Location": "CERN",
         "Status": "Running",
-        "Reference": "https://arxiv.org/pdf/2409.10128",
+        "Reference": "https://arxiv.org/abs/2409.10128",
         "Anomalies?": "",
         "Notes": ""
     },
@@ -584,7 +584,7 @@
         "Energy Threshold": "",
         "Location": "CERN",
         "Status": "Running",
-        "Reference": "https://arxiv.org/pdf/1703.08501",
+        "Reference": "https://arxiv.org/abs/1703.08501",
         "Anomalies?": "",
         "Notes": "NA62 aims to measure rare Kaon decays (K to Pi nu) at the CERN SPS."
     },
@@ -740,6 +740,25 @@
         "Anomalies?": "",
         "Notes": "thick Cu target off-axis to the beam"
     },
+    "CHARM-II": {
+        "Class": "Beam Target",
+        "Source(s)": "CERN SPS",
+        "Beam Particle": "proton",
+        "Beam Energy (GeV)": "450",
+        "POT": "2.50E+19",
+        "Baseline (m)": "480",
+        "Detector Tech": "Tracking calorimeters",
+        "Detector Material": "glass",
+        "Detector Mass (t)": "",
+        "Fiducial Mass (t)": "",
+        "Dector Volume (m^3)": "",
+        "Energy Threshold": "5 GeV",
+        "Location": "CERN",
+        "Status": "Complete",
+        "Reference": "https://inspirehep.net/experiments/1109222",
+        "Anomalies?": "",
+        "Notes": "The experiment aims at determining the electroweak mixing angle Theta(W) and the ratio g(A)/g(V) from the ratio of neutrino-electron and antineutrino-electron scattering cross-sections. The obtained values are to be compared to those determined with 10**6 times larger Q**2 at LEP. CHARM-II neutrino detector consists of a massive, fine-grained, and low-density electronic calorimeter, followed by a muon spectrometer made of magnetized iron, with scintillators and drift chambers as active elements. The measurements are performed in the horn-focused wide-band neutrino beam."
+    },
     "NuCAL": {
         "Class": "Beam Target",
         "Source(s)": "IHEP, Protvino",
@@ -812,7 +831,7 @@
         "Energy Threshold": "?",
         "Location": "CERN",
         "Status": "Future",
-        "Reference": "https://arxiv.org/pdf/1504.04855",
+        "Reference": "https://arxiv.org/abs/1504.04855",
         "Anomalies?": "",
         "Notes": ""
     },
@@ -831,7 +850,7 @@
         "Energy Threshold": "",
         "Location": "CERN",
         "Status": "Complete",
-        "Reference": "https://arxiv.org/pdf/2208.00416",
+        "Reference": "https://arxiv.org/abs/2208.00416",
         "Anomalies?": "",
         "Notes": "copper target aka CERN WA66"
     },
@@ -850,7 +869,7 @@
         "Energy Threshold": "",
         "Location": "Fermilab",
         "Status": "Complete",
-        "Reference": "https://arxiv.org/pdf/hep-ex/9908011",
+        "Reference": "https://arxiv.org/abs/hep-ex/9908011",
         "Anomalies?": "",
         "Notes": "Beryllium-oxide target"
     },
@@ -869,7 +888,7 @@
         "Energy Threshold": "",
         "Location": "CERN",
         "Status": "Complete",
-        "Reference": "https://arxiv.org/pdf/2112.06800",
+        "Reference": "https://arxiv.org/abs/2112.06800",
         "Anomalies?": "",
         "Notes": ""
     },
