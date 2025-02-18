@@ -358,7 +358,7 @@
         "Status": "Complete",
         "Reference": "https://inspirehep.net/experiments/1110641?ui-citation-summary=true",
         "Anomalies?": "Yes",
-        "Notes": "The MiniBooNE experiment (using the 8 GeV proton booster neutrino beam [BNB] on the beryllium target) aimed to search for oscillations between muon-neutrinos and electron-neutrinos for neutrino mass differences greater than 0.01 eV**2, and for mixing parameters less than about 0.05. The experiment will also look for a muon-neutrino disappearance signal. If neutrino oscillations are observed, the experiment will be able to measure the mass difference and the mixing angle and search for CP violation in the lepton sector."
+        "Notes": "The MiniBooNE experiment (using the 8 GeV proton booster neutrino beam [BNB] on the beryllium target) aimed to search for oscillations between muon-neutrinos and electron-neutrinos for neutrino mass differences greater than 0.01 eV^2, and for mixing parameters less than about 0.05. The experiment will also look for a muon-neutrino disappearance signal. If neutrino oscillations are observed, the experiment will be able to measure the mass difference and the mixing angle and search for CP violation in the lepton sector."
     },
     "MicroBooNE": {
         "Class": "Beam Target",
@@ -702,7 +702,7 @@
         "Anomalies?": "",
         "Notes": "The constituents of dark matter are still unknown, and the viable possibilities span a very large mass range. Specific scenarios for the origin of dark matter sharpen the focus on a narrower range of masses: the natural scenario where dark matter originates from thermal contact with familiar matter in the early Universe requires the DM mass to lie within about an MeV to 100 TeV. Considerable experimental attention has been given to exploring Weakly Interacting Massive Particles in the upper end of this range (few GeV - ~TeV), while the region ~MeV to ~GeV is largely unexplored. Most of the stable constituents of known matter have masses in this lower range, tantalizing hints for physics beyond the Standard Model have been found here, and a thermal origin for dark matter works in a simple and predictive manner in this mass range as well. It is therefore a priority to explore. If there is an interaction between light DM and ordinary matter, as there must be in the case of a thermal origin, then there necessarily is a production mechanism in accelerator-based experiments. The most sensitive way, (if the interaction is not electron-phobic) to search for this production is to use a primary electron beam to produce DM in ﬁxed-target collisions. The Light Dark Matter eXperiment (LDMX) is a planned electron-beam fixed-target missing-momentum experiment that has unique sensitivity to light DM in the sub-GeV range."
     },
-    "PIP-II BD**": {
+    "PIP-II BD": {
         "Class": "Beam Target",
         "Source(s)": "Pip-II Linac",
         "Beam Particle": "proton",
@@ -759,7 +759,7 @@
         "Anomalies?": "",
         "Notes": ""
     },
-    "DAMSA**": {
+    "DAMSA": {
         "Class": "Beam Target",
         "Source(s)": "PIP-II Linac?",
         "Beam Particle": "proton",
@@ -778,7 +778,7 @@
         "Anomalies?": "",
         "Notes": "Graphite Target with layered Cu and Fe"
     },
-    "Little DAMSA**": {
+    "Little DAMSA": {
         "Class": "Beam Target",
         "Source(s)": "",
         "Beam Particle": "electron",
@@ -797,7 +797,7 @@
         "Anomalies?": "",
         "Notes": ""
     },
-    "SHiP**": {
+    "SHiP": {
         "Class": "Beam Target",
         "Source(s)": "CERN SPS",
         "Beam Particle": "proton",
