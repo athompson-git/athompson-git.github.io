@@ -23,7 +23,7 @@
         "Source(s)": "CERN SPS",
         "Beam Particle": "proton",
         "Beam Energy (GeV)": 450.0,
-        "POT": "",
+        "POT": 4.1e19,
         "Baseline (m)": "625",
         "Detector Tech": "Tracking Calorimeter",
         "Detector Material": "Mixed",
@@ -33,9 +33,9 @@
         "Energy Threshold": "",
         "Location": "",
         "Status": "Complete",
-        "Reference": "https://inspirehep.net/experiments/1108727",
+        "Reference": "https://inspirehep.net/experiments/1108727, https://arxiv.org/abs/hep-ex/0101041",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "Searches for the oscillation numu --> nutau in a wide-band, 10-200 GeV neutrino beam. Aims at detecting nutau charged-current interactions by observing the production of the tau through its various decay modes by means of kinematical criteria. The detector reconstructs the event kinematics. It uses the CERN-UA-001 magnet. The target consists of 44 drift chamber planes with a total mass of 2.9 tons over a fiducial volume of 2.6 x 2.6 x 4 m^3. It is followed by transition radiation detectors, by additional tracking chambers and by an electromagnetic calorimeter consisting of 875 lead glass blocks and including a preshower detector. A hadronic calorimeter made of iron and scintillator is located behind the electromagnetic calorimeter outside of the magnetic field volume. A muon detector has two stations of large-area drift-tube chambers on both sides of an iron absorber. The sensitivity of the detector to (Delta m)^2 is larger than 1 eV^2."
     },
     "NOvA-FD": {
         "Class": "Beam Target",
@@ -861,7 +861,7 @@
         "Beam Energy (GeV)": "400",
         "POT": "2.72E+18",
         "Baseline (m)": "404",
-        "Detector Tech": "",
+        "Detector Tech": "Bubble Chamber",
         "Detector Material": "",
         "Detector Mass (t)": "",
         "Fiducial Mass (t)": "",
@@ -871,7 +871,7 @@
         "Status": "Complete",
         "Reference": "https://arxiv.org/abs/2208.00416",
         "Anomalies?": "",
-        "Notes": "copper target aka CERN WA66"
+        "Notes": "BEBC / WA66: copper target aka CERN WA66"
     },
     "NuTeV": {
         "Class": "Beam Target",
