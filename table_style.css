@@ -27,7 +27,7 @@
   
   .logo-container,
   .spacer {
-    flex: 0 0 max(250px, 10vw); /* fixed width for logo and spacer */
+    flex: 0 0 max(350px, 5vw); /* fixed width for logo and spacer */
   }
   
   .logo-container {
