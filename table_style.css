@@ -29,9 +29,9 @@
     left: 10px; /* adjust the left margin as needed */
     top: 50%;
     transform: translateY(-50%);
-    height: 50px; /* adjust the logo size as needed */
+    height: 60px; /* adjust the logo size as needed */
   }
-
+  
   header h1 {
     margin: 0;
     font-size: 1.8em;
@@ -59,6 +59,13 @@
     height: auto !important;
   }
   
+
+  /* Table container for horizontal scrolling */
+  .table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+
   /* Table styling */
   table {
     width: 100%;
@@ -85,6 +92,15 @@
   
   table th {
     background-color: #f2f2f2;
+    cursor: pointer;
+  }
+
+  /* Sticky header row: all header cells will stick at the top */
+  thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f2;
+    z-index: 4; /* Ensure header stays above body cells */
     cursor: pointer;
   }
 
@@ -133,5 +149,18 @@
   .experiment-name:hover .tooltip {
     visibility: visible;
     opacity: 1;
+  }
+
+  /* Apply a hash pattern over rows marked with the anomaly class */
+  tr.anomaly {
+    /* The repeating-linear-gradient creates diagonal stripes.
+      Adjust the colors and stripe widths as needed. */
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.068) 0,
+        rgba(214, 68, 32, 0.1) 5px,
+        transparent 5px,
+        transparent 10px
+    );
   }
   

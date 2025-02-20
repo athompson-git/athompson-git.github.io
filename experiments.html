@@ -78,7 +78,7 @@
     <script type="text/javascript" language="javascript" src="jquery-1.8.2.min.js"></script>        
 
     <script type="text/javascript">
-        let visible_columns = ["Source(s)", "Beam Particle", "Beam Energy (GeV)", "POT", "Baseline (m)",
+        let visible_columns = ["Source(s)", "Beam Particle", "Beam Energy (GeV)", "POT (Planned/Largest)", "Baseline (m)",
                                             "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
                                             "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Anomalies?"];
         
@@ -115,6 +115,13 @@
                             rowColor = ' style="background-color: rgba(255, 255, 0, 0.2)"';
                         }
 
+                        // Mark anomalies row for hash
+                        let anomalies = details["Anomalies?"] || "";
+                        let anomalyClass = "";
+                        if (anomalies.trim() !== "") {
+                            anomalyClass = "anomaly";
+                        }
+
                         // Get the "Notes" field if it exists.
                         let notes = details["Notes"] || "";
 
@@ -126,7 +133,7 @@
                         }
 
                         // Build tooltip
-                        let row = `<tr${rowColor}>
+                        let row = `<tr class="${anomalyClass}" ${rowColor}>
                             <td class="experiment-name">
                                 ${experiment}
                                 ${inspireAnchor}
