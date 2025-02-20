@@ -121,6 +121,13 @@
                         // Get the "Notes" field if it exists.
                         let notes = details["Notes"] || "";
 
+                        // Place Inspire links
+                        let inspireLink = details["InspireLink"] || "";
+                        let inspireAnchor = "";
+                        if (inspireLink.trim() !== "") {
+                            inspireAnchor = `<a href="${inspireLink}" target="_blank">[iN]</a>`;
+                        }
+
                         // Build tooltip
                         let row = `<tr${rowColor}>
                             <td class="experiment-name">
