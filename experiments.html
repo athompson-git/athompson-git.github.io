@@ -95,6 +95,7 @@
                         // Skip unneeded columns
                         if (col === "Notes") return;
                         if (col === "Class") return;
+                        if (col === "InspireLink") return;
                         headerRow.append(`<th onclick="sortTable(${index + 1})">${col}</th>`);
                     });
 
@@ -126,6 +127,7 @@
                             // Skip unneeded rows
                             if (col === "Notes") return;
                             if (col === "Class") return;
+                            if (col === "InspireLink") return;
                             
                             // Add hyperlinking for references
                             let cellData = details[col] || "";

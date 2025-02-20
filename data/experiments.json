@@ -14,9 +14,10 @@
         "Energy Threshold": "~0.75 GeV",
         "Location": "Fermilab",
         "Status": "Running",
-        "Reference": "https://arxiv.org/abs/2409.04553",
+        "Reference": "https://inspirehep.net/literature/774999",
         "Anomalies?": "",
-        "Notes": "14.6 mrad off-axis"
+        "Notes": "14.6 mrad off-axis",
+        "InspireLink": "https://inspirehep.net/experiments/1108441?ui-citation-summary=true"
     },
     "NOMAD": {
         "Class": "Beam Target",
@@ -33,9 +34,10 @@
         "Energy Threshold": "",
         "Location": "",
         "Status": "Complete",
-        "Reference": "https://inspirehep.net/experiments/1108727, https://arxiv.org/abs/hep-ex/0101041",
+        "Reference": "https://inspirehep.net/literature/450410",
         "Anomalies?": "",
-        "Notes": "Searches for the oscillation numu --> nutau in a wide-band, 10-200 GeV neutrino beam. Aims at detecting nutau charged-current interactions by observing the production of the tau through its various decay modes by means of kinematical criteria. The detector reconstructs the event kinematics. It uses the CERN-UA-001 magnet. The target consists of 44 drift chamber planes with a total mass of 2.9 tons over a fiducial volume of 2.6 x 2.6 x 4 m^3. It is followed by transition radiation detectors, by additional tracking chambers and by an electromagnetic calorimeter consisting of 875 lead glass blocks and including a preshower detector. A hadronic calorimeter made of iron and scintillator is located behind the electromagnetic calorimeter outside of the magnetic field volume. A muon detector has two stations of large-area drift-tube chambers on both sides of an iron absorber. The sensitivity of the detector to (Delta m)^2 is larger than 1 eV^2."
+        "Notes": "Searches for the oscillation numu --> nutau in a wide-band, 10-200 GeV neutrino beam. Aims at detecting nutau charged-current interactions by observing the production of the tau through its various decay modes by means of kinematical criteria. The detector reconstructs the event kinematics. It uses the CERN-UA-001 magnet. The target consists of 44 drift chamber planes with a total mass of 2.9 tons over a fiducial volume of 2.6 x 2.6 x 4 m^3. It is followed by transition radiation detectors, by additional tracking chambers and by an electromagnetic calorimeter consisting of 875 lead glass blocks and including a preshower detector. A hadronic calorimeter made of iron and scintillator is located behind the electromagnetic calorimeter outside of the magnetic field volume. A muon detector has two stations of large-area drift-tube chambers on both sides of an iron absorber. The sensitivity of the detector to (Delta m)^2 is larger than 1 eV^2.",
+        "InspireLink": "https://inspirehep.net/experiments/1108727?ui-citation-summary=true"
     },
     "NOvA-FD": {
         "Class": "Beam Target",
@@ -52,9 +54,10 @@
         "Energy Threshold": "~0.75 GeV",
         "Location": "Fermilab",
         "Status": "Running",
-        "Reference": "https://arxiv.org/abs/2409.04553",
+        "Reference": "https://inspirehep.net/literature/774999",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": "https://inspirehep.net/experiments/1108441?ui-citation-summary=true"
     },
     "T2K (neutrino mode)": {
         "Class": "Beam Target",
@@ -73,7 +76,8 @@
         "Status": "Running",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "T2K (anti-neutrino mode)": {
         "Class": "Beam Target",
@@ -92,7 +96,8 @@
         "Status": "Running",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "T2K (ND280)": {
         "Class": "Beam Target",
@@ -111,7 +116,8 @@
         "Status": "Running",
         "Reference": "https://arxiv.org/abs/1902.07598, https://pos.sissa.it/441/220",
         "Anomalies?": "",
-        "Notes": "off-axis, 2.5deg, 12.34E+20 (nu) 6.28E+20 (nubar)"
+        "Notes": "off-axis, 2.5deg, 12.34E+20 (nu) 6.28E+20 (nubar)",
+        "InspireLink": ""
     },
     "DUNE-ND": {
         "Class": "Beam Target",
@@ -130,7 +136,8 @@
         "Status": "Future",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": "Graphite target"
+        "Notes": "Graphite target",
+        "InspireLink": ""
     },
     "DUNE-FD": {
         "Class": "Beam Target",
@@ -149,7 +156,8 @@
         "Status": "Future",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "ICARUS-NuMI": {
         "Class": "Beam Target",
@@ -168,7 +176,8 @@
         "Status": "Running",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "ICARUS-BNB": {
         "Class": "Beam Target",
@@ -187,7 +196,8 @@
         "Status": "Running",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": "BNB / Beryllium target"
+        "Notes": "BNB / Beryllium target",
+        "InspireLink": ""
     },
     "ICARUS-T600": {
         "Class": "",
@@ -206,7 +216,8 @@
         "Status": "Complete",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": "The ICARUS program concerns the usage of Liquid Argon (LAr) detector for studies of neutrinos from CNGS beam. The ICARUS detector filled with 600 tons of liquid argon, T600, has started data taking in 2010 (see neutrino event Gallery). The detector is placed at the undeground laboratory in Gran Sasso. The advantage of the LAr detector is its excellent spatial and calorimetric resolution which makes possible a perfect visualization of tracks of the charged particles. The technology of the Liquid Argon Time Projection Chamber (LAr TPC), was first proposed by Professor Carlo Rubbia in 1977, was conceived as a tool for a completely uniform imaging with high accuracy of very massive volumes (several thousand tons). ICARUS is the first large scale detector, exploiting this detection technique. Originally, it was planned to perform the detector upgrade up to 2-3 ktons, by adding modules similar to the existing ones. In 2005 the decision was taken to change the concept in favor of a monolithic detector of this scale."
+        "Notes": "The ICARUS program concerns the usage of Liquid Argon (LAr) detector for studies of neutrinos from CNGS beam. The ICARUS detector filled with 600 tons of liquid argon, T600, has started data taking in 2010 (see neutrino event Gallery). The detector is placed at the undeground laboratory in Gran Sasso. The advantage of the LAr detector is its excellent spatial and calorimetric resolution which makes possible a perfect visualization of tracks of the charged particles. The technology of the Liquid Argon Time Projection Chamber (LAr TPC), was first proposed by Professor Carlo Rubbia in 1977, was conceived as a tool for a completely uniform imaging with high accuracy of very massive volumes (several thousand tons). ICARUS is the first large scale detector, exploiting this detection technique. Originally, it was planned to perform the detector upgrade up to 2-3 ktons, by adding modules similar to the existing ones. In 2005 the decision was taken to change the concept in favor of a monolithic detector of this scale.",
+        "InspireLink": ""
     },
     "SBND": {
         "Class": "Beam Target",
@@ -225,7 +236,8 @@
         "Status": "Running",
         "Reference": "https://inspirehep.net/experiments/1607955",
         "Anomalies?": "",
-        "Notes": "BNB / Beryllium target"
+        "Notes": "BNB / Beryllium target",
+        "InspireLink": ""
     },
     "MINOS+": {
         "Class": "Beam Target",
@@ -244,7 +256,8 @@
         "Status": "Complete",
         "Reference": "https://arxiv.org/abs/1108.0015, https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.091803",
         "Anomalies?": "",
-        "Notes": "MINOS+ (Proposed: 2011, Started: 2013, Completed: Jun 29, 2016) is a proposal to continue to expose the two MINOS detectors to the NuMI muon neutrino beam for three years starting in 2013. The medium energy setting of the NuMI beam projected for NOVA will deliver about 18 x 10^20 protons-on-target during the first three years of operation.This will allow the MINOS Far Detector to collect more than 10,000 charged current muon neutrino events in the 4-10 GeV energy range and provide a stringent test for non-standard neutrino interactions, sterile neutrinos, extra dimensions, neutrino life-time, and perhaps more. In addition there will be more than 3,000 neutral current events which will be particularly useful in extending the sterile neutrino search range."
+        "Notes": "MINOS+ (Proposed: 2011, Started: 2013, Completed: Jun 29, 2016) is a proposal to continue to expose the two MINOS detectors to the NuMI muon neutrino beam for three years starting in 2013. The medium energy setting of the NuMI beam projected for NOVA will deliver about 18 x 10^20 protons-on-target during the first three years of operation.This will allow the MINOS Far Detector to collect more than 10,000 charged current muon neutrino events in the 4-10 GeV energy range and provide a stringent test for non-standard neutrino interactions, sterile neutrinos, extra dimensions, neutrino life-time, and perhaps more. In addition there will be more than 3,000 neutral current events which will be particularly useful in extending the sterile neutrino search range.",
+        "InspireLink": ""
     },
     "MINOS-ND": {
         "Class": "Beam Target",
@@ -263,7 +276,8 @@
         "Status": "Complete",
         "Reference": "https://arxiv.org/abs/1108.0015, https://www.sciencedirect.com/science/article/pii/S0168900208011613",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "MINOS-FD": {
         "Class": "Beam Target",
@@ -282,7 +296,8 @@
         "Status": "Complete",
         "Reference": "https://inspirehep.net/experiments/1671995?ui-citation-summary=true",
         "Anomalies?": "",
-        "Notes": "(Proposed: Feb 9, 1995, Approved: May 2, 1995, Completed: Jun 29, 2016)"
+        "Notes": "(Proposed: Feb 9, 1995, Approved: May 2, 1995, Completed: Jun 29, 2016)",
+        "InspireLink": ""
     },
     "COHERENT-LAr (CENNS-10)": {
         "Class": "Beam Target",
@@ -301,7 +316,8 @@
         "Status": "Running",
         "Reference": "https://arxiv.org/abs/2003.10630",
         "Anomalies?": "",
-        "Notes": "Hg target"
+        "Notes": "Hg target",
+        "InspireLink": ""
     },
     "COHERENT-CsI": {
         "Class": "Beam Target",
@@ -320,7 +336,8 @@
         "Status": "Running",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "COHERENT-NaI": {
         "Class": "Beam Target",
@@ -339,26 +356,8 @@
         "Status": "Running",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
-    },
-    "COSINE200": {
-        "Class": "Beam Target",
-        "Source(s)": "SNS",
-        "Beam Particle": "proton",
-        "Beam Energy (GeV)": "1",
-        "POT": "",
-        "Baseline (m)": "",
-        "Detector Tech": "Scintillator",
-        "Detector Material": "NaI",
-        "Detector Mass (t)": "2.00E-01",
-        "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
-        "Energy Threshold": "",
-        "Location": "ORNL",
-        "Status": "",
-        "Reference": "",
-        "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "MiniBooNE": {
         "Class": "Beam Target",
@@ -377,7 +376,8 @@
         "Status": "Complete",
         "Reference": "https://inspirehep.net/experiments/1110641?ui-citation-summary=true",
         "Anomalies?": "Yes",
-        "Notes": "The MiniBooNE experiment (using the 8 GeV proton booster neutrino beam [BNB] on the beryllium target) aimed to search for oscillations between muon-neutrinos and electron-neutrinos for neutrino mass differences greater than 0.01 eV^2, and for mixing parameters less than about 0.05. The experiment will also look for a muon-neutrino disappearance signal. If neutrino oscillations are observed, the experiment will be able to measure the mass difference and the mixing angle and search for CP violation in the lepton sector."
+        "Notes": "The MiniBooNE experiment (using the 8 GeV proton booster neutrino beam [BNB] on the beryllium target) aimed to search for oscillations between muon-neutrinos and electron-neutrinos for neutrino mass differences greater than 0.01 eV^2, and for mixing parameters less than about 0.05. The experiment will also look for a muon-neutrino disappearance signal. If neutrino oscillations are observed, the experiment will be able to measure the mass difference and the mixing angle and search for CP violation in the lepton sector.",
+        "InspireLink": ""
     },
     "MicroBooNE": {
         "Class": "Beam Target",
@@ -396,7 +396,8 @@
         "Status": "Running",
         "Reference": "https://inspirehep.net/experiments/1108254?ui-citation-summary=true",
         "Anomalies?": "",
-        "Notes": "BNB / Beryllium target"
+        "Notes": "BNB / Beryllium target",
+        "InspireLink": ""
     },
     "KARMEN": {
         "Class": "Beam Target",
@@ -415,7 +416,8 @@
         "Status": "",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "LSND": {
         "Class": "Beam Target",
@@ -434,7 +436,8 @@
         "Status": "Complete",
         "Reference": "https://inspirehep.net/experiments/1108822?ui-citation-summary=true",
         "Anomalies?": "Yes",
-        "Notes": "LSND (Proposed: Jul 3, 1989, Approved: Jan, 1990, Started: Sep, 1993, Completed: 1998): A search for neutrino oscillations to the level sin(theta)^2 = 3 x 10^(-4), where theta represents the mixing angle if there were a two-generation mixing. Uses neutrinos produced by both at-rest and in-flight decaying pions. Neutrinos then interact in a mineral oil (CH2) target. The detector consists of a tank with 167 tons of liquid scintillator and with 1220 photomultiplier tubes mounted on the inside tank surface. Other physics goals include measurements of neutrino elastic, charged-current, and neutral-current scattering. Taking data (July 96). Will continue the data taking for at least one more year, and possibly for another 5-10 years."
+        "Notes": "LSND (Proposed: Jul 3, 1989, Approved: Jan, 1990, Started: Sep, 1993, Completed: 1998): A search for neutrino oscillations to the level sin(theta)^2 = 3 x 10^(-4), where theta represents the mixing angle if there were a two-generation mixing. Uses neutrinos produced by both at-rest and in-flight decaying pions. Neutrinos then interact in a mineral oil (CH2) target. The detector consists of a tank with 167 tons of liquid scintillator and with 1220 photomultiplier tubes mounted on the inside tank surface. Other physics goals include measurements of neutrino elastic, charged-current, and neutral-current scattering. Taking data (July 96). Will continue the data taking for at least one more year, and possibly for another 5-10 years.",
+        "InspireLink": ""
     },
     "CCM": {
         "Class": "Beam Target",
@@ -453,7 +456,8 @@
         "Status": "Running",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "MINERvA": {
         "Class": "Beam Target",
@@ -472,7 +476,8 @@
         "Status": "",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": "graphite target"
+        "Notes": "graphite target",
+        "InspireLink": ""
     },
     "JSNS2": {
         "Class": "Beam Target",
@@ -491,7 +496,8 @@
         "Status": "Future",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "IsoDAR": {
         "Class": "Beam Target",
@@ -510,7 +516,8 @@
         "Status": "Future",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "NA61/SHINE": {
         "Class": "Beam Target",
@@ -529,7 +536,8 @@
         "Status": "",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "NA64": {
         "Class": "Beam Target",
@@ -548,7 +556,8 @@
         "Status": "Running",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": "NA64 combines the active beam dump and missing energy techniques to search for rare events. The goal is the direct search of massive dark photons produced in the reaction of high energy electrons scattering off a nuclei with their subsequent invisible decays into lighter dark matter particles. Preparation (Aug 2016)"
+        "Notes": "NA64 combines the active beam dump and missing energy techniques to search for rare events. The goal is the direct search of massive dark photons produced in the reaction of high energy electrons scattering off a nuclei with their subsequent invisible decays into lighter dark matter particles. Preparation (Aug 2016)",
+        "InspireLink": ""
     },
     "NA64(e)": {
         "Class": "Beam Target",
@@ -567,7 +576,8 @@
         "Status": "Running",
         "Reference": "https://arxiv.org/abs/2307.02404",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "NA64(mu)": {
         "Class": "Beam Target",
@@ -586,7 +596,8 @@
         "Status": "Running",
         "Reference": "https://arxiv.org/abs/2409.10128",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "NA62": {
         "Class": "Beam Target",
@@ -605,7 +616,8 @@
         "Status": "Running",
         "Reference": "https://arxiv.org/abs/1703.08501",
         "Anomalies?": "",
-        "Notes": "NA62 aims to measure rare Kaon decays (K to Pi nu) at the CERN SPS."
+        "Notes": "NA62 aims to measure rare Kaon decays (K to Pi nu) at the CERN SPS.",
+        "InspireLink": ""
     },
     "E774": {
         "Class": "Beam Target",
@@ -624,7 +636,8 @@
         "Status": "Complete",
         "Reference": "https://inspirehep.net/experiments/1109003?ui-citation-summary=true",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "E137": {
         "Class": "Beam Target",
@@ -643,7 +656,8 @@
         "Status": "Complete",
         "Reference": "https://inspirehep.net/literature/261598",
         "Anomalies?": "",
-        "Notes": "E137: There are features of this beam-dump experiment quite unique to SLAC. There is the high intensity of the primary beam, with a yield of approximately 1 C of 20-GeV electrons delivered per (very good) day. The 1.6-microsec pulse length (180 pulses/sec) allows good cosmic-ray rejection. But most importantly the electrons, positrons, and photons which are produced in the dump (aluminum plates immersed in a large tank of water) have transverse momenta no larger than 20 MeV, much lower than in hadronic showers. This collimation, together with production mechanisms even more collimated, implies that beams of the sundry hypothetical particles will be well collimated. This in turn allows a long decay region without significant loss of acceptance. The E137 apparatus is located about 380 m downstream of the dump, with 200 m of available decay path in front of the detector."
+        "Notes": "E137: There are features of this beam-dump experiment quite unique to SLAC. There is the high intensity of the primary beam, with a yield of approximately 1 C of 20-GeV electrons delivered per (very good) day. The 1.6-microsec pulse length (180 pulses/sec) allows good cosmic-ray rejection. But most importantly the electrons, positrons, and photons which are produced in the dump (aluminum plates immersed in a large tank of water) have transverse momenta no larger than 20 MeV, much lower than in hadronic showers. This collimation, together with production mechanisms even more collimated, implies that beams of the sundry hypothetical particles will be well collimated. This in turn allows a long decay region without significant loss of acceptance. The E137 apparatus is located about 380 m downstream of the dump, with 200 m of available decay path in front of the detector.",
+        "InspireLink": ""
     },
     "E141": {
         "Class": "Beam Target",
@@ -662,7 +676,8 @@
         "Status": "Complete",
         "Reference": "https://inspirehep.net/experiments/1109031?ui-citation-summary=true",
         "Anomalies?": "",
-        "Notes": "An electron beam dump search for possible pseudoscalar particles with masses in the range 1-10 MeV and lifetimes of order 10^(-14) to 10^(-12) seconds, with dominant decay modes into e+ e- or gamma gamma pairs. Electron beams of 9 and 18 GeV are stopped in copper/tungsten dumps ranging in length from 10-100 cm. A signal searched for is a high energy positron or photon downstream of the dump. An 8 GeV spectrometer set at zero degrees is used to detect positrons."
+        "Notes": "An electron beam dump search for possible pseudoscalar particles with masses in the range 1-10 MeV and lifetimes of order 10^(-14) to 10^(-12) seconds, with dominant decay modes into e+ e- or gamma gamma pairs. Electron beams of 9 and 18 GeV are stopped in copper/tungsten dumps ranging in length from 10-100 cm. A signal searched for is a high energy positron or photon downstream of the dump. An 8 GeV spectrometer set at zero degrees is used to detect positrons.",
+        "InspireLink": ""
     },
     "Orsay": {
         "Class": "Beam Target",
@@ -681,7 +696,8 @@
         "Status": "Complete",
         "Reference": "https://inspirehep.net/literature/282960",
         "Anomalies?": "",
-        "Notes": "Orsay: Electron beam operated on a lead beam dump with tungsten core."
+        "Notes": "Orsay: Electron beam operated on a lead beam dump with tungsten core.",
+        "InspireLink": ""
     },
     "KEK": {
         "Class": "Beam Target",
@@ -700,7 +716,8 @@
         "Status": "Complete",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "LDMX": {
         "Class": "Beam Target",
@@ -719,7 +736,8 @@
         "Status": "Future",
         "Reference": "https://inspirehep.net/literature/2053415",
         "Anomalies?": "",
-        "Notes": "The constituents of dark matter are still unknown, and the viable possibilities span a very large mass range. Specific scenarios for the origin of dark matter sharpen the focus on a narrower range of masses: the natural scenario where dark matter originates from thermal contact with familiar matter in the early Universe requires the DM mass to lie within about an MeV to 100 TeV. Considerable experimental attention has been given to exploring Weakly Interacting Massive Particles in the upper end of this range (few GeV - ~TeV), while the region ~MeV to ~GeV is largely unexplored. Most of the stable constituents of known matter have masses in this lower range, tantalizing hints for physics beyond the Standard Model have been found here, and a thermal origin for dark matter works in a simple and predictive manner in this mass range as well. It is therefore a priority to explore. If there is an interaction between light DM and ordinary matter, as there must be in the case of a thermal origin, then there necessarily is a production mechanism in accelerator-based experiments. The most sensitive way, (if the interaction is not electron-phobic) to search for this production is to use a primary electron beam to produce DM in ﬁxed-target collisions. The Light Dark Matter eXperiment (LDMX) is a planned electron-beam fixed-target missing-momentum experiment that has unique sensitivity to light DM in the sub-GeV range."
+        "Notes": "The constituents of dark matter are still unknown, and the viable possibilities span a very large mass range. Specific scenarios for the origin of dark matter sharpen the focus on a narrower range of masses: the natural scenario where dark matter originates from thermal contact with familiar matter in the early Universe requires the DM mass to lie within about an MeV to 100 TeV. Considerable experimental attention has been given to exploring Weakly Interacting Massive Particles in the upper end of this range (few GeV - ~TeV), while the region ~MeV to ~GeV is largely unexplored. Most of the stable constituents of known matter have masses in this lower range, tantalizing hints for physics beyond the Standard Model have been found here, and a thermal origin for dark matter works in a simple and predictive manner in this mass range as well. It is therefore a priority to explore. If there is an interaction between light DM and ordinary matter, as there must be in the case of a thermal origin, then there necessarily is a production mechanism in accelerator-based experiments. The most sensitive way, (if the interaction is not electron-phobic) to search for this production is to use a primary electron beam to produce DM in ﬁxed-target collisions. The Light Dark Matter eXperiment (LDMX) is a planned electron-beam fixed-target missing-momentum experiment that has unique sensitivity to light DM in the sub-GeV range.",
+        "InspireLink": ""
     },
     "PIP-II BD": {
         "Class": "Beam Target",
@@ -738,7 +756,8 @@
         "Status": "Future",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "CHARM": {
         "Class": "Beam Target",
@@ -757,7 +776,8 @@
         "Status": "Complete",
         "Reference": "http://cds.cern.ch/record/133953/files/198006183.pdf?version=1 https://link.springer.com/content/pdf/10.1007/JHEP04(2017)116.pdf",
         "Anomalies?": "",
-        "Notes": "thick Cu target off-axis to the beam"
+        "Notes": "thick Cu target off-axis to the beam",
+        "InspireLink": ""
     },
     "CHARM-II": {
         "Class": "Beam Target",
@@ -776,7 +796,8 @@
         "Status": "Complete",
         "Reference": "https://inspirehep.net/experiments/1109222",
         "Anomalies?": "",
-        "Notes": "The experiment aims at determining the electroweak mixing angle Theta(W) and the ratio g(A)/g(V) from the ratio of neutrino-electron and antineutrino-electron scattering cross-sections. The obtained values are to be compared to those determined with 10**6 times larger Q**2 at LEP. CHARM-II neutrino detector consists of a massive, fine-grained, and low-density electronic calorimeter, followed by a muon spectrometer made of magnetized iron, with scintillators and drift chambers as active elements. The measurements are performed in the horn-focused wide-band neutrino beam."
+        "Notes": "The experiment aims at determining the electroweak mixing angle Theta(W) and the ratio g(A)/g(V) from the ratio of neutrino-electron and antineutrino-electron scattering cross-sections. The obtained values are to be compared to those determined with 10**6 times larger Q**2 at LEP. CHARM-II neutrino detector consists of a massive, fine-grained, and low-density electronic calorimeter, followed by a muon spectrometer made of magnetized iron, with scintillators and drift chambers as active elements. The measurements are performed in the horn-focused wide-band neutrino beam.",
+        "InspireLink": ""
     },
     "NuCAL": {
         "Class": "Beam Target",
@@ -795,7 +816,8 @@
         "Status": "Complete",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "DAMSA": {
         "Class": "Beam Target",
@@ -814,7 +836,8 @@
         "Status": "Proposed",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": "Graphite Target with layered Cu and Fe"
+        "Notes": "Graphite Target with layered Cu and Fe",
+        "InspireLink": ""
     },
     "Little DAMSA": {
         "Class": "Beam Target",
@@ -833,7 +856,8 @@
         "Status": "Proposed",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "SHiP": {
         "Class": "Beam Target",
@@ -852,7 +876,8 @@
         "Status": "Future",
         "Reference": "https://arxiv.org/abs/1504.04855",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "BEBC": {
         "Class": "Beam Target",
@@ -871,7 +896,8 @@
         "Status": "Complete",
         "Reference": "https://arxiv.org/abs/2208.00416",
         "Anomalies?": "",
-        "Notes": "BEBC / WA66: copper target aka CERN WA66"
+        "Notes": "BEBC / WA66: copper target aka CERN WA66",
+        "InspireLink": ""
     },
     "NuTeV": {
         "Class": "Beam Target",
@@ -890,7 +916,8 @@
         "Status": "Complete",
         "Reference": "https://arxiv.org/abs/hep-ex/9908011",
         "Anomalies?": "",
-        "Notes": "Beryllium-oxide target"
+        "Notes": "Beryllium-oxide target",
+        "InspireLink": ""
     },
     "PS191": {
         "Class": "Beam Target",
@@ -909,7 +936,8 @@
         "Status": "Complete",
         "Reference": "https://arxiv.org/abs/2112.06800",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "CCFR": {
         "Class": "Beam Target",
@@ -928,7 +956,8 @@
         "Status": "Complete",
         "Reference": "https://www.nevis.columbia.edu/ccfr/index.html#contents, https://inspirehep.net/experiments/1109041?ui-citation-summary=true",
         "Anomalies?": "",
-        "Notes": "Uses iron target, scintillators, and flash ADC calorimeter drift chamber readout. A continuation of FNAL-744. Ran for 1600 hours."
+        "Notes": "Uses iron target, scintillators, and flash ADC calorimeter drift chamber readout. A continuation of FNAL-744. Ran for 1600 hours.",
+        "InspireLink": ""
     },
     "HYPER-K": {
         "Class": "Beam Target",
@@ -947,7 +976,8 @@
         "Status": "Future",
         "Reference": "https://inspirehep.net/literature/1672899",
         "Anomalies?": "",
-        "Notes": "The Hyper-Kamiokande (Hyper-K) detector is a next generation underground water Cherenkov detector, about 25 times larger than Super-Kamiokande. It is a multipurpose detector but it will be mainly the far detector of a future long baseline neutrino experiment, envisioned for the upgraded J-PARC beam. Hyper-Kamiokande is also able to study proton decays, atmospheric neutrinos, and neutrinos from astro-physical origins. It is currently under construction and will begin running in 2027."
+        "Notes": "The Hyper-Kamiokande (Hyper-K) detector is a next generation underground water Cherenkov detector, about 25 times larger than Super-Kamiokande. It is a multipurpose detector but it will be mainly the far detector of a future long baseline neutrino experiment, envisioned for the upgraded J-PARC beam. Hyper-Kamiokande is also able to study proton decays, atmospheric neutrinos, and neutrinos from astro-physical origins. It is currently under construction and will begin running in 2027.",
+        "InspireLink": ""
     },
     "ArgoNeuT": {
         "Class": "Beam Target",
@@ -966,7 +996,8 @@
         "Status": "Complete",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "field_types": {
         "Class": "",
@@ -985,6 +1016,7 @@
         "Status": "",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     }
 }
