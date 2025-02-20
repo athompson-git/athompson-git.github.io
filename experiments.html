@@ -3,26 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiment Data</title>
+    
+    <title>xDB: Particle Physics Experiment Database</title>
+    
+    <!--jquery and chart stuff -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!--Table CSS -->
     <link rel="stylesheet" href="table_style.css">
     
+
+    <!-- Meta Tags -->
+    <meta name="description" content="xDB, the searchable table of Particle Physics Experiments">
+    <meta name="keywords" content="Particle Physics, Neutrino Experiments, Dark Matter, Beam Energy, POT, Detector Technology, Gravitational Waves, Reactors">
+    <meta name="robots" content="index, follow">
+  
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="xDB: The Particle Physics Experiment Database">
+    <meta property="og:description" content="Searchable table of particle physics and gravitational wave experiments.">
+    <meta property="og:image" content="images/logos/xdb.png">
+    <meta property="og:url" content="https://athompson-git.github.io/experiments.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="xDB: The Particle Physics Experiment Database">
+    <meta name="twitter:description" content="Searchable table of particle physics and gravitational wave experiments.">
+    <meta name="twitter:image" content="images/logos/xdb.png">
+
 </head>
 
 
 
 
-
-
-
-
-
 <body>
-    <h2 align="center">Fixed Target and Reactor Experiments</h2>
-    <h3 align="center">Work in Progress!</h3>
+    <h1 align="center">xDB: The Particle Physics Experiments Database</h1>
+    <h3 align="center">I: Fixed Target and Reactor Experiments</h2>
+    <h4 align="center">Work in Progress!</h3>
 
     <p style="text-align: center">
         <img src="images/particle_beam.gif", align="center", class="inline-image", style="width: min(350px, 90vw);">
@@ -101,7 +119,9 @@
 
                         columns.forEach(col => {
 
+                            // Skip unneeded rows
                             if (col === "Notes") return;
+                            if (col === "Class") return;
                             
                             // Add hyperlinking for references
                             let cellData = details[col] || "";

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment Data</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+ 
+    <link rel="stylesheet" href="table_style.css">
+
+</head>
+
+
+
+
+<body>
+    <h1 align="center">xDB: The Particle Physics Experiments Database</h1>
+    <h3 align="center">IV: Gravitational Wave Observatories</h2>
+    <h4 align="center">Work in Progress!</h3>
+
+    <header>
+        <nav>
+          <a href="index.html">Back to Home</a>
+          <a href="experiments.html">Fixed Target Experiments </a>
+          <a href="passive_det.html">Neutrino Observatories and DM Direct Detectors</a>
+          <a href="gw.html">Gravitational Wave and Axion Searches</a>
+        </nav>
+    </header>
+
+    <p>
+        Here we collect gravitational wave experiments. <b>Hover over experiment names for more information.</b>
+    </p>
+    <p>
+        Disclaimer: This table is maintained individually and supported by community feedback.
+        The information within is sourced only by public references and please, look to the source references for the most accurate representation of the aggragate information here.
+    </p>
+    <input type="text" id="search" placeholder="Search experiments...">
+
+    <table id="experimentTable">
+        <thead>
+            <tr id="tableHeader"></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script type="text/javascript" language="javascript" src="jquery-1.8.2.min.js"></script>        
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $.getJSON("data/gw.json")
+                .done(function(data) {
+                    console.log("JSON loaded successfully:", data); // Debugging
+                    const fieldTypes = data.field_types;
+                    delete data.field_types;
+
+                    // Get all keys from fieldTypes and remove the duplicate experiment name if it exists.
+                    let columns = Object.keys(fieldTypes);//.filter(col => col.toLowerCase() !== "experiment name");
+
+                    // Build the header row: first column for the experiment name,
+                    // then one column for each field in the filtered list.
+                    let headerRow = $("#tableHeader");
+                    headerRow.append(`<th onclick="sortTable(0)">Experiment Name</th>`);
+                    columns.forEach((col, index) => {
+                        if (col === "Notes") return;
+                        headerRow.append(`<th onclick="sortTable(${index + 1})">${col}</th>`);
+                    });
+
+                    // Populate the table body with data.
+                    let tableBody = $("#experimentTable tbody");
+                    Object.entries(data).forEach(([experiment, details]) => {
+
+                        // Row colors
+                        let status = details["Status"] || "";
+                        let rowColor = "";
+                        if (status === "Running") {
+                            rowColor = ' style="background-color: rgba(0, 128, 0, 0.2);"'
+                        } else if (status === "Future") {
+                            rowColor = ' style="background-color: rgba(255, 255, 0, 0.2)"';
+                        }
+
+                        // Get the "Notes" field if it exists.
+                        let notes = details["Notes"] || "";
+
+                        // Build tooltip
+                        let row = `<tr${rowColor}>
+                            <td class="experiment-name">
+                                ${experiment}
+                                ${notes ? `<span class="tooltip">${notes}</span>` : ""}
+                            </td>`;
+
+                        columns.forEach(col => {
+
+                            if (col === "Notes") return;
+                            
+                            // Add hyperlinking for references
+                            let cellData = details[col] || "";
+                            if (col === "Reference" && cellData) {
+                                let refs = cellData.split(",").map(ref => {
+                                    let trimmedRef = ref.trim();
+                                    return `<a href="${trimmedRef}" target="_blank">${trimmedRef}</a>`;
+                                });
+                                cellData = refs.join(", ");
+                            }
+                            
+                            row += `<td>${cellData}</td>`;
+                        });
+                        row += "</tr>";
+                        tableBody.append(row);
+                    });
+
+                    // Search filter functionality
+                    $("#search").on("keyup", function() {
+                        let value = $(this).val().toLowerCase();
+                        $("#experimentTable tbody tr").each(function() {
+                            let rowText = $(this).text().toLowerCase();
+                            $(this).toggle(rowText.includes(value));
+                        });
+                    });
+                })
+                .fail(function(jqxhr, textStatus, error) {
+                    console.error("Error loading JSON:", textStatus, error);
+                });
+        });
+
+        function sortTable(n) {
+            let table = document.getElementById("experimentTable");
+            let rows, switching, i, x, y, shouldSwitch, dir = "asc", switchcount = 0;
+            switching = true;
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+                    if ((dir === "asc" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) ||
+                        (dir === "desc" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount++;
+                } else if (switchcount === 0 && dir === "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
