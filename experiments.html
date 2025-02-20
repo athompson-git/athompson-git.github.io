@@ -78,6 +78,10 @@
     <script type="text/javascript" language="javascript" src="jquery-1.8.2.min.js"></script>        
 
     <script type="text/javascript">
+        let visible_columns = ["Source(s)", "Beam Particle", "Beam Energy (GeV)", "POT", "Baseline (m)",
+                                            "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
+                                            "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Anomalies?"];
+        
         $(document).ready(function(){
             $.getJSON("data/experiments.json")
                 .done(function(data) {
@@ -94,16 +98,14 @@
                     headerRow.append(`<th onclick="sortTable(0)">Experiment Name</th>`);
                     columns.forEach((col, index) => {
                         // Skip unneeded columns
-                        if (col === "Notes") return;
-                        if (col === "Class") return;
-                        if (col === "InspireLink") return;
+                        if (!visible_columns.includes(col)) return;
+                        //if (col === "Notes") return;
+                        //if (col === "Class") return;
+                        //if (col === "InspireLink") return;
                         headerRow.append(`<th onclick="sortTable(${index + 1})">${col}</th>`);
                     });
 
                     // Populate the table body with data.
-                    let visible_columns = ["Source(s)", "Beam Particle", "Beam Energy (GeV)", "POT", "Baseline (m)",
-                                            "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
-                                            "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Anomalies?"]
                     let tableBody = $("#experimentTable tbody");
                     Object.entries(data).forEach(([experiment, details]) => {
 
