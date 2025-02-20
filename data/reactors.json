@@ -169,6 +169,25 @@
         "Anomalies?": "",
         "Notes": ""
     },
+    "NEON": {
+        "Class": "Reactor",
+        "Source(s)": "Hanbit",
+        "Reactor Power": "2.8 GW",
+        "Reactor ON Exposure (kg-days)": "1214",
+        "Reactor OFF Exposure (kg-days)": "1422",
+        "Baseline (m)": "23.7",
+        "Detector Tech": "",
+        "Detector Material": "NaI(Tl)",
+        "Detector Mass (t)": "16.7e-3",
+        "Fiducial Mass (t)": "",
+        "Dector Volume (m^3)": "",
+        "Energy Threshold": "~1 keV",
+        "Location": "Hanbit, South Korea",
+        "Status": "Running",
+        "Reference": "https://arxiv.org/abs/2407.16194, https://inspirehep.net/experiments/2865768",
+        "Anomalies?": "",
+        "Notes": ""
+    },
     "field_types": {
         "Class": "",
         "Source(s)": "",
