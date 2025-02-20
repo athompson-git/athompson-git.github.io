@@ -61,6 +61,16 @@
       word-wrap: break-word;
       padding-left: 0;
     }
+
+    .logo-container {
+      text-align: left; /* left-justify the logo */
+      width: max(350px, 10vw)
+    }
+    
+    .logo-container img.logo {
+      width: max(350px, 10vw);
+      height: auto;
+    }
   }
   
   header h1 {
