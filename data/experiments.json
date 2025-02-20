@@ -314,7 +314,7 @@
         "Energy Threshold": "",
         "Location": "ORNL",
         "Status": "Running",
-        "Reference": "https://arxiv.org/abs/2003.10630",
+        "Reference": "https://arxiv.org/abs/2003.10630, https://arxiv.org/abs/2204.04575",
         "Anomalies?": "",
         "Notes": "Hg target",
         "InspireLink": ""
@@ -334,10 +334,30 @@
         "Energy Threshold": "",
         "Location": "ORNL",
         "Status": "Running",
-        "Reference": "https://arxiv.org/abs/1708.01294",
+        "Reference": "https://arxiv.org/abs/1708.01294, https://arxiv.org/abs/2204.04575",
         "Anomalies?": "",
         "Notes": "Hg target",
-        "InspireLink": ""
+        "InspireLink": "https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=collaboration%3ACOHERENT"
+    },
+    "COHERENT-Ge": {
+        "Class": "Beam Target",
+        "Source(s)": "SNS",
+        "Beam Particle": "proton",
+        "Beam Energy (GeV)": "1",
+        "POT": "",
+        "Baseline (m)": "",
+        "Detector Tech": "Scintillator",
+        "Detector Material": "Ge",
+        "Detector Mass (t)": "0.0176",
+        "Fiducial Mass (t)": "",
+        "Dector Volume (m^3)": "",
+        "Energy Threshold": "1.5 keV",
+        "Location": "ORNL",
+        "Status": "Running",
+        "Reference": "https://arxiv.org/abs/2406.13806, https://arxiv.org/abs/2204.04575",
+        "Anomalies?": "",
+        "Notes": "Hg target",
+        "InspireLink": "https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=collaboration%3ACOHERENT"
     },
     "COHERENT-NaI": {
         "Class": "Beam Target",
@@ -354,10 +374,10 @@
         "Energy Threshold": "",
         "Location": "ORNL",
         "Status": "Running",
-        "Reference": "",
+        "Reference": "https://arxiv.org/abs/2204.04575",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": ""
+        "InspireLink": "https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=collaboration%3ACOHERENT"
     },
     "MiniBooNE": {
         "Class": "Beam Target",
