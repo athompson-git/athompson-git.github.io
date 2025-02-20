@@ -58,7 +58,7 @@
     "MINER": {
         "Class": "Reactor",
         "Source(s)": "NSC Research Reactor",
-        "Reactor Power": "",
+        "Reactor Power": "1 MW",
         "Reactor ON Exposure (kg-days)": "",
         "Reactor OFF Exposure (kg-days)": "",
         "Baseline (m)": "4",
