@@ -397,7 +397,7 @@
         "Reference": "https://inspirehep.net/experiments/1110641?ui-citation-summary=true",
         "Anomalies?": "Yes",
         "Notes": "The MiniBooNE experiment (using the 8 GeV proton booster neutrino beam [BNB] on the beryllium target) aimed to search for oscillations between muon-neutrinos and electron-neutrinos for neutrino mass differences greater than 0.01 eV^2, and for mixing parameters less than about 0.05. The experiment will also look for a muon-neutrino disappearance signal. If neutrino oscillations are observed, the experiment will be able to measure the mass difference and the mixing angle and search for CP violation in the lepton sector.",
-        "InspireLink": ""
+        "InspireLink": "https://inspirehep.net/experiments/1110641"
     },
     "MicroBooNE": {
         "Class": "Beam Target",
@@ -417,7 +417,7 @@
         "Reference": "https://inspirehep.net/experiments/1108254?ui-citation-summary=true",
         "Anomalies?": "",
         "Notes": "BNB / Beryllium target",
-        "InspireLink": ""
+        "InspireLink": "https://inspirehep.net/experiments/1108254"
     },
     "KARMEN": {
         "Class": "Beam Target",
@@ -432,12 +432,12 @@
         "Fiducial Mass (t)": "56",
         "Detector Volume (m^3)": "3.5 x 4 x 4 m^3",
         "Energy Threshold": "",
-        "Location": "",
-        "Status": "",
-        "Reference": "",
+        "Location": "Rutherford Appleton Laboratory, England.",
+        "Status": "Complete",
+        "Reference": "https://inspirehep.net/literature/386892",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": ""
+        "InspireLink": "https://inspirehep.net/experiments/1110653"
     },
     "LSND": {
         "Class": "Beam Target",
