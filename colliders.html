@@ -8,7 +8,6 @@
     <!-- Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
- 
     <link rel="stylesheet" href="table_style.css">
 
 </head>
@@ -21,7 +20,8 @@
         <img src="images/logos/xdb.png" alt="xDB Logo" class="logo">
         <h1>xDB: The Particle Physics Experiments Database</h1>
     </header>
-    <h3 align="center">II: Neutrino Observatories, Dark Matter Direct Detectors, and Other Passive Particle Detectors</h2>
+    
+    <h3 align="center">IV: Gravitational Wave Observatories</h2>
     <h4 align="center">Work in Progress!</h3>
 
     <header>
@@ -36,7 +36,7 @@
     </header>
 
     <p>
-        Here we collect experiments that utilize large volumes of instrumented detector to capture neutrinos or dark matter. <b>Hover over experiment names for more information.</b>
+        Here we collect gravitational wave experiments. <b>Hover over experiment names for more information.</b>
     </p>
     <p>
         Disclaimer: This table is maintained individually and supported by community feedback.
@@ -51,9 +51,11 @@
         <tbody></tbody>
     </table>
 
+    <script type="text/javascript" language="javascript" src="jquery-1.8.2.min.js"></script>        
+
     <script type="text/javascript">
         $(document).ready(function(){
-            $.getJSON("data/passive_det.json")
+            $.getJSON("data/colliders.json")
                 .done(function(data) {
                     console.log("JSON loaded successfully:", data); // Debugging
                     const fieldTypes = data.field_types;
@@ -67,7 +69,6 @@
                     let headerRow = $("#tableHeader");
                     headerRow.append(`<th onclick="sortTable(0)">Experiment Name</th>`);
                     columns.forEach((col, index) => {
-                        // Skip unneeded rows
                         if (col === "Notes") return;
                         if (col === "InspireLink") return;
                         headerRow.append(`<th onclick="sortTable(${index + 1})">${col}</th>`);
@@ -98,7 +99,6 @@
 
                         columns.forEach(col => {
 
-                            // Skip unneeded rows
                             if (col === "Notes") return;
                             if (col === "InspireLink") return;
                             
@@ -163,5 +163,3 @@
 </body>
 
 </html>
-
-
