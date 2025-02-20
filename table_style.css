@@ -18,22 +18,40 @@
   
   /* Header styling */
   header {
-    position: relative;
-    text-align: center;
-    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     padding: 10px 0;
   }
-
-  header img.logo {
-    position: absolute;
-    left: 10px; /* adjust the left margin as needed */
-    top: 50%;
-    transform: translateY(-50%);
-    height: 60px; /* adjust the logo size as needed */
+  
+  .logo-container,
+  .spacer {
+    flex: 0 0 max(250px, 10vw); /* fixed width for logo and spacer */
+  }
+  
+  .logo-container {
+    text-align: left; /* left-justify the logo */
+  }
+  
+  .logo-container img.logo {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .title-container {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .title-container h1 {
+    margin: 0;
+    word-wrap: break-word;
   }
   
   header h1 {
     margin: 0;
+    flex: 1 1 auto;
     font-size: 1.8em;
   }
   
