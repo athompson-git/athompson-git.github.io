@@ -90,7 +90,9 @@
                     let headerRow = $("#tableHeader");
                     headerRow.append(`<th onclick="sortTable(0)">Experiment Name</th>`);
                     columns.forEach((col, index) => {
+                        // Skip unneeded columns
                         if (col === "Notes") return;
+                        if (col === "Class") return;
                         headerRow.append(`<th onclick="sortTable(${index + 1})">${col}</th>`);
                     });
 
