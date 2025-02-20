@@ -24,7 +24,7 @@
         "Source(s)": "CERN SPS",
         "Beam Particle": "proton",
         "Beam Energy (GeV)": 450.0,
-        "POT (Planned/Largest)": 4.1e19,
+        "POT (Planned/Largest)": "4.1e19",
         "Baseline (m)": "625",
         "Detector Tech": "Tracking Calorimeter",
         "Detector Material": "Mixed",
@@ -435,7 +435,7 @@
         "Location": "Fermilab",
         "Status": "Running",
         "Reference": "https://inspirehep.net/experiments/1108254?ui-citation-summary=true",
-        "Anomalies?": "",
+        "Anomalies?": "Yes",
         "Notes": "BNB / Beryllium target",
         "InspireLink": "https://inspirehep.net/experiments/1108254"
     },
