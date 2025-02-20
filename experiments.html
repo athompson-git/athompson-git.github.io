@@ -99,9 +99,6 @@
                     columns.forEach((col, index) => {
                         // Skip unneeded columns
                         if (!visible_columns.includes(col)) return;
-                        //if (col === "Notes") return;
-                        //if (col === "Class") return;
-                        //if (col === "InspireLink") return;
                         headerRow.append(`<th onclick="sortTable(${index + 1})">${col}</th>`);
                     });
 
@@ -125,13 +122,14 @@
                         let inspireLink = details["InspireLink"] || "";
                         let inspireAnchor = "";
                         if (inspireLink.trim() !== "") {
-                            inspireAnchor = `<a href="${inspireLink}" target="_blank">[iN]</a>`;
+                            inspireAnchor = `<a href="${inspireLink}" target="_blank" style="color: blue; text-decoration: underline;">[iN]</a>`;
                         }
 
                         // Build tooltip
                         let row = `<tr${rowColor}>
                             <td class="experiment-name">
                                 ${experiment}
+                                ${inspireAnchor}
                                 ${notes ? `<span class="tooltip">${notes}</span>` : ""}
                             </td>`;
 
@@ -139,9 +137,6 @@
 
                             // Skip unneeded rows
                             if (!visible_columns.includes(col)) return;
-                            //if (col === "Notes") return;
-                            //if (col === "Class") return;
-                            //if (col === "InspireLink") return;
                             
                             // Add hyperlinking for references
                             let cellData = details[col] || "";
