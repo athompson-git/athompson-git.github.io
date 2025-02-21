@@ -1,21 +1,23 @@
 {
     "JUNO": {
         "Class": "Neutrino Observatory",
-        "Reactor Power": "",
+        "Source(s)": "Yangjiang, Taishan, Daya Bay, Huizhou",
+        "Reactor Power": "2.9 GW, 4.6 GW, 17.4 GW, 17.4 GW",
         "Reactor ON Exposure (kg-days)": "",
         "Reactor OFF Exposure (kg-days)": "",
-        "Baseline (m)": "",
-        "Detector Tech": "",
-        "Detector Material": "Liquid Scintillator",
-        "Detector Mass (t)": "20000",
-        "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
+        "Baseline (m)": "52.5e3, 52.5e3, 215e3, 265e3",
+        "Detector Tech": "PMTs and Liquid Scintillator",
+        "Detector Material": "linear alkyl benzene, PPO",
+        "Detector Mass (t)": "",
+        "Fiducial Mass (t)": "20000",
+        "Dector Volume (m^3)": "35.4 m diameter sphere",
         "Energy Threshold": "",
         "Location": "",
         "Status": "",
         "Reference": "https://inspirehep.net/literature/1384111, https://inspirehep.net/literature/1856344",
         "Anomalies?": "",
-        "Notes": "The Jiangmen Underground Neutrino Observatory (JUNO) is a multipurpose neutrino experiment designed to determine neutrino mass hierarchy and precisely measure oscillation parametersby detecting reactor neutrinos from the Yangjiang and Taishan Nuclear Power Plants, observe supernova neutrinos, study the atmospheric, solar neutrinos and geo-neutrinos, and perform exotic searches, with a 20-thousand-ton liquid scintillator detector of unprecedented 3% energy resolution (at 1 MeV) at 700-meter deep underground."
+        "Notes": "The Jiangmen Underground Neutrino Observatory (JUNO) is a multipurpose neutrino experiment designed to determine neutrino mass hierarchy and precisely measure oscillation parametersby detecting reactor neutrinos from the Yangjiang and Taishan Nuclear Power Plants, observe supernova neutrinos, study the atmospheric, solar neutrinos and geo-neutrinos, and perform exotic searches, with a 20-thousand-ton liquid scintillator detector of unprecedented 3% energy resolution (at 1 MeV) at 700-meter deep underground.",
+        "InspireLink": "https://inspirehep.net/experiments/1288789"
     },
     "DAYA-BAY": {
         "Class": "Reactor",
@@ -34,7 +36,8 @@
         "Status": "",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "Neutrino-4": {
         "Class": "Reactor",
@@ -53,7 +56,8 @@
         "Status": "",
         "Reference": "",
         "Anomalies?": "Yes",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "MINER": {
         "Class": "Reactor",
@@ -72,7 +76,8 @@
         "Status": "",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "CONNIE": {
         "Class": "Reactor",
@@ -91,7 +96,8 @@
         "Status": "Future",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "CONUS": {
         "Class": "Reactor",
@@ -110,7 +116,8 @@
         "Status": "Complete",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "CONUS+": {
         "Class": "Reactor",
@@ -129,7 +136,8 @@
         "Status": "Running",
         "Reference": "https://arxiv.org/abs/2501.05206",
         "Anomalies?": "",
-        "Notes": "CONUS+, the upgrade to CONUS operating by the KKL power reactor. Claimed the first statistically significant (3.7sigma) CEvNS measurement in 2025."
+        "Notes": "CONUS+, the upgrade to CONUS operating by the KKL power reactor. Claimed the first statistically significant (3.7sigma) CEvNS measurement in 2025.",
+        "InspireLink": ""
     },
     "nucleus": {
         "Class": "Reactor",
@@ -148,7 +156,8 @@
         "Status": "Future",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "TEXONO": {
         "Class": "Reactor",
@@ -167,7 +176,8 @@
         "Status": "Running",
         "Reference": "https://inspirehep.net/experiments/1110606",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "NEON": {
         "Class": "Reactor",
@@ -186,7 +196,8 @@
         "Status": "Running",
         "Reference": "https://arxiv.org/abs/2407.16194, https://inspirehep.net/experiments/2865768",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     },
     "field_types": {
         "Class": "",
@@ -205,6 +216,7 @@
         "Status": "",
         "Reference": "",
         "Anomalies?": "",
-        "Notes": ""
+        "Notes": "",
+        "InspireLink": ""
     }
 }
