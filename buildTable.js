@@ -3,7 +3,7 @@
 // visible_columns: Array of columns to display,
 // jsonFile: The JSON data file URL,
 // tableId: The id of the table element to build (it must contain a <thead> with a <tr> and a <tbody>)
-function buildTable(visible_columns, jsonFile, tableId) {
+function buildTable(visible_columns, jsonFile, tableId, titleId) {
   $(document).ready(function(){
     $.getJSON(jsonFile)
       .done(function(data) {
@@ -82,12 +82,27 @@ function buildTable(visible_columns, jsonFile, tableId) {
         });
   
         // Setup search functionality (if present)
+        // $("#search").on("keyup", function() {
+        //   let value = $(this).val().toLowerCase();
+        //   $("#" + tableId + " tbody tr").each(function() {
+        //     let rowText = $(this).text().toLowerCase();
+        //     $(this).toggle(rowText.includes(value));
+        //   });
+        // });
         $("#search").on("keyup", function() {
           let value = $(this).val().toLowerCase();
           $("#" + tableId + " tbody tr").each(function() {
             let rowText = $(this).text().toLowerCase();
             $(this).toggle(rowText.includes(value));
           });
+          // If no rows are visible, hide the header; otherwise, show it.
+          if ($("#" + tableId + " tbody tr:visible").length === 0) {
+            $("#" + tableId + " thead").hide();
+            $("#" + titleId).hide();
+          } else {
+            $("#" + tableId + " thead").show();
+            $("#" + titleId).show();
+          }
         });
       })
       .fail(function(jqxhr, textStatus, error) {

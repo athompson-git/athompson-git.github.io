@@ -58,7 +58,7 @@
   </p>
   <input type="text" id="search" placeholder="Search experiments...">
 
-  <h2 align="center">I: Fixed Target Experiments</h2>
+  <h2 id="tableTitle_ft" align="center">I: Fixed Target Experiments</h2>
   <div class="table-container">
     <table id="fixedTargetTable">
       <thead>
@@ -68,7 +68,7 @@
     </table>
   </div>
   
-  <h2 align="center">II: Dark Matter Direct Detectors and Neutrino Observatories</h2>
+  <h2 id="tableTitle_dd" align="center">II: Dark Matter Direct Detectors and Neutrino Observatories</h2>
   <div class="table-container">
     <table id="ddTable">
       <thead>
@@ -78,7 +78,7 @@
     </table>
   </div>
 
-  <h2 align="center">III: Reactor Experiments</h2>
+  <h2 id="tableTitle_reactors" align="center">III: Reactor Experiments</h2>
   <div class="table-container">
     <table id="reactorTable">
       <thead>
@@ -88,7 +88,7 @@
     </table>
   </div>
 
-  <h2 align="center">IV: Gravitational Wave and Haloscope Experiments</h2>
+  <h2 id="tableTitle_gw" align="center">IV: Gravitational Wave and Haloscope Experiments</h2>
   <div class="table-container">
     <table id="gwTable">
       <thead>
@@ -98,7 +98,7 @@
     </table>
   </div>
 
-  <h2 align="center">V: Collider Experiments and Forward Facilities</h2>
+  <h2 id="tableTitle_collider" align="center">V: Collider Experiments and Forward Facilities</h2>
   <div class="table-container">
     <table id="colliderTable">
       <thead>
@@ -115,26 +115,26 @@
     let visible_columns_ft = ["Source(s)", "Beam Particle", "Beam Energy (GeV)", "POT (Planned/Largest)", "Baseline (m)",
                            "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
                            "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Anomalies?"];
-    buildTable(visible_columns_ft, "data/experiments.json", "fixedTargetTable");
+    buildTable(visible_columns_ft, "data/experiments.json", "fixedTargetTable", "tableTitle_ft");
     
     // Build second table for direct detection experiments
     let visible_columns_dd = ["Source(s)", "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
                            "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Anomalies?"];
-    buildTable(visible_columns_dd, "data/passive_det.json", "ddTable");
+    buildTable(visible_columns_dd, "data/passive_det.json", "ddTable", "tableTitle_dd");
 
     // Build second table for reactor experiments
-    let visible_columns_reactors = ["Source(s)", "Baseline (m)",
+    let visible_columns_reactors = ["Source(s)", "Reactor Power", "Reactor ON Exposure (kg-days)", "Reactor OFF Exposure (kg-days)", "Baseline (m)",
                            "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
                            "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Anomalies?"];
-    buildTable(visible_columns_reactors, "data/reactors.json", "reactorTable");
+    buildTable(visible_columns_reactors, "data/reactors.json", "reactorTable", "tableTitle_reactors");
 
     let visible_columns_gw = ["Class", "Source(s)", "Baseline (m)", "Detector Tech", "Frequency Band",
                                 "Location", "Status", "Reference", "Anomalies?"];
-    buildTable(visible_columns_gw, "data/gw.json", "gwTable");
+    buildTable(visible_columns_gw, "data/gw.json", "gwTable", "tableTitle_gw");
 
     let visible_columns_col = ["Collider", "Collider Geometry", "Beam Particles", "CoM Energy √s (TeV)", "Luminosity Collected",
                                 "Detector Rapidity Coverage", "Location", "Status", "Reference", "Anomalies?"];
-    buildTable(visible_columns_col, "data/colliders.json", "colliderTable");
+    buildTable(visible_columns_col, "data/colliders.json", "colliderTable", "tableTitle_collider");
 
 
   </script>
