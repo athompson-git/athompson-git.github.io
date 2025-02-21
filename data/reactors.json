@@ -15,6 +15,7 @@
         "Location": "",
         "Status": "",
         "Reference": "https://inspirehep.net/literature/1384111, https://inspirehep.net/literature/1856344",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "The Jiangmen Underground Neutrino Observatory (JUNO) is a multipurpose neutrino experiment designed to determine neutrino mass hierarchy and precisely measure oscillation parametersby detecting reactor neutrinos from the Yangjiang and Taishan Nuclear Power Plants, observe supernova neutrinos, study the atmospheric, solar neutrinos and geo-neutrinos, and perform exotic searches, with a 20-thousand-ton liquid scintillator detector of unprecedented 3% energy resolution (at 1 MeV) at 700-meter deep underground.",
         "InspireLink": "https://inspirehep.net/experiments/1288789"
@@ -35,6 +36,7 @@
         "Location": "",
         "Status": "",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -55,6 +57,7 @@
         "Location": "",
         "Status": "",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "Yes",
         "Notes": "",
         "InspireLink": ""
@@ -75,6 +78,7 @@
         "Location": "",
         "Status": "",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -95,6 +99,7 @@
         "Location": "",
         "Status": "Future",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -115,6 +120,7 @@
         "Location": "Brokdorf, Germany (KBR)",
         "Status": "Complete",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -135,6 +141,7 @@
         "Location": "Leibstadt, Switzerland (KKL)",
         "Status": "Running",
         "Reference": "https://arxiv.org/abs/2501.05206",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "CONUS+, the upgrade to CONUS operating by the KKL power reactor. Claimed the first statistically significant (3.7sigma) CEvNS measurement in 2025.",
         "InspireLink": ""
@@ -155,6 +162,7 @@
         "Location": "",
         "Status": "Future",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -175,6 +183,7 @@
         "Location": "",
         "Status": "Running",
         "Reference": "https://inspirehep.net/experiments/1110606",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -194,10 +203,11 @@
         "Energy Threshold": "~1 keV",
         "Location": "Hanbit, South Korea",
         "Status": "Running",
-        "Reference": "https://arxiv.org/abs/2407.16194, https://inspirehep.net/experiments/2865768",
+        "Reference": "https://arxiv.org/abs/2407.16194",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": ""
+        "InspireLink": "https://inspirehep.net/experiments/2865768"
     },
     "field_types": {
         "Class": "",
@@ -215,6 +225,7 @@
         "Location": "",
         "Status": "",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""

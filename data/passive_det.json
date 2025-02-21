@@ -11,6 +11,7 @@
         "Location": "",
         "Status": "",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -27,6 +28,7 @@
         "Location": "",
         "Status": "Running",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -43,6 +45,7 @@
         "Location": "",
         "Status": "",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -59,6 +62,7 @@
         "Location": "",
         "Status": "Running",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -75,6 +79,7 @@
         "Location": "SLAC",
         "Status": "",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -91,6 +96,7 @@
         "Location": "",
         "Status": "",
         "Reference": "https://arxiv.org/abs/1703.09144",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -107,6 +113,7 @@
         "Location": "",
         "Status": "",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -123,6 +130,7 @@
         "Location": "",
         "Status": "Future",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -139,6 +147,7 @@
         "Location": "",
         "Status": "Future",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -155,6 +164,7 @@
         "Location": "",
         "Status": "",
         "Reference": "https://arxiv.org/abs/2103.04755",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "Measurement on upper bound of neutrino mass",
         "InspireLink": ""
@@ -171,6 +181,7 @@
         "Location": "",
         "Status": "",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "Yes",
         "Notes": "",
         "InspireLink": ""
@@ -187,6 +198,7 @@
         "Location": "Capo Passero, Italy",
         "Status": "Running",
         "Reference": "https://iopscience.iop.org/article/10.1088/0954-3899/43/8/084001",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -203,6 +215,7 @@
         "Location": "Toulon, France",
         "Status": "Running",
         "Reference": "https://iopscience.iop.org/article/10.1088/0954-3899/43/8/084001 https://arxiv.org/pdf/2501.11336",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -219,6 +232,7 @@
         "Location": "Mediterranean",
         "Status": "Complete",
         "Reference": "https://inspirehep.net/experiments/1110619?ui-citation-summary=true",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "Astronomy With a Neutrino Telescope and Abyss Environmental Research. 2006-2022",
         "InspireLink": ""
@@ -235,6 +249,7 @@
         "Location": "South Pole",
         "Status": "Complete",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "AMANDA: Antarctic Muon and Neutrino Detector; AMANDA is a high-energy neutrino observatory which uses the deep South Pole ice as a target and a track-sensitive, transparent detecting medium. Upward moving neutrinos, having passed through the Earth, interact with ice and produce muons. The muons generate Cerenkov radiation which can be recorded by photomultiplier tubes (PMT). The tubes are placed in vertical shafts melted into the icecap to the depth of 1720 m. The data acquisition is handled in a counting facility at the surface. As of July 96, a total of 173 operating PMTs has been installed. The plan is to have at least 800 optical modules operating before the end of the century. Under construction (July 96).",
         "InspireLink": ""
@@ -251,6 +266,7 @@
         "Location": "South Pole",
         "Status": "Running",
         "Reference": "https://inspirehep.net/experiments/1108514?ui-citation-summary=true",
+        "Open Data": "",
         "Anomalies?": "Yes",
         "Notes": "IceCube is a one-cubic-kilometer international high-energy neutrino observatory to be built and installed in the clear deep ice below the South Pole Station. IceCube will open unexplored bands for astronomy, including the PeV (1015 eV) energy region, where the universe is opaque, to high-energy gamma rays originating from beyond the edge of our own galaxy, and where cosmic rays do not carry directional information because of their deflection by magnetic fields. The instrument may, for example, answer the question of whether the fascinating multi-TeV photons, originating in the Crab supernova remnant and near the supermassive black holes of active galaxies, are of hadronic or electromagnetic origin. IceCube will provide a totally novel viewpoint on the multi-messenger astronomy of gamma ray bursts, which have been identified as a possible source of the highest energy particles in nature. IceCube also occupies a unique place in the multi-prong attack on the particle nature of dark matter, with unmatched sensitivity to cold dark matter particles approaching TeV masses. As a particle physics experiment with the capacity to detect neutrinos with energies far beyond those produced at accelerators, IceCube will join the race to discover supersymmetric particles and the topological defects created in grand unified phase transitions in the early universe. The detection of cosmic neutrino beams would open the opportunity to study neutrino oscillations over Megaparsec baselines.",
         "InspireLink": ""
@@ -267,6 +283,7 @@
         "Location": "South Pole",
         "Status": "Running",
         "Reference": "https://arxiv.org/pdf/2008.04323",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "Bigger and icy-er",
         "InspireLink": ""
@@ -283,6 +300,7 @@
         "Location": "LNGS",
         "Status": "Complete",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "Yes",
         "Notes": "",
         "InspireLink": ""
@@ -299,6 +317,7 @@
         "Location": "",
         "Status": "Complete",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "Yes",
         "Notes": "",
         "InspireLink": ""
@@ -315,6 +334,7 @@
         "Location": "Mount Ikeno, Japan",
         "Status": "Complete",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -331,6 +351,7 @@
         "Location": "Tochibora mine, Japan",
         "Status": "Future",
         "Reference": "https://inspirehep.net/experiments/1340261?ui-citation-summary=true",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -347,6 +368,7 @@
         "Location": "Gran Sasso, Italy",
         "Status": "Running",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -363,6 +385,7 @@
         "Location": "",
         "Status": "",
         "Reference": "https://inspirehep.net/literature/1384111, https://inspirehep.net/literature/1856344",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "The Jiangmen Underground Neutrino Observatory (JUNO) is a multipurpose neutrino experiment designed to determine neutrino mass hierarchy and precisely measure oscillation parametersby detecting reactor neutrinos from the Yangjiang and Taishan Nuclear Power Plants, observe supernova neutrinos, study the atmospheric, solar neutrinos and geo-neutrinos, and perform exotic searches, with a 20-thousand-ton liquid scintillator detector of unprecedented 3% energy resolution (at 1 MeV) at 700-meter deep underground.",
         "InspireLink": ""
@@ -379,6 +402,7 @@
         "Location": "SURF, South Dakota",
         "Status": "Future",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
         "InspireLink": ""
@@ -395,6 +419,7 @@
         "Location": "Yangyang Underground Laboratory (Y2L) in South Korea",
         "Status": "Running",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "The COSINE-100 dark matter search experiment has started taking physics data with the goal of performing an independent measurement of the annual modulation signal observed by DAMA/LIBRA. A muon detector was constructed by using plastic scintillator panels in the outermost layer of the shield surrounding the COSINE-100 detector. It is used to detect cosmic ray muons in order to understand the impact of the muon annual modulation on dark matter analysis. Assembly and initial performance test of each module have been performed at a ground laboratory. The installation of the detector in Yangyang Underground Laboratory (Y2L) was completed in the summer of 2016. Using three months of data, the muon underground flux was measured to be 328 ±± 1(stat.)±± 10(syst.) muons/m22/day. In this report, the assembly of the muon detector and the results from the analysis are presented.",
         "InspireLink": "https://inspirehep.net/experiments/1641535"
@@ -411,6 +436,7 @@
         "Location": "",
         "Status": "Running",
         "Reference": "https://inspirehep.net/literature/1791139",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "Even though COSINE-100 will result interesting outputs for DAMA/LIBRA's annual modulation signal, it is necessary to develop low background NaI(Tl) crystals. It is mainly due to crystal background of COSINE-100 that are 2-3 times higher than DAMA/LIBRA. This may result not to explain all the possibilities to interpret the modulation signals. We are currently developing ultra low background NaI(Tl) crystals and eventually launch next phase COSINE-200 experiment. Basic strategy of the COSINE-200 experiment is to do every process related with low background NaI(Tl) detectors by ourselves that include raw powder purification, crystal growing, and detector assembly.",
         "InspireLink": "https://inspirehep.net/experiments/1791609"
@@ -427,6 +453,7 @@
         "Location": "Kamioka Mine",
         "Status": "",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "KamLAND is a large neutrino detector built in the Kamioka mine, under 2700 m.w.e. of rock. The neutrino detector/target is 1 kton of ultra pure liquid scintillator contained in a 13-m-diameter spherical balloon made of 135-micrometer-thick transparent nylon/EVOH (ethylene vinyl alcohol copolymer) composite fi lm. A network of Kevlar ropes supports and constrains the balloon. The liquid scintillator is 80% dodecane, 20% pseudocumene (1,2,4-trimethylbenzene), and 1.52 g/liter of PPO (2,5-diphenyloxazole) used as a fluor. A buffer mixture of dodecane and isoparaffin oils fills the volume b etween the balloon and the 18-m-diameter spherical stainless-steel containment vessel. The entire inner sur face of the vessel is covered by an array of a total of 1879 photomultiplier tubes (PMTs), 1325 of which ar e specially developed 17-in. and 554 of which are the old Kamiokande 20-in. devices. The total photocathode coverage is 34 %. The containment vessel is surrounded by a 3.2 kton water-Cherenkov detector. The data taking has been continuing since January 22, 2002.",
         "InspireLink": ""

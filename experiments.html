@@ -114,26 +114,26 @@
     // Build first table for fixed target experiments
     let visible_columns_ft = ["Source(s)", "Beam Particle", "Beam Energy (GeV)", "POT (Planned/Largest)", "Baseline (m)",
                            "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
-                           "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Anomalies?"];
+                           "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
     buildTable(visible_columns_ft, "data/experiments.json", "fixedTargetTable", "tableTitle_ft");
     
     // Build second table for direct detection experiments
     let visible_columns_dd = ["Source(s)", "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
-                           "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Anomalies?"];
+                           "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
     buildTable(visible_columns_dd, "data/passive_det.json", "ddTable", "tableTitle_dd");
 
     // Build second table for reactor experiments
     let visible_columns_reactors = ["Source(s)", "Reactor Power", "Reactor ON Exposure (kg-days)", "Reactor OFF Exposure (kg-days)", "Baseline (m)",
                            "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
-                           "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Anomalies?"];
+                           "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
     buildTable(visible_columns_reactors, "data/reactors.json", "reactorTable", "tableTitle_reactors");
 
     let visible_columns_gw = ["Class", "Source(s)", "Baseline (m)", "Detector Tech", "Frequency Band",
-                                "Location", "Status", "Reference", "Anomalies?"];
+                                "Location", "Status", "Reference", "Open Data", "Anomalies?"];
     buildTable(visible_columns_gw, "data/gw.json", "gwTable", "tableTitle_gw");
 
     let visible_columns_col = ["Collider", "Collider Geometry", "Beam Particles", "CoM Energy √s (TeV)", "Luminosity Collected",
-                                "Detector Rapidity Coverage", "Location", "Status", "Reference", "Anomalies?"];
+                                "Detector Rapidity Coverage", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
     buildTable(visible_columns_col, "data/colliders.json", "colliderTable", "tableTitle_collider");
 
 
@@ -181,8 +181,21 @@
   </p>
 
   <h2>About the data</h2>
+  <h4>Links to JSON:</h4>
   <p>
-    Link to JSON: <a href="data/experiments.json">experiments.json</a>
+    Fixed target: <a href="data/experiments.json">experiments.json</a>
+  </p>
+  <p>
+    DM Direct Detectors and Nu Observatories: <a href="data/passive_det.json">passive_det.json</a>
+  </p>
+  <p>
+    Reactors: <a href="data/reactors.json">reactors.json</a>
+  </p>
+  <p>
+    Gravitational Waves and Haloscopes: <a href="data/gw.json">gw.json</a>
+  </p>
+  <p>
+    Colliders: <a href="data/colliders.json">colliders.json</a>
   </p>
   <br><br>
 </body>

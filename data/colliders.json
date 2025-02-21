@@ -9,23 +9,27 @@
         "Location": "",
         "Status": "",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Known For": ""
     },
     "ALICE": {
         "Collider": "LHC",
         "Collider Geometry": "Circular",
-        "Beam Particles": "p-Pb, Pb-Pb",
-        "CoM Energy √s (TeV)": "5.02",
+        "Beam Particles": "p-Pb, Pb-Pb, p-p",
+        "CoM Energy √s (TeV)": "5.02, 2.76, 7, 13",
         "Luminosity Collected": "",
         "Detector Rapidity Coverage": "",
         "Location": "CERN",
         "Status": "Running",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "The ALICE (Proposed: Mar 1, 1993, Approved: Feb 6, 1997, Started: Nov 23, 2009, Still Running) Collaboration has built a dedicated detector to exploit the unique physics potential of nucleus-nucleus collisions at LHC energies. Our aim is to study the physics of strongly interacting matter at the highest energy densities reached so far in the laboratory. In such condition, an extreme phase of matter - called the quark-gluon plasma - is formed. Our universe is thought to have been in such a primordial state for the first few millionths of a second after the Big Bang. The properties of such a phase are key issues for Quantum Chromo Dynamics, the understanding of confinement-deconfinement and chiral phase transitions. For this purpose, we are carrying out a comprehensive study of the hadrons, electrons, muons and photons produced in the collisions of heavy nuclei. ALICE is also studying proton-proton and proton-nucleus collisions both as a comparison with nucleus-nucleus collisions and in their own right.",
-        "InspireLink": "https://inspirehep.net/experiments/1110642"
+        "InspireLink": "https://inspirehep.net/experiments/1110642",
+        "Known For": ""
     },
     "LHCb": {
         "Collider": "LHC",
@@ -37,9 +41,11 @@
         "Location": "CERN",
         "Status": "Running",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": "https://inspirehep.net/experiments/1110643"
+        "InspireLink": "https://inspirehep.net/experiments/1110643",
+        "Known For": "Higgs"
     },
     "ATLAS": {
         "Collider": "LHC",
@@ -51,9 +57,11 @@
         "Location": "CERN",
         "Status": "Running",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": "https://inspirehep.net/experiments/1108541"
+        "InspireLink": "https://inspirehep.net/experiments/1108541",
+        "Known For": "Higgs"
     },
     "CMS": {
         "Collider": "LHC",
@@ -65,9 +73,11 @@
         "Location": "CERN",
         "Status": "Running",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "(Proposed: Oct 1, 1992, Approved: Jan 31, 1996, Started: Nov 23, 2009, Completed: 9999). The 27-km Large Hadron Collider (LHC) is the largest and most powerful particle accelerator ever built. It accelerates protons to nearly the velocity of light -- in clockwise and anti-clockwise directions -- and then collides them at four locations around its ring. At these points, the energy of the particle collisions gets transformed into mass, spraying particles in all directions. The Compact Muon Solenoid (or CMS) detector sits at one of these four collision points. It is a general-purpose detector; that is, it is designed to observe any new physics phenomena that the LHC might reveal. CMS acts as a giant, high-speed camera, taking 3D “photographs” of particle collisions from all directions up to 40 million times each second. Although most of the particles produced in the collisions are “unstable”, they transform rapidly into stable particles that can be detected by CMS. By identifying (nearly) all the stable particles produced in each collision, measuring their momenta and energies, and then piecing together the information of all these particles like putting together the pieces of a puzzle, the detector can recreate an “image” of the collision for further analysis.",
-        "InspireLink": "https://inspirehep.net/experiments/1108642"
+        "InspireLink": "https://inspirehep.net/experiments/1108642",
+        "Known For": "Higgs"
     },
     "KLOE": {
         "Collider": "DAFNE",
@@ -79,9 +89,11 @@
         "Location": "INFN",
         "Status": "Complete",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "(K LOng Experiment) which has been studying CP violation in kaon decays and rare kaon decays since 2000. This is the largest of DAFNE experiments. It has been continued by the KLOE-2 experiment.",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Known For": ""
     },
     "FINUDA": {
         "Collider": "DAFNE",
@@ -93,9 +105,11 @@
         "Location": "INFN",
         "Status": "Complete",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "(FIsica NUcleare a DAFNE), studies the spectra and nonmesonic decays of hypernuclei containing lambda baryons (Λ). The hypernuclei are produced by negatively charged kaons (K−) striking a thin target.",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Known For": ""
     },
     "DEAR": {
         "Collider": "DAFNE",
@@ -107,9 +121,11 @@
         "Location": "INFN",
         "Status": "Complete",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "(DAFNE Exotic Atoms Research experiment), determines scattering lengths in atoms made from a kaon and a proton or deuteron.",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Known For": ""
     },
     "DAFNE-L": {
         "Collider": "DAFNE",
@@ -121,9 +137,11 @@
         "Location": "INFN",
         "Status": "Complete",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "(DAΦNE-L) consists of 3 lines of synchrotron radiation emitted by DAFNE, a fourth is under construction.",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Known For": ""
     },
     "SIDDHARTA": {
         "Collider": "DAFNE",
@@ -135,9 +153,11 @@
         "Location": "INFN",
         "Status": "Complete",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "SIDDHARTA (SIlicon Drift Detectors for Hadronic Atom Research by Timing Application), aims to improve the precision measurements of X-ray transitions in kaon atoms studied at DEAR.",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Known For": ""
     },
     "ALEPH": {
         "Collider": "LEP",
@@ -149,9 +169,11 @@
         "Location": "CERN",
         "Status": "Complete",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Known For": ""
     },
     "DELPHI": {
         "Collider": "LEP",
@@ -163,9 +185,11 @@
         "Location": "CERN",
         "Status": "Complete",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Known For": ""
     },
     "L3": {
         "Collider": "LEP",
@@ -177,9 +201,11 @@
         "Location": "CERN",
         "Status": "Complete",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Known For": ""
     },
     "OPAL": {
         "Collider": "LEP",
@@ -191,8 +217,43 @@
         "Location": "CERN",
         "Status": "Complete",
         "Reference": "",
+        "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Known For": ""
+    },
+    "DØ (DZero)": {
+        "Collider": "Tevatron",
+        "Collider Geometry": "Circular",
+        "Beam Particles": "p-pbar",
+        "CoM Energy √s (TeV)": "1",
+        "Luminosity Collected": "",
+        "Detector Rapidity Coverage": "",
+        "Location": "Fermilab",
+        "Status": "Complete",
+        "Reference": "",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "",
+        "InspireLink": "https://inspirehep.net/experiments/1109214",
+        "Known For": "Top Quark"
+    },
+    "CDF": {
+        "Collider": "Tevatron",
+        "Collider Geometry": "Circular",
+        "Beam Particles": "p-pbar",
+        "CoM Energy √s (TeV)": "1",
+        "Luminosity Collected": "",
+        "Detector Rapidity Coverage": "",
+        "Location": "Fermilab",
+        "Status": "Complete",
+        "Reference": "",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "",
+        "InspireLink": "https://inspirehep.net/experiments/1110316",
+        "Known For": "Top Quark"
     }
+    
 }
