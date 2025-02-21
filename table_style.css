@@ -68,10 +68,16 @@
   }
   
   header nav a {
+    text-align: left;
     margin: 0 15px;
     text-decoration: none;
     color: #357be6;
-    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  nav {
+    text-align: left;
   }
   
   header nav a:hover {

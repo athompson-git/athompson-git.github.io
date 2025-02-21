@@ -3,13 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiment Data</title>
+    
+    <title>exDB: Particle Physics Experiment Database</title>
+    
+    <!--jquery and chart stuff -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
- 
+    <!--Table CSS -->
     <link rel="stylesheet" href="table_style.css">
+    
+
+    <!-- Meta Tags -->
+    <meta name="description" content="exDB, the searchable table of Particle Physics Experiments">
+    <meta name="keywords" content="Particle Physics, Neutrino Experiments, Dark Matter, Beam Energy, POT, Detector Technology, Gravitational Waves, Reactors">
+    <meta name="robots" content="index, follow">
+  
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="exDB: The Particle Physics Experiment Database">
+    <meta property="og:description" content="Searchable table of particle physics and gravitational wave experiments.">
+    <meta property="og:image" content="https://athompson-git.github.io/images/logos/exdb_1200x628.png">
+    <meta property="og:url" content="https://athompson-git.github.io/fixed_target.html">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="_wraith0">
+    <meta name="twitter:title" content="exDB: The Particle Physics Experiment Database">
+    <meta name="twitter:description" content="Searchable table of particle physics and gravitational wave experiments.">
+    <meta name="twitter:image" content="https://athompson-git.github.io/images/logos/exdb_1200x628.png">
 
 </head>
 
@@ -28,9 +50,6 @@
         </div>
     </header>
 
-    <h3 align="center">IV: Gravitational Wave Observatories</h2>
-    <h4 align="center">Work in Progress!</h3>
-
     <div class="header">
         <nav>
             <p><a href="index.html">Home</a></p>
@@ -43,27 +62,34 @@
         </nav>
     </div>
 
-    <p>
-        Here we collect gravitational wave experiments. <b>Hover over experiment names for more information.</b>
-    </p>
-    <p>
+    <p style="font-style: italic;">
         Disclaimer: This table is maintained individually and supported by community feedback.
         The information within is sourced only by public references and please, look to the source references for the most accurate representation of the aggragate information here.
+        To suggest corrections or provide new data, see contact information at the bottom of the page.
     </p>
     <input type="text" id="search" placeholder="Search experiments...">
 
-    <table id="experimentTable">
-        <thead>
-            <tr id="tableHeader"></tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+
+    <h2 align="center">I: Fixed Target Experiments</h2>
+    <h4 align="center">[Work in Progress]</h4>
+
+    <div class="table-container">
+        <table id="experimentTable">
+            <thead>
+                <tr id="tableHeader"></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 
     <script type="text/javascript" language="javascript" src="jquery-1.8.2.min.js"></script>        
-
     <script type="text/javascript">
+        let visible_columns = ["Source(s)", "Beam Particle", "Beam Energy (GeV)", "POT (Planned/Largest)", "Baseline (m)",
+                                            "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
+                                            "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Anomalies?"];
+        
         $(document).ready(function(){
-            $.getJSON("data/gw.json")
+            $.getJSON("data/experiments.json")
                 .done(function(data) {
                     console.log("JSON loaded successfully:", data); // Debugging
                     const fieldTypes = data.field_types;
@@ -77,7 +103,8 @@
                     let headerRow = $("#tableHeader");
                     headerRow.append(`<th onclick="sortTable(0)">Experiment Name</th>`);
                     columns.forEach((col, index) => {
-                        if (col === "Notes") return;
+                        // Skip unneeded columns
+                        if (!visible_columns.includes(col)) return;
                         headerRow.append(`<th onclick="sortTable(${index + 1})">${col}</th>`);
                     });
 
@@ -94,6 +121,13 @@
                             rowColor = ' style="background-color: rgba(255, 255, 0, 0.1)"';
                         }
 
+                        // Mark anomalies row for hash
+                        let anomalies = details["Anomalies?"] || "";
+                        let anomalyClass = "";
+                        if (anomalies.trim() !== "") {
+                            anomalyClass = "anomaly";
+                        }
+
                         // Get the "Notes" field if it exists.
                         let notes = details["Notes"] || "";
 
@@ -105,7 +139,7 @@
                         }
 
                         // Build tooltip
-                        let row = `<tr${rowColor}>
+                        let row = `<tr class="${anomalyClass}" ${rowColor}>
                             <td class="experiment-name">
                                 ${experiment}
                                 ${inspireAnchor}
@@ -114,7 +148,8 @@
 
                         columns.forEach(col => {
 
-                            if (col === "Notes") return;
+                            // Skip unneeded rows
+                            if (!visible_columns.includes(col)) return;
                             
                             // Add hyperlinking for references
                             let cellData = details[col] || "";
@@ -123,7 +158,14 @@
                                     let trimmedRef = ref.trim();
                                     return `<a href="${trimmedRef}" target="_blank">${trimmedRef}</a>`;
                                 });
-                                cellData = refs.join(", ");
+                                cellData = refs.join("<br>");
+                            }
+
+                            if (col === "POT") {
+                                let potValue = parseFloat(cellData);
+                                if (!isNaN(potValue)) {
+                                    cellData = potValue.toExponential(2);
+                                }
                             }
                             
                             row += `<td>${cellData}</td>`;
@@ -175,8 +217,11 @@
         }
     </script>
 
+    <br>
+    <br>
 
-
+    
+    
 
     <br>
     <br>
@@ -189,16 +234,17 @@
     </p>
 
     <h2>About the data</h2>
-
+    
     <p>
-        Link to JSON: <a href="data/gw.json">gw.json</a>
+        Link to JSON: <a href="data/experiments.json">experiments.json</a>
     </p>
 
     <br>
     <br>
 
 
-
 </body>
 
 </html>
+
+

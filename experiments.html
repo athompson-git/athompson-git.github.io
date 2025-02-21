@@ -1,252 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>exDB: Particle Physics Experiment Database</title>
-    
-    <!--jquery and chart stuff -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <!--Table CSS -->
-    <link rel="stylesheet" href="table_style.css">
-    
-
-    <!-- Meta Tags -->
-    <meta name="description" content="exDB, the searchable table of Particle Physics Experiments">
-    <meta name="keywords" content="Particle Physics, Neutrino Experiments, Dark Matter, Beam Energy, POT, Detector Technology, Gravitational Waves, Reactors">
-    <meta name="robots" content="index, follow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exDB: Particle Physics Experiment Database</title>
   
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="exDB: The Particle Physics Experiment Database">
-    <meta property="og:description" content="Searchable table of particle physics and gravitational wave experiments.">
-    <meta property="og:image" content="https://athompson-git.github.io/images/logos/exdb_1200x628.png">
-    <meta property="og:url" content="https://athompson-git.github.io/experiments.html">
-    <meta property="og:type" content="website">
+  <!-- jQuery and Chart.js -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="_wraith0">
-    <meta name="twitter:title" content="exDB: The Particle Physics Experiment Database">
-    <meta name="twitter:description" content="Searchable table of particle physics and gravitational wave experiments.">
-    <meta name="twitter:image" content="https://athompson-git.github.io/images/logos/exdb_1200x628.png">
+  <!-- Table CSS -->
+  <link rel="stylesheet" href="table_style.css">
 
+  <!-- Meta Tags for SEO, Open Graph, Twitter, etc. -->
+  <meta name="description" content="exDB, the searchable table of Particle Physics Experiments">
+  <meta name="keywords" content="Particle Physics, Neutrino Experiments, Dark Matter, Beam Energy, POT, Detector Technology, Gravitational Waves, Reactors">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="exDB: The Particle Physics Experiment Database">
+  <meta property="og:description" content="Searchable table of particle physics and gravitational wave experiments.">
+  <meta property="og:image" content="https://athompson-git.github.io/images/logos/exdb_1200x628.png">
+  <meta property="og:url" content="https://athompson-git.github.io/experiments.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="_wraith0">
+  <meta name="twitter:title" content="exDB: The Particle Physics Experiment Database">
+  <meta name="twitter:description" content="Searchable table of particle physics and gravitational wave experiments.">
+  <meta name="twitter:image" content="https://athompson-git.github.io/images/logos/exdb_1200x628.png">
 </head>
-
-
-
-
 <body>
-    <header>
-        <div class="header">
-            <div class="logo-container">
-                <img src="images/logos/exdb_1200x628.png" alt="xDB Logo", align="left">
-            </div>
-            <div class="title-container">
-                <h1>The Particle Physics Experiments Database</h1>
-            </div>
-        </div>
-    </header>
-    
-
-    <h3 align="center">I: Fixed Target Experiments</h2>
-    <h4 align="center">Work in Progress!</h3>
-
-    <header>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="experiments.html">I: Fixed Target </a>
-            <a href="passive_det.html">II: Neutrino Observatories & DM Direct Detectors</a>
-            <a href="reactors.html">III: Reactors </a>
-            <a href="gw.html">IV: Gravitational Waves & Haloscopes</a>
-            <a href="colliders.html">V: Collider Experiments</a>
-        </nav>
-    </header>
-    <p>
-        Here we collect fixed target, beam dump, and reactor neutrino and/or dark matter experiments. <b>Hover over experiment names for more information.</b>
-    </p>
-    <p>
-        Disclaimer: This table is maintained individually and supported by community feedback.
-        The information within is sourced only by public references and please, look to the source references for the most accurate representation of the aggragate information here.
-        To suggest corrections or provide new data, see contact information at the bottom of the page.
-    </p>
-    <input type="text" id="search" placeholder="Search experiments...">
-
-    <div class="table-container">
-        <table id="experimentTable">
-            <thead>
-                <tr id="tableHeader"></tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+  <header>
+    <div class="header">
+      <div class="logo-container">
+        <img src="images/logos/exdb_1200x628.png" alt="xDB Logo">
+      </div>
+      <div class="title-container">
+        <h1>The Particle Physics Experiments Database</h1>
+      </div>
     </div>
+  </header>
 
-    <script type="text/javascript" language="javascript" src="jquery-1.8.2.min.js"></script>        
+  <div class="header">
+    <nav>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="experiments.html">All Experiments</a></p>
+      <p><a href="fixed_target.html">I: Fixed Target</a></p>
+      <p><a href="passive_det.html">II: Neutrino Observatories & DM Direct Detectors</a></p>
+      <p><a href="reactors.html">III: Reactors</a></p>
+      <p><a href="gw.html">IV: Gravitational Waves & Haloscopes</a></p>
+      <p><a href="colliders.html">V: Collider Experiments</a></p>
+    </nav>
+  </div>
 
-    <script type="text/javascript">
-        let visible_columns = ["Source(s)", "Beam Particle", "Beam Energy (GeV)", "POT (Planned/Largest)", "Baseline (m)",
-                                            "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
-                                            "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Anomalies?"];
-        
-        $(document).ready(function(){
-            $.getJSON("data/experiments.json")
-                .done(function(data) {
-                    console.log("JSON loaded successfully:", data); // Debugging
-                    const fieldTypes = data.field_types;
-                    delete data.field_types;
+  <p style="font-style: italic;">
+    Disclaimer: This table is maintained individually and supported by community feedback.
+    The information within is sourced only by public references. Please check the source references for the most accurate representation of the aggregate information.
+    To suggest corrections or provide new data, see contact information at the bottom of the page.
+  </p>
+  <input type="text" id="search" placeholder="Search experiments...">
 
-                    // Get all keys from fieldTypes and remove the duplicate experiment name if it exists.
-                    let columns = Object.keys(fieldTypes);//.filter(col => col.toLowerCase() !== "experiment name");
+  <h2 align="center">I: Fixed Target Experiments</h2>
+  <div class="table-container">
+    <table id="fixedTargetTable">
+      <thead>
+        <tr id="tableHeader_ft"></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  
+  <h2 align="center">II: Dark Matter Direct Detectors and Neutrino Observatories</h2>
+  <div class="table-container">
+    <table id="ddTable">
+      <thead>
+        <tr id="tableHeader_dd"></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
 
-                    // Build the header row: first column for the experiment name,
-                    // then one column for each field in the filtered list.
-                    let headerRow = $("#tableHeader");
-                    headerRow.append(`<th onclick="sortTable(0)">Experiment Name</th>`);
-                    columns.forEach((col, index) => {
-                        // Skip unneeded columns
-                        if (!visible_columns.includes(col)) return;
-                        headerRow.append(`<th onclick="sortTable(${index + 1})">${col}</th>`);
-                    });
+  <h2 align="center">III: Reactor Experiments</h2>
+  <div class="table-container">
+    <table id="reactorTable">
+      <thead>
+        <tr id="tableHeader_reactors"></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
 
-                    // Populate the table body with data.
-                    let tableBody = $("#experimentTable tbody");
-                    Object.entries(data).forEach(([experiment, details]) => {
+  <h2 align="center">IV: Gravitational Wave and Haloscope Experiments</h2>
+  <div class="table-container">
+    <table id="gwTable">
+      <thead>
+        <tr id="tableHeader_gw"></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
 
-                        // Row colors
-                        let status = details["Status"] || "";
-                        let rowColor = "";
-                        if (status === "Running") {
-                            rowColor = ' style="background-color: rgba(0, 128, 0, 0.2);"'
-                        } else if (status === "Future") {
-                            rowColor = ' style="background-color: rgba(255, 255, 0, 0.2)"';
-                        }
+  <h2 align="center">V: Collider Experiments and Forward Facilities</h2>
+  <div class="table-container">
+    <table id="colliderTable">
+      <thead>
+        <tr id="tableHeader_collider"></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
 
-                        // Mark anomalies row for hash
-                        let anomalies = details["Anomalies?"] || "";
-                        let anomalyClass = "";
-                        if (anomalies.trim() !== "") {
-                            anomalyClass = "anomaly";
-                        }
+  <!-- Call the external buildTable function -->
+  <script src="buildTable.js"></script>
+  <script>
+    // Build first table for fixed target experiments
+    let visible_columns_ft = ["Source(s)", "Beam Particle", "Beam Energy (GeV)", "POT (Planned/Largest)", "Baseline (m)",
+                           "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
+                           "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Anomalies?"];
+    buildTable(visible_columns_ft, "data/experiments.json", "fixedTargetTable");
+    
+    // Build second table for direct detection experiments
+    let visible_columns_dd = ["Source(s)", "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
+                           "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Anomalies?"];
+    buildTable(visible_columns_dd, "data/passive_det.json", "ddTable");
 
-                        // Get the "Notes" field if it exists.
-                        let notes = details["Notes"] || "";
+    // Build second table for reactor experiments
+    let visible_columns_reactors = ["Source(s)", "Baseline (m)",
+                           "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
+                           "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Anomalies?"];
+    buildTable(visible_columns_reactors, "data/reactors.json", "reactorTable");
 
-                        // Place Inspire links
-                        let inspireLink = details["InspireLink"] || "";
-                        let inspireAnchor = "";
-                        if (inspireLink.trim() !== "") {
-                            inspireAnchor = `<a href="${inspireLink}" target="_blank" style="color: blue; text-decoration: underline;">[iN]</a>`;
-                        }
+    let visible_columns_gw = ["Class", "Source(s)", "Baseline (m)", "Detector Tech", "Frequency Band",
+                                "Location", "Status", "Reference", "Anomalies?"];
+    buildTable(visible_columns_gw, "data/gw.json", "gwTable");
 
-                        // Build tooltip
-                        let row = `<tr class="${anomalyClass}" ${rowColor}>
-                            <td class="experiment-name">
-                                ${experiment}
-                                ${inspireAnchor}
-                                ${notes ? `<span class="tooltip">${notes}</span>` : ""}
-                            </td>`;
+    let visible_columns_col = ["Collider", "Collider Geometry", "Beam Particles", "CoM Energy √s (TeV)", "Luminosity Collected",
+                                "Detector Rapidity Coverage", "Location", "Status", "Reference", "Anomalies?"];
+    buildTable(visible_columns_col, "data/colliders.json", "colliderTable");
 
-                        columns.forEach(col => {
 
-                            // Skip unneeded rows
-                            if (!visible_columns.includes(col)) return;
-                            
-                            // Add hyperlinking for references
-                            let cellData = details[col] || "";
-                            if (col === "Reference" && cellData) {
-                                let refs = cellData.split(",").map(ref => {
-                                    let trimmedRef = ref.trim();
-                                    return `<a href="${trimmedRef}" target="_blank">${trimmedRef}</a>`;
-                                });
-                                cellData = refs.join("<br>");
-                            }
+  </script>
 
-                            if (col === "POT") {
-                                let potValue = parseFloat(cellData);
-                                if (!isNaN(potValue)) {
-                                    cellData = potValue.toExponential(2);
-                                }
-                            }
-                            
-                            row += `<td>${cellData}</td>`;
-                        });
-                        row += "</tr>";
-                        tableBody.append(row);
-                    });
-
-                    // Search filter functionality
-                    $("#search").on("keyup", function() {
-                        let value = $(this).val().toLowerCase();
-                        $("#experimentTable tbody tr").each(function() {
-                            let rowText = $(this).text().toLowerCase();
-                            $(this).toggle(rowText.includes(value));
-                        });
-                    });
-                })
-                .fail(function(jqxhr, textStatus, error) {
-                    console.error("Error loading JSON:", textStatus, error);
-                });
-        });
-
-        function sortTable(n) {
-            let table = document.getElementById("experimentTable");
-            let rows, switching, i, x, y, shouldSwitch, dir = "asc", switchcount = 0;
-            switching = true;
-            while (switching) {
-                switching = false;
-                rows = table.rows;
-                for (i = 1; i < (rows.length - 1); i++) {
-                    shouldSwitch = false;
-                    x = rows[i].getElementsByTagName("TD")[n];
-                    y = rows[i + 1].getElementsByTagName("TD")[n];
-                    if ((dir === "asc" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) ||
-                        (dir === "desc" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())) {
-                        shouldSwitch = true;
-                        break;
-                    }
-                }
-                if (shouldSwitch) {
-                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                    switching = true;
-                    switchcount++;
-                } else if (switchcount === 0 && dir === "asc") {
-                    dir = "desc";
-                    switching = true;
-                }
-            }
+  <!-- Additional scripts, e.g., sortTable function, etc. -->
+  <script>
+    function sortTable(n) {
+      let table = document.getElementById("experimentTable");
+      let rows, switching, i, x, y, shouldSwitch, dir = "asc", switchcount = 0;
+      switching = true;
+      while (switching) {
+        switching = false;
+        rows = table.rows;
+        for (i = 1; i < (rows.length - 1); i++) {
+          shouldSwitch = false;
+          x = rows[i].getElementsByTagName("TD")[n];
+          y = rows[i + 1].getElementsByTagName("TD")[n];
+          if ((dir === "asc" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) ||
+              (dir === "desc" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())) {
+            shouldSwitch = true;
+            break;
+          }
         }
-    </script>
+        if (shouldSwitch) {
+          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+          switching = true;
+          switchcount++;
+        } else if (switchcount === 0 && dir === "asc") {
+          dir = "desc";
+          switching = true;
+        }
+      }
+    }
+  </script>
 
-    <br>
-    <br>
+  <!-- Community feedback section and about data, etc. -->
+  <br><br>
+  <h2 align="center">Community Feedback and Contact</h2>
+  <p align="center">
+    To contact the owner for any corrections, improvements or feedback please email:
+  </p>
+  <p align="center">
+    a.thompson AT northwestern DOT edu
+  </p>
 
-    
-    
-
-    <br>
-    <br>
-    <h2 align="center">Community Feedback and Contact</h4>
-    <p align="center">
-        To contact the owner for any corrections, improvements or feedback please email:
-    </p>
-    <p align="center">
-        a.thompson AT northwestern DOT edu
-    </p>
-
-    <h2>About the data</h2>
-    
-    <p>
-        Link to JSON: <a href="data/experiments.json">experiments.json</a>
-    </p>
-
-    <br>
-    <br>
-
-
+  <h2>About the data</h2>
+  <p>
+    Link to JSON: <a href="data/experiments.json">experiments.json</a>
+  </p>
+  <br><br>
 </body>
-
 </html>
-
-
