@@ -60,7 +60,7 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
             if (!visible_columns.includes(col)) return;
             let cellData = details[col] || "";
   
-            if (col === "Reference" && cellData) {
+            if ((col === "Reference" || col === "Open Data") && cellData) {
               let refs = cellData.split(",").map(ref => {
                 let trimmedRef = ref.trim();
                 return `<a href="${trimmedRef}" target="_blank">${trimmedRef}</a>`;
