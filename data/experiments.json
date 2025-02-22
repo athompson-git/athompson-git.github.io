@@ -1007,6 +1007,28 @@
         "Notes": "BEBC / WA66: copper target aka CERN WA66",
         "InspireLink": ""
     },
+    "KTeV (E-799/E-832)": {
+        "Class": "Beam Target",
+        "Source(s)": "Tevatron",
+        "Beam Particles": "proton",
+        "Beam Energy (GeV)": "800",
+        "POT (Planned/Largest)": "",
+        "Baseline (m)": "94",
+        "Detector Tech": "Hodoscopes, CsI Cal., Magnets, Veto",
+        "Detector Material": "CsI/mixed",
+        "Detector Mass (t)": "",
+        "Fiducial Mass (t)": "",
+        "Detector Volume (m^3)": "",
+        "Energy Threshold": "",
+        "Location": "Tevatron",
+        "Status": "Complete",
+        "Reference": "https://hep.uchicago.edu/ktev/ktev.html",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "The KTeV experiment was designed to search for direct CP violation in K -> 2 pion decays, and to study a wide variety of rare KL decays. The KTeV collaboration includes about 80 physicists from 12 universities and Fermilab.",
+        "InspireLink": "https://inspirehep.net/experiments/1110316",
+        "Known For": ""
+    },
     "NuTeV": {
         "Class": "Beam Target",
         "Source(s)": "Tevatron",
