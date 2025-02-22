@@ -67,6 +67,16 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
               });
               cellData = refs.join("<br>");
             }
+
+            // Apply color coding for beam particle type
+            if (col === "Beam Particle") {
+              let lowerData = cellData.toLowerCase();
+              if (lowerData.includes("proton")) {
+                cellData = `<span style="color: red;">${cellData}</span>`;
+              } else if (lowerData.includes("electron")) {
+                cellData = `<span style="color: blue;">${cellData}</span>`;
+              }
+            }
   
             if (col === "POT") {
               let potValue = parseFloat(cellData);
@@ -81,14 +91,6 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
           tableBody.append(rowStr);
         });
   
-        // Setup search functionality (if present)
-        // $("#search").on("keyup", function() {
-        //   let value = $(this).val().toLowerCase();
-        //   $("#" + tableId + " tbody tr").each(function() {
-        //     let rowText = $(this).text().toLowerCase();
-        //     $(this).toggle(rowText.includes(value));
-        //   });
-        // });
         $("#search").on("keyup", function() {
           let value = $(this).val().toLowerCase();
           $("#" + tableId + " tbody tr").each(function() {
