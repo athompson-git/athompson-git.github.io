@@ -254,6 +254,22 @@
         "Notes": "",
         "InspireLink": "https://inspirehep.net/experiments/1110316",
         "Known For": "Top Quark"
+    },
+    "KTeV (E-799/E-832)": {
+        "Collider": "Tevatron",
+        "Collider Geometry": "Circular",
+        "Beam Particles": "KLong decays",
+        "CoM Energy √s (TeV)": "1",
+        "Luminosity Collected": "",
+        "Detector Rapidity Coverage": "",
+        "Location": "Tevatron",
+        "Status": "Complete",
+        "Reference": "https://hep.uchicago.edu/ktev/ktev.html",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "The KTeV experiment was designed to search for direct CP violation in K -> 2 pion decays, and to study a wide variety of rare KL decays. The KTeV collaboration includes about 80 physicists from 12 universities and Fermilab.",
+        "InspireLink": "https://inspirehep.net/experiments/1110316",
+        "Known For": ""
     }
     
 }
