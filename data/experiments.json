@@ -446,7 +446,7 @@
         "Beam Particle": "proton",
         "Beam Energy (GeV)": "8",
         "POT (Planned/Largest)": "1.86e20",
-        "Baseline (m)": "541",
+        "Baseline (m)": "489",
         "Detector Tech": "Cherenkov",
         "Detector Material": "CH2",
         "Detector Mass (t)": "818",
@@ -457,7 +457,7 @@
         "Status": "Complete",
         "Reference": "https://inspirehep.net/literature/1682906",
         "Open Data": "",
-        "Anomalies?": "Yes",
+        "Anomalies?": "",
         "Notes": "The MiniBooNE experiment (using the 8 GeV proton booster neutrino beam [BNB] on the beryllium target) aimed to search for oscillations between muon-neutrinos and electron-neutrinos for neutrino mass differences greater than 0.01 eV^2, and for mixing parameters less than about 0.05. The experiment will also look for a muon-neutrino disappearance signal. If neutrino oscillations are observed, the experiment will be able to measure the mass difference and the mixing angle and search for CP violation in the lepton sector.",
         "InspireLink": "https://inspirehep.net/experiments/1110641"
     },
