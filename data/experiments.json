@@ -997,7 +997,7 @@
         "Detector Material": "Neon/Hydrogen",
         "Detector Mass (t)": "",
         "Fiducial Mass (t)": "11.5",
-        "Detector Volume (m^3)": "3.57 \u00d7 2.52 \u00d7 1.85",
+        "Detector Volume (m^3)": "3.57 x 2.52 x 1.85",
         "Energy Threshold": "",
         "Location": "CERN",
         "Status": "Complete",
@@ -1010,7 +1010,7 @@
     "KTeV (E-799/E-832)": {
         "Class": "Beam Target",
         "Source(s)": "Tevatron",
-        "Beam Particles": "proton",
+        "Beam Particle": "proton",
         "Beam Energy (GeV)": "800",
         "POT (Planned/Largest)": "",
         "Baseline (m)": "94",
