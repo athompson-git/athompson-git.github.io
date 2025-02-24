@@ -128,8 +128,9 @@
                            "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
     buildTable(visible_columns_reactors, "data/reactors.json", "reactorTable", "tableTitle_reactors");
 
-    let visible_columns_gw = ["Class", "Source(s)", "Baseline (m)", "Detector Tech", "Frequency Band",
-                                "Location", "Status", "Reference", "Open Data", "Anomalies?"];
+    let visible_columns_gw = ["Class", "Signals of Interest", "Length Scale (km)", "Technology",
+                                    "Frequency Band (Hz)", "Minimum Strain Sensitivity (1/Hz^1/2)", "Minimum Strain Sensitivity (h^2 Ω_GW)",
+                                    "Location", "Status", "Reference", "Open Data", "Anomalies?"];
     buildTable(visible_columns_gw, "data/gw.json", "gwTable", "tableTitle_gw");
 
     let visible_columns_col = ["Collider", "Collider Geometry", "Beam Particles", "CoM Energy √s (TeV)", "Luminosity Collected",
