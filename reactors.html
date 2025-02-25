@@ -24,12 +24,10 @@
             </div>
             <div class="title-container">
                 <h1>The Particle Physics Experiments Database</h1>
+                <h4>[Work In Progress]</h4>
             </div>
         </div>
     </header>
-
-    <h3 align="center">III: Neutrino Observatories, Dark Matter Direct Detectors, and Other Passive Particle Detectors</h2>
-    <h4 align="center">Work in Progress!</h3>
 
     <div class="header">
         <nav>
@@ -45,135 +43,32 @@
     <p>
         Here we collect experiments that utilize large volumes of instrumented detector to capture neutrinos or dark matter. <b>Hover over experiment names for more information.</b>
     </p>
-    <p>
+    <p style="font-style: italic;">
         Disclaimer: This table is maintained individually and supported by community feedback.
-        The information within is sourced only by public references and please, look to the source references for the most accurate representation of the aggragate information here.
-    </p>
+        The information within is sourced only by public references. Please check the source references for the most accurate representation of the aggregate information.
+        To suggest corrections or provide new data, see contact information at the bottom of the page.
+      </p>
     <input type="text" id="search" placeholder="Search experiments...">
 
-    <table id="experimentTable">
+
+    <h2 id="tableTitle_reactors" align="center">III: Reactor Experiments</h2>
+    <table id="reactorTable">
         <thead>
-            <tr id="tableHeader"></tr>
+            <tr id="tableHeader_reactors"></tr>
         </thead>
         <tbody></tbody>
     </table>
 
-    <script type="text/javascript" language="javascript" src="jquery-1.8.2.min.js"></script>        
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $.getJSON("data/reactors.json")
-                .done(function(data) {
-                    console.log("JSON loaded successfully:", data); // Debugging
-                    const fieldTypes = data.field_types;
-                    delete data.field_types;
-
-                    // Get all keys from fieldTypes and remove the duplicate experiment name if it exists.
-                    let columns = Object.keys(fieldTypes);//.filter(col => col.toLowerCase() !== "experiment name");
-
-                    // Build the header row: first column for the experiment name,
-                    // then one column for each field in the filtered list.
-                    let headerRow = $("#tableHeader");
-                    headerRow.append(`<th onclick="sortTable(0)">Experiment Name</th>`);
-                    columns.forEach((col, index) => {
-                        if (col === "Notes") return;
-                        headerRow.append(`<th onclick="sortTable(${index + 1})">${col}</th>`);
-                    });
-
-                    // Populate the table body with data.
-                    let tableBody = $("#experimentTable tbody");
-                    Object.entries(data).forEach(([experiment, details]) => {
-
-                        // Row colors
-                        let status = details["Status"] || "";
-                        let rowColor = "";
-                        if (status === "Running") {
-                            rowColor = ' style="background-color: rgba(0, 128, 0, 0.1);"'
-                        } else if (status === "Future") {
-                            rowColor = ' style="background-color: rgba(255, 255, 0, 0.1)"';
-                        }
-
-                        // Get the "Notes" field if it exists.
-                        let notes = details["Notes"] || "";
-                        
-                        // Place Inspire links
-                        let inspireLink = details["InspireLink"] || "";
-                        let inspireAnchor = "";
-                        if (inspireLink.trim() !== "") {
-                            inspireAnchor = `<a href="${inspireLink}" target="_blank" style="color: blue; text-decoration: underline;">[iN]</a>`;
-                        }
-
-                        // Build tooltip
-                        let row = `<tr${rowColor}>
-                            <td class="experiment-name">
-                                ${experiment}
-                                ${inspireAnchor}
-                                ${notes ? `<span class="tooltip">${notes}</span>` : ""}
-                            </td>`;
-
-                        columns.forEach(col => {
-
-                            if (col === "Notes") return;
-                            
-                            // Add hyperlinking for references
-                            let cellData = details[col] || "";
-                            if (col === "Reference" && cellData) {
-                                let refs = cellData.split(",").map(ref => {
-                                    let trimmedRef = ref.trim();
-                                    return `<a href="${trimmedRef}" target="_blank">${trimmedRef}</a>`;
-                                });
-                                cellData = refs.join(", ");
-                            }
-                            
-                            row += `<td>${cellData}</td>`;
-                        });
-                        row += "</tr>";
-                        tableBody.append(row);
-                    });
-
-                    // Search filter functionality
-                    $("#search").on("keyup", function() {
-                        let value = $(this).val().toLowerCase();
-                        $("#experimentTable tbody tr").each(function() {
-                            let rowText = $(this).text().toLowerCase();
-                            $(this).toggle(rowText.includes(value));
-                        });
-                    });
-                })
-                .fail(function(jqxhr, textStatus, error) {
-                    console.error("Error loading JSON:", textStatus, error);
-                });
-        });
-
-        function sortTable(n) {
-            let table = document.getElementById("experimentTable");
-            let rows, switching, i, x, y, shouldSwitch, dir = "asc", switchcount = 0;
-            switching = true;
-            while (switching) {
-                switching = false;
-                rows = table.rows;
-                for (i = 1; i < (rows.length - 1); i++) {
-                    shouldSwitch = false;
-                    x = rows[i].getElementsByTagName("TD")[n];
-                    y = rows[i + 1].getElementsByTagName("TD")[n];
-                    if ((dir === "asc" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) ||
-                        (dir === "desc" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())) {
-                        shouldSwitch = true;
-                        break;
-                    }
-                }
-                if (shouldSwitch) {
-                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-                    switching = true;
-                    switchcount++;
-                } else if (switchcount === 0 && dir === "asc") {
-                    dir = "desc";
-                    switching = true;
-                }
-            }
-        }
+    <!-- Call the external buildTable function -->
+    <script src="buildTable.js"></script>
+    <script>
+        // Build the tables
+        let visible_columns_reactors = ["Source(s)", "Reactor Power", "Reactor ON Exposure (kg-days)", "Reactor OFF Exposure (kg-days)", "Baseline (m)",
+                                "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
+                                "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
+        buildTable(visible_columns_reactors, "data/reactors.json", "reactorTable", "tableTitle_reactors");
     </script>
-
 
 
 

@@ -24,12 +24,10 @@
             </div>
             <div class="title-container">
                 <h1>The Particle Physics Experiments Database</h1>
+                <h4>[Work in Progress]</h4>
             </div>
         </div>
     </header>
-
-    <h3 align="center">IV: Gravitational Wave Observatories</h2>
-    <h4 align="center">Work in Progress!</h3>
 
     <div class="header">
         <nav>
@@ -45,23 +43,22 @@
     <p>
         Here we collect gravitational wave experiments. <b>Hover over experiment names for more information.</b>
     </p>
-    <p>
+    <p style="font-style: italic;">
         Disclaimer: This table is maintained individually and supported by community feedback.
-        The information within is sourced only by public references and please, look to the source references for the most accurate representation of the aggragate information here.
-    </p>
+        The information within is sourced only by public references. Please check the source references for the most accurate representation of the aggregate information.
+        To suggest corrections or provide new data, see contact information at the bottom of the page.
+      </p>
     <input type="text" id="search" placeholder="Search experiments...">
 
     <h2 id="tableTitle_gw" align="center">IV: Gravitational Wave and Haloscope Experiments</h2>
-    <div class="table-container">
-        <table id="gwTable">
+    <table id="gwTable">
         <thead>
             <tr id="tableHeader_gw"></tr>
         </thead>
         <tbody></tbody>
-        </table>
-    </div>
+    </table>
 
-     <!-- Call the external buildTable function -->
+    <!-- Call the external buildTable function -->
     <script src="buildTable.js"></script>
     <script>
         // Build table
@@ -70,39 +67,6 @@
                                     "Location", "Status", "Reference", "Open Data", "Anomalies?"];
         buildTable(visible_columns_gw, "data/gw.json", "gwTable", "tableTitle_gw");
     </script>
-
-    <!-- Additional scripts, e.g., sortTable function, etc. -->
-    <script>
-        function sortTable(n) {
-        let table = document.getElementById("experimentTable");
-        let rows, switching, i, x, y, shouldSwitch, dir = "asc", switchcount = 0;
-        switching = true;
-        while (switching) {
-            switching = false;
-            rows = table.rows;
-            for (i = 1; i < (rows.length - 1); i++) {
-            shouldSwitch = false;
-            x = rows[i].getElementsByTagName("TD")[n];
-            y = rows[i + 1].getElementsByTagName("TD")[n];
-            if ((dir === "asc" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) ||
-                (dir === "desc" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())) {
-                shouldSwitch = true;
-                break;
-            }
-            }
-            if (shouldSwitch) {
-            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-            switching = true;
-            switchcount++;
-            } else if (switchcount === 0 && dir === "asc") {
-            dir = "desc";
-            switching = true;
-            }
-        }
-        }
-    </script>
-
-
 
 
     <br>
