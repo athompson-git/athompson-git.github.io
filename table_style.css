@@ -98,16 +98,22 @@
 
   /* Table container for horizontal scrolling */
   .table-container {
-    overflow-x: auto;
+    overflow-x: scroll;
+    overflow-y: visible; 
     margin-bottom: 20px;
+    scrollbar-width: auto; /* For Firefox */
+    -ms-overflow-style: scrollbar; /* For Internet Explorer and Edge */
   }
 
   /* Table styling */
   table {
+    display: block;
+    overflow-y: visible; 
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
     font-size: 12px;
+    white-space: normal; /* Allow cells to wrap text */
   }
 
   input#search {
@@ -122,8 +128,10 @@
   table th,
   table td {
     border: 1px solid black;;
-    padding: 8px;
+    padding: 6px;
     text-align: center;
+    overflow-wrap: break-word; /* Break long words */
+    word-wrap: break-word;
   }
   
   table th {
@@ -132,11 +140,14 @@
   }
 
   /* Sticky header row: all header cells will stick at the top */
-  thead th {
+  thead {
     position: sticky;
     top: 0;
-    background-color: #f2f2f2;
-    z-index: 4; /* Ensure header stays above body cells */
+    z-index: 10;  /* Ensure it sits above table body cells */
+    background-color: #f2f2f2; /* Set a background so it doesn’t appear transparent */
+  }
+
+  thead th {
     cursor: pointer;
   }
 

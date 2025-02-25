@@ -58,54 +58,44 @@
   <input type="text" id="search" placeholder="Search experiments...">
 
   <h2 id="tableTitle_ft" align="center">I: Fixed Target Experiments</h2>
-  <div class="table-container">
-    <table id="fixedTargetTable">
-      <thead>
-        <tr id="tableHeader_ft"></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
+  <table id="fixedTargetTable">
+    <thead>
+      <tr id="tableHeader_ft"></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
   
   <h2 id="tableTitle_dd" align="center">II: Dark Matter Direct Detectors and Neutrino Observatories</h2>
-  <div class="table-container">
-    <table id="ddTable">
-      <thead>
-        <tr id="tableHeader_dd"></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
+  <table id="ddTable">
+    <thead>
+      <tr id="tableHeader_dd"></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 
   <h2 id="tableTitle_reactors" align="center">III: Reactor Experiments</h2>
-  <div class="table-container">
-    <table id="reactorTable">
-      <thead>
-        <tr id="tableHeader_reactors"></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
+  <table id="reactorTable">
+    <thead>
+      <tr id="tableHeader_reactors"></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 
   <h2 id="tableTitle_gw" align="center">IV: Gravitational Wave and Haloscope Experiments</h2>
-  <div class="table-container">
-    <table id="gwTable">
-      <thead>
-        <tr id="tableHeader_gw"></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
+  <table id="gwTable">
+    <thead>
+      <tr id="tableHeader_gw"></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 
   <h2 id="tableTitle_collider" align="center">V: Collider Experiments and Forward Facilities</h2>
-  <div class="table-container">
-    <table id="colliderTable">
-      <thead>
-        <tr id="tableHeader_collider"></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  </div>
+  <table id="colliderTable">
+    <thead>
+      <tr id="tableHeader_collider"></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 
   <!-- Call the external buildTable function -->
   <script src="buildTable.js"></script>
@@ -139,50 +129,21 @@
 
   </script>
 
-  <!-- Additional scripts, e.g., sortTable function, etc. -->
-  <script>
-    function sortTable(n) {
-      let table = document.getElementById("experimentTable");
-      let rows, switching, i, x, y, shouldSwitch, dir = "asc", switchcount = 0;
-      switching = true;
-      while (switching) {
-        switching = false;
-        rows = table.rows;
-        for (i = 1; i < (rows.length - 1); i++) {
-          shouldSwitch = false;
-          x = rows[i].getElementsByTagName("TD")[n];
-          y = rows[i + 1].getElementsByTagName("TD")[n];
-          if ((dir === "asc" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) ||
-              (dir === "desc" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())) {
-            shouldSwitch = true;
-            break;
-          }
-        }
-        if (shouldSwitch) {
-          rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-          switching = true;
-          switchcount++;
-        } else if (switchcount === 0 && dir === "asc") {
-          dir = "desc";
-          switching = true;
-        }
-      }
-    }
-  </script>
 
   <!-- Community feedback section and about data, etc. -->
   <br><br>
-  <h2 align="center">Community Feedback and Contact</h2>
-  <p align="center">
+  <h2>Community Feedback and Contact</h2>
+  <p>
     To contact the owner for any corrections, improvements or feedback please email:
   </p>
-  <p align="center">
+  <p>
     a.thompson AT northwestern DOT edu
   </p>
 
-  <div class="header">
-    <h2>About the data</h2>
-  </div>
+  <br><br><br><br>
+
+
+  <h2>About the data</h2>
   <h4>Links to JSON:</h4>
   <p>
     Fixed target: <a href="data/experiments.json">experiments.json</a>
@@ -200,6 +161,16 @@
     Colliders: <a href="data/colliders.json">colliders.json</a>
   </p>
 
-  <br><br>
+  <br><br><br><br>
+
+  <h2>
+  <h2>About the Author:</h2>
+  <br>
+  <p>
+    <a href="index.html">Adrian Thompson</a>
+  </p>
+
+
+
 </body>
 </html>

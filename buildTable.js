@@ -27,7 +27,22 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
         // Build table body.
         let tableBody = $("#" + tableId + " tbody");
         tableBody.empty();
-        Object.entries(data).forEach(([experiment, details]) => {
+
+        // Sorting: "Running" comes first, "Future" second, and all others last.
+        let sortedEntries = Object.entries(data).sort((a, b) => {
+          let orderMap = { "running": 0, "future": 1 };
+          let statusA = (a[1]["Status"] || "").toLowerCase();
+          let statusB = (b[1]["Status"] || "").toLowerCase();
+          let orderA = (statusA in orderMap) ? orderMap[statusA] : 2;
+          let orderB = (statusB in orderMap) ? orderMap[statusB] : 2;
+          if (orderA !== orderB) {
+            return orderA - orderB;
+          }
+          // If same status group, sort alphabetically by experiment name.
+          return a[0].localeCompare(b[0]);
+        });
+
+        sortedEntries.forEach(([experiment, details]) => {
           // Determine row color based on "Status"
           let status = details["Status"] || "";
           let rowColor = "";
@@ -59,11 +74,16 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
           columns.forEach(col => {
             if (!visible_columns.includes(col)) return;
             let cellData = details[col] || "";
-  
+
             if ((col === "Reference" || col === "Open Data") && cellData) {
               let refs = cellData.split(",").map(ref => {
                 let trimmedRef = ref.trim();
-                return `<a href="${trimmedRef}" target="_blank">${trimmedRef}</a>`;
+                // Trim the display text to a maximum of 40 characters.
+                let displayText = trimmedRef;
+                if (displayText.length > 35) {
+                  displayText = displayText.substring(0, 35) + "...";
+                }
+                return `<a href="${trimmedRef}" target="_blank">${displayText}</a>`;
               });
               cellData = refs.join("<br>");
             }
@@ -111,4 +131,32 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
         console.error("Error loading JSON from " + jsonFile, textStatus, error);
       });
   });
+}
+
+function sortTable(n) {
+  let table = document.getElementById("experimentTable");
+  let rows, switching, i, x, y, shouldSwitch, dir = "asc", switchcount = 0;
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if ((dir === "asc" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) ||
+          (dir === "desc" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())) {
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount++;
+    } else if (switchcount === 0 && dir === "asc") {
+      dir = "desc";
+      switching = true;
+    }
+  }
 }
