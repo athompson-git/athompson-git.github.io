@@ -2,7 +2,7 @@
     "NOvA-ND": {
         "Class": "Beam Target",
         "Source(s)": "NuMI",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": 120.0,
         "POT (Planned/Largest)": 1.30e21,
         "Baseline (m)": "1000",
@@ -23,7 +23,7 @@
     "NOMAD": {
         "Class": "Beam Target",
         "Source(s)": "CERN SPS",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": 450.0,
         "POT (Planned/Largest)": "4.1e19",
         "Baseline (m)": "625",
@@ -44,7 +44,7 @@
     "NOvA-FD": {
         "Class": "Beam Target",
         "Source(s)": "NuMI",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": 120.0,
         "POT (Planned/Largest)": "1.30E+21",
         "Baseline (m)": "8.10E+05",
@@ -65,7 +65,7 @@
     "T2K (neutrino mode)": {
         "Class": "Beam Target",
         "Source(s)": "J-PARC",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "30",
         "POT (Planned/Largest)": "12.34E+20",
         "Baseline (m)": "2.95E+05",
@@ -75,7 +75,7 @@
         "Fiducial Mass (t)": "",
         "Detector Volume (m^3)": "",
         "Energy Threshold": "",
-        "Location": "JPARC",
+        "Location": "J-PARC, Japan",
         "Status": "Running",
         "Reference": "",
         "Open Data": "",
@@ -86,7 +86,7 @@
     "T2K (anti-neutrino mode)": {
         "Class": "Beam Target",
         "Source(s)": "J-PARC",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "30",
         "POT (Planned/Largest)": "6.28E+20",
         "Baseline (m)": "2.95E+05",
@@ -96,7 +96,7 @@
         "Fiducial Mass (t)": "",
         "Detector Volume (m^3)": "",
         "Energy Threshold": "",
-        "Location": "JPARC",
+        "Location": "J-PARC, Japan",
         "Status": "Running",
         "Reference": "",
         "Open Data": "",
@@ -107,7 +107,7 @@
     "T2K (ND280)": {
         "Class": "Beam Target",
         "Source(s)": "J-PARC",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "30",
         "POT (Planned/Largest)": "12.34E+20",
         "Baseline (m)": "280",
@@ -117,7 +117,7 @@
         "Fiducial Mass (t)": "",
         "Detector Volume (m^3)": "6.3 m^3",
         "Energy Threshold": "",
-        "Location": "JPARC",
+        "Location": "J-PARC, Japan",
         "Status": "Running",
         "Reference": "https://arxiv.org/abs/1902.07598, https://pos.sissa.it/441/220",
         "Open Data": "",
@@ -128,7 +128,7 @@
     "DUNE-ND": {
         "Class": "Beam Target",
         "Source(s)": "LBNF",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": 120.0,
         "POT (Planned/Largest)": "7.70E+21",
         "Baseline (m)": "575",
@@ -149,7 +149,7 @@
     "DUNE-FD": {
         "Class": "Beam Target",
         "Source(s)": "LBNF",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": 120.0,
         "POT (Planned/Largest)": "7.70E+21",
         "Baseline (m)": "1300e3",
@@ -170,7 +170,7 @@
     "ICARUS-NuMI": {
         "Class": "Beam Target",
         "Source(s)": "NuMI",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "120",
         "POT (Planned/Largest)": "6.60E+20",
         "Baseline (m)": "600",
@@ -191,7 +191,7 @@
     "ICARUS-BNB": {
         "Class": "Beam Target",
         "Source(s)": "BNB",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "8",
         "POT (Planned/Largest)": "6.60E+20",
         "Baseline (m)": "600",
@@ -233,7 +233,7 @@
     "SBND": {
         "Class": "Beam Target",
         "Source(s)": "BNB",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "8",
         "POT (Planned/Largest)": "6.60E+20",
         "Baseline (m)": "110",
@@ -254,7 +254,7 @@
     "MINOS+": {
         "Class": "Beam Target",
         "Source(s)": "NuMI",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": 120.0,
         "POT (Planned/Largest)": "5.80E+20",
         "Baseline (m)": "1040",
@@ -275,7 +275,7 @@
     "MINOS-ND": {
         "Class": "Beam Target",
         "Source(s)": "NuMI",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": 120.0,
         "POT (Planned/Largest)": "10.56E+20",
         "Baseline (m)": "1040",
@@ -296,7 +296,7 @@
     "MINOS-FD": {
         "Class": "Beam Target",
         "Source(s)": "NuMI",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": 120.0,
         "POT (Planned/Largest)": "10.56E+20",
         "Baseline (m)": "7.35E+05",
@@ -317,7 +317,7 @@
     "COHERENT-LAr (CENNS-10)": {
         "Class": "Beam Target",
         "Source(s)": "SNS",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "1",
         "POT (Planned/Largest)": "1.37E+23",
         "Baseline (m)": "28.4",
@@ -338,7 +338,7 @@
     "COHERENT-CsI": {
         "Class": "Beam Target",
         "Source(s)": "SNS",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "1",
         "POT (Planned/Largest)": "1.76e23",
         "Baseline (m)": "19.3",
@@ -359,7 +359,7 @@
     "COHERENT-Ge": {
         "Class": "Beam Target",
         "Source(s)": "SNS",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "1",
         "POT (Planned/Largest)": "",
         "Baseline (m)": "",
@@ -380,7 +380,7 @@
     "COHERENT-NaI": {
         "Class": "Beam Target",
         "Source(s)": "SNS",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "1",
         "POT (Planned/Largest)": "",
         "Baseline (m)": "",
@@ -401,7 +401,7 @@
     "MiniBooNE (ν-mode)": {
         "Class": "Beam Target",
         "Source(s)": "BNB, Numi",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "8",
         "POT (Planned/Largest)": "18.75e20",
         "Baseline (m)": "541",
@@ -422,7 +422,7 @@
     "MiniBooNE (anti-ν mode)": {
         "Class": "Beam Target",
         "Source(s)": "BNB, Numi",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "8",
         "POT (Planned/Largest)": "11.27e20",
         "Baseline (m)": "541",
@@ -443,7 +443,7 @@
     "MiniBooNE (dump mode)": {
         "Class": "Beam Target",
         "Source(s)": "BNB, Numi",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "8",
         "POT (Planned/Largest)": "1.86e20",
         "Baseline (m)": "489",
@@ -464,7 +464,7 @@
     "MicroBooNE": {
         "Class": "Beam Target",
         "Source(s)": "BNB, Numi",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "8",
         "POT (Planned/Largest)": "1.32E+21",
         "Baseline (m)": "470",
@@ -485,7 +485,7 @@
     "KARMEN": {
         "Class": "Beam Target",
         "Source(s)": "ISIS",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "0.8",
         "POT (Planned/Largest)": "4.00E+22",
         "Baseline (m)": "17.5",
@@ -506,7 +506,7 @@
     "LSND": {
         "Class": "Beam Target",
         "Source(s)": "A6 beam stop",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "0.789",
         "POT (Planned/Largest)": "9.00E+22",
         "Baseline (m)": "30",
@@ -527,7 +527,7 @@
     "CCM": {
         "Class": "Beam Target",
         "Source(s)": "Lujan beam",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "0.8",
         "POT (Planned/Largest)": "2.25E+22",
         "Baseline (m)": "23",
@@ -548,7 +548,7 @@
     "MINERvA": {
         "Class": "Beam Target",
         "Source(s)": "NuMI",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": 120.0,
         "POT (Planned/Largest)": "1.60E+21",
         "Baseline (m)": "675",
@@ -569,7 +569,7 @@
     "JSNS2": {
         "Class": "Beam Target",
         "Source(s)": "J-PARC",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "3",
         "POT (Planned/Largest)": "",
         "Baseline (m)": "",
@@ -579,7 +579,7 @@
         "Fiducial Mass (t)": "",
         "Detector Volume (m^3)": "",
         "Energy Threshold": "",
-        "Location": "JPARC",
+        "Location": "J-PARC, Japan",
         "Status": "Future",
         "Reference": "",
         "Open Data": "",
@@ -590,7 +590,7 @@
     "IsoDAR": {
         "Class": "Beam Target",
         "Source(s)": "IsoDAR beam target",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "0.06",
         "POT (Planned/Largest)": "1.00E+24",
         "Baseline (m)": "17",
@@ -611,7 +611,7 @@
     "NA61/SHINE": {
         "Class": "Beam Target",
         "Source(s)": "CERN SPS",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "",
         "POT (Planned/Largest)": "",
         "Baseline (m)": "1000",
@@ -632,7 +632,7 @@
     "NA64": {
         "Class": "Beam Target",
         "Source(s)": "CERN SPS",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "",
         "POT (Planned/Largest)": "",
         "Baseline (m)": "",
@@ -653,7 +653,7 @@
     "NA64(e)": {
         "Class": "Beam Target",
         "Source(s)": "CERN SPS",
-        "Beam Particle": "electron/positron",
+        "Beam Particle": "Electron/Positron",
         "Beam Energy (GeV)": "100",
         "POT (Planned/Largest)": "9.37E+11",
         "Baseline (m)": "",
@@ -674,7 +674,7 @@
     "NA64(mu)": {
         "Class": "Beam Target",
         "Source(s)": "CERN SPS",
-        "Beam Particle": "muon",
+        "Beam Particle": "Muon",
         "Beam Energy (GeV)": "160",
         "POT (Planned/Largest)": "1.98E+10",
         "Baseline (m)": "",
@@ -695,7 +695,7 @@
     "NA62": {
         "Class": "Beam Target",
         "Source(s)": "CERN SPS",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "400",
         "POT (Planned/Largest)": "1.3e16/1e18",
         "Baseline (m)": "82",
@@ -716,7 +716,7 @@
     "E774": {
         "Class": "Beam Target",
         "Source(s)": "Fermilab",
-        "Beam Particle": "electron",
+        "Beam Particle": "Electron",
         "Beam Energy (GeV)": "275",
         "POT (Planned/Largest)": "0.52e10",
         "Baseline (m)": "1.75",
@@ -737,7 +737,7 @@
     "E137": {
         "Class": "Beam Target",
         "Source(s)": "SLAC",
-        "Beam Particle": "electron",
+        "Beam Particle": "Electron",
         "Beam Energy (GeV)": "20",
         "POT (Planned/Largest)": "1.80E+20",
         "Baseline (m)": "380",
@@ -758,7 +758,7 @@
     "E141": {
         "Class": "Beam Target",
         "Source(s)": "SLAC",
-        "Beam Particle": "electron",
+        "Beam Particle": "Electron",
         "Beam Energy (GeV)": "9.0, 10.7, 18.0, 22",
         "POT (Planned/Largest)": "5.00E+15",
         "Baseline (m)": "35",
@@ -779,7 +779,7 @@
     "Orsay": {
         "Class": "Beam Target",
         "Source(s)": "",
-        "Beam Particle": "electron",
+        "Beam Particle": "Electron",
         "Beam Energy (GeV)": "1.6",
         "POT (Planned/Largest)": "2.00E+16",
         "Baseline (m)": "2",
@@ -800,7 +800,7 @@
     "KEK": {
         "Class": "Beam Target",
         "Source(s)": "KEK, Japan",
-        "Beam Particle": "electron",
+        "Beam Particle": "Electron",
         "Beam Energy (GeV)": "2.5",
         "POT (Planned/Largest)": "1.60E+17",
         "Baseline (m)": "",
@@ -821,7 +821,7 @@
     "LDMX": {
         "Class": "Beam Target",
         "Source(s)": "LCLS",
-        "Beam Particle": "electron",
+        "Beam Particle": "Electron",
         "Beam Energy (GeV)": "4,8,11,16",
         "POT (Planned/Largest)": "4e14, 1e16",
         "Baseline (m)": "<1m",
@@ -842,7 +842,7 @@
     "PIP-II BD": {
         "Class": "Beam Target",
         "Source(s)": "Pip-II Linac",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "800 MeV - 2 GeV",
         "POT (Planned/Largest)": "5e23",
         "Baseline (m)": "",
@@ -863,7 +863,7 @@
     "CHARM": {
         "Class": "Beam Target",
         "Source(s)": "CERN SPS",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "400",
         "POT (Planned/Largest)": "2.40E+18",
         "Baseline (m)": "480",
@@ -884,7 +884,7 @@
     "CHARM-II": {
         "Class": "Beam Target",
         "Source(s)": "CERN SPS",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "450",
         "POT (Planned/Largest)": "2.50E+19",
         "Baseline (m)": "480",
@@ -905,7 +905,7 @@
     "NuCAL": {
         "Class": "Beam Target",
         "Source(s)": "IHEP, Protvino",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "70",
         "POT (Planned/Largest)": "1.70E+18",
         "Baseline (m)": "64",
@@ -926,7 +926,7 @@
     "DAMSA": {
         "Class": "Beam Target",
         "Source(s)": "PIP-II Linac?",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "0.6",
         "POT (Planned/Largest)": "1.4e23",
         "Baseline (m)": "10.2",
@@ -947,7 +947,7 @@
     "Little DAMSA Path-Finder": {
         "Class": "Beam Target",
         "Source(s)": "",
-        "Beam Particle": "electron",
+        "Beam Particle": "Electron",
         "Beam Energy (GeV)": "0.02,0.3",
         "POT (Planned/Largest)": "1e14,1e16,1e18",
         "Baseline (m)": "0.42",
@@ -968,7 +968,7 @@
     "SHiP": {
         "Class": "Beam Target",
         "Source(s)": "CERN SPS",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "400",
         "POT (Planned/Largest)": "2.00E+20",
         "Baseline (m)": "70/120",
@@ -989,7 +989,7 @@
     "BEBC": {
         "Class": "Beam Target",
         "Source(s)": "CERN SPS",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "400",
         "POT (Planned/Largest)": "2.72E+18",
         "Baseline (m)": "404",
@@ -1010,7 +1010,7 @@
     "KTeV (E-799/E-832)": {
         "Class": "Beam Target",
         "Source(s)": "Tevatron",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "800",
         "POT (Planned/Largest)": "",
         "Baseline (m)": "94",
@@ -1032,7 +1032,7 @@
     "NuTeV": {
         "Class": "Beam Target",
         "Source(s)": "Tevatron",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "800",
         "POT (Planned/Largest)": "2.54E+18",
         "Baseline (m)": "1400",
@@ -1053,7 +1053,7 @@
     "PS191": {
         "Class": "Beam Target",
         "Source(s)": "CERN SPS",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "19.2",
         "POT (Planned/Largest)": "8.60E+18",
         "Baseline (m)": "115",
@@ -1074,7 +1074,7 @@
     "CCFR": {
         "Class": "Beam Target",
         "Source(s)": "Tevatron",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "800",
         "POT (Planned/Largest)": "",
         "Baseline (m)": "1400",
@@ -1095,7 +1095,7 @@
     "HYPER-K": {
         "Class": "Beam Target",
         "Source(s)": "J-PARC",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": "30",
         "POT (Planned/Largest)": "2.7e22",
         "Baseline (m)": "295e3",
@@ -1116,7 +1116,7 @@
     "ArgoNeuT": {
         "Class": "Beam Target",
         "Source(s)": "NuMI",
-        "Beam Particle": "proton",
+        "Beam Particle": "Proton",
         "Beam Energy (GeV)": 120.0,
         "POT (Planned/Largest)": "1.35e20",
         "Baseline (m)": "1.04E+03",
@@ -1133,6 +1133,69 @@
         "Anomalies?": "",
         "Notes": "ArgoNeuT uses Liquid Argon to detect and record neutrino interactions. There are three main systems in ArgoNeuT: the time projection chamber, the purity system, and the recirculation system. The whole experiment will be located underground in the direct path of the NuMI neutrino beam.",
         "InspireLink": "https://inspirehep.net/experiments/1108255"
+    },
+    "Mu2e": {
+        "Class": "Lepton Precision",
+        "Source(s)": "8 GeV protons (Delivery Ring)",
+        "Beam Particle": "Muon",
+        "Beam Energy (GeV)": "",
+        "POT (Planned/Largest)": "6e16",
+        "Baseline (m)": "",
+        "Detector Tech": "Solenoid + Tracker, CsI Cal.",
+        "Detector Material": "CsI/Mixed",
+        "Detector Mass (t)": "",
+        "Fiducial Mass (t)": "",
+        "Detector Volume (m^3)": "",
+        "Energy Threshold": "",
+        "Location": "Fermilab",
+        "Status": "Future",
+        "Reference": "https://inspirehep.net/literature/2877261",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "Sourced from 8 GeV protons on tungsten, 4e19 protons-on-target for ~6e16 muons stopped. 0.0015 mu / POT. The Mu2e experiment at Fermilab searches for the coherent, neutrino-less conversion of a μ- to e-in the Coulomb field of Al nuclei, that represents one of the cleanest Charged Lepton Flavor Violating (CLFV) processes for exploring Beyond the Standard Model (BSM) physics.",
+        "InspireLink": "https://inspirehep.net/experiments/1108209"
+    },
+    "COMET": {
+        "Class": "Lepton Precision",
+        "Source(s)": "J-PARC",
+        "Beam Particle": "Muon",
+        "Beam Energy (GeV)": "",
+        "POT (Planned/Largest)": "",
+        "Baseline (m)": "",
+        "Detector Tech": "Solenoid + Tracker, ECAL",
+        "Detector Material": "",
+        "Detector Mass (t)": "",
+        "Fiducial Mass (t)": "",
+        "Detector Volume (m^3)": "",
+        "Energy Threshold": "",
+        "Location": "J-PARC, Japan",
+        "Status": "Running",
+        "Reference": "https://arxiv.org/abs/2308.14275",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "COMET is built at the Japan Proton Accelerator Research Complex (J-PARC), from where it will receive its 8 GeV proton beam.",
+        "InspireLink": "https://inspirehep.net/experiments/1108246"
+    },
+    "g-2": {
+        "Class": "Lepton Precision",
+        "Source(s)": "",
+        "Beam Particle": "Muon",
+        "Beam Energy (GeV)": "",
+        "POT (Planned/Largest)": "",
+        "Baseline (m)": "",
+        "Detector Tech": "",
+        "Detector Material": "",
+        "Detector Mass (t)": "",
+        "Fiducial Mass (t)": "",
+        "Detector Volume (m^3)": "",
+        "Energy Threshold": "",
+        "Location": "",
+        "Status": "",
+        "Reference": "",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "",
+        "InspireLink": "https://inspirehep.net/experiments/1108997"
     },
     "field_types": {
         "Class": "",

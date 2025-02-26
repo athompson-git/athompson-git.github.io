@@ -95,6 +95,8 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
                 cellData = `<span style="color: red;">${cellData}</span>`;
               } else if (lowerData.includes("electron")) {
                 cellData = `<span style="color: blue;">${cellData}</span>`;
+              } else if (lowerData.includes("muon")) {
+                cellData = `<span style="color: purple;">${cellData}</span>`;
               }
             }
   
@@ -133,19 +135,27 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
   });
 }
 
-function sortTable(n) {
-  let table = document.getElementById("experimentTable");
-  let rows, switching, i, x, y, shouldSwitch, dir = "asc", switchcount = 0;
-  switching = true;
+// This function sorts the table (by tbody rows) based on column n (0-indexed) in the table with the given tableId.
+function sortTable(n, tableId) {
+  let table = document.getElementById(tableId);
+  let switching = true;
+  let dir = "asc";
+  let switchcount = 0;
+  let rows, i, shouldSwitch; // Declare variables outside the loop
+
   while (switching) {
     switching = false;
-    rows = table.rows;
-    for (i = 1; i < (rows.length - 1); i++) {
-      shouldSwitch = false;
-      x = rows[i].getElementsByTagName("TD")[n];
-      y = rows[i + 1].getElementsByTagName("TD")[n];
-      if ((dir === "asc" && x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) ||
-          (dir === "desc" && x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase())) {
+    rows = table.tBodies[0].rows;
+    // Loop through all table rows (except the header)
+    for (i = 0; i < rows.length - 1; i++) {
+      shouldSwitch = false; // Initialize for each pair of rows
+      let x = rows[i].getElementsByTagName("TD")[n];
+      let y = rows[i + 1].getElementsByTagName("TD")[n];
+
+      if (dir === "asc" && x.innerText.toLowerCase() > y.innerText.toLowerCase()) {
+        shouldSwitch = true;
+        break;
+      } else if (dir === "desc" && x.innerText.toLowerCase() < y.innerText.toLowerCase()) {
         shouldSwitch = true;
         break;
       }
@@ -154,9 +164,13 @@ function sortTable(n) {
       rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
       switching = true;
       switchcount++;
-    } else if (switchcount === 0 && dir === "asc") {
-      dir = "desc";
-      switching = true;
+    } else {
+      // If no switching has been done and direction is "asc",
+      // set the direction to "desc" and run the loop again.
+      if (switchcount === 0 && dir === "asc") {
+        dir = "desc";
+        switching = true;
+      }
     }
   }
 }
