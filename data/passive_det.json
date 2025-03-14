@@ -23,17 +23,17 @@
         "Detector Tech": "LXe",
         "Detector Material": "LXe",
         "Target Exposure (t-yr)": "",
-        "Detector Mass (t)": "",
+        "Detector Mass (t)": "~2.5",
         "Fiducial Mass (t)": "",
         "Detector Volume m^3": "",
         "Energy Threshold": "0.44 keVnr / 0.02 keVee",
         "Location": "",
         "Status": "Running",
-        "Reference": "",
+        "Reference": "https://arxiv.org/abs/2407.10892",
         "Open Data": "",
         "Anomalies?": "",
-        "Notes": "",
-        "InspireLink": ""
+        "Notes": "PandaX-4T datasets included paired and US2 with different exposures, see reference.",
+        "InspireLink": "https://inspirehep.net/experiments/1677151"
     },
     "PandaX-II": {
         "Class": "Dark Matter Detector",
