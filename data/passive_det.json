@@ -269,6 +269,42 @@
         "Notes": "AMANDA: Antarctic Muon and Neutrino Detector; AMANDA is a high-energy neutrino observatory which uses the deep South Pole ice as a target and a track-sensitive, transparent detecting medium. Upward moving neutrinos, having passed through the Earth, interact with ice and produce muons. The muons generate Cerenkov radiation which can be recorded by photomultiplier tubes (PMT). The tubes are placed in vertical shafts melted into the icecap to the depth of 1720 m. The data acquisition is handled in a counting facility at the surface. As of July 96, a total of 173 operating PMTs has been installed. The plan is to have at least 800 optical modules operating before the end of the century. Under construction (July 96).",
         "InspireLink": ""
     },
+    "SNO+": {
+        "Class": "Neutrino Observatory",
+        "Source(s)": "Solar/Astrophysical Neutrinos",
+        "Detector Tech": "Liquid Scintillator",
+        "Detector Material": "LS",
+        "Target Exposure (t-yr)": "",
+        "Detector Mass (t)": "",
+        "Fiducial Mass (t)": "",
+        "Dector Volume (m^3)": "6 m radius sphere",
+        "Energy Threshold": "",
+        "Location": "Creighton Mine, Sudbury, Ontario",
+        "Status": "Complete",
+        "Reference": "https://arxiv.org/2407.17595",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "",
+        "InspireLink": "https://inspirehep.net/experiments/1108233"
+    },
+    "SNO": {
+        "Class": "Neutrino Observatory",
+        "Source(s)": "Solar/Astrophysical Neutrinos",
+        "Detector Tech": "Heavy water Cherenkov",
+        "Detector Material": "D2O",
+        "Target Exposure (t-yr)": "",
+        "Detector Mass (t)": "1000",
+        "Fiducial Mass (t)": "",
+        "Dector Volume (m^3)": "",
+        "Energy Threshold": "",
+        "Location": "Creighton Mine, Sudbury, Ontario",
+        "Status": "Complete",
+        "Reference": "",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "",
+        "InspireLink": "https://inspirehep.net/experiments/1109110"
+    },
     "IceCube": {
         "Class": "Neutrino Observatory",
         "Source(s)": "Astrophysical/Atmospheric Neutrinos",
@@ -382,7 +418,7 @@
         "Source(s)": "Solar/Atmospheric",
         "Detector Tech": "Liquid Scintillator",
         "Detector Material": "Gd-LS",
-        "Target Exposure (t-yr)": "",
+        "Target Exposure (t-yr)": "~280",
         "Detector Mass (t)": "~300t",
         "Fiducial Mass (t)": "",
         "Dector Volume (m^3)": "",
@@ -392,8 +428,8 @@
         "Reference": "",
         "Open Data": "",
         "Anomalies?": "",
-        "Notes": "",
-        "InspireLink": ""
+        "Notes": "Phase-I, Phase-II, and Phase-III datasets",
+        "InspireLink": "https://inspirehep.net/experiments/1110446"
     },
     "JUNO": {
         "Class": "Neutrino Observatory",
