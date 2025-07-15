@@ -96,7 +96,9 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
               } else if (lowerData.includes("electron")) {
                 cellData = `<span style="color: blue;">${cellData}</span>`;
               } else if (lowerData.includes("muon")) {
-                cellData = `<span style="color: purple;">${cellData}</span>`;
+                cellData = `<span style="color: green;">${cellData}</span>`;
+              } else if (lowerData.includes("photon")) {
+                cellData = `<span style="color: cyan;">${cellData}</span>`;
               }
             }
   
