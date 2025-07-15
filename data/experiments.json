@@ -1281,6 +1281,27 @@
         "Notes": "The experiment is a precision measurement of Drell-Yan yields from hydrogen and deuterium. The ratio of these yields can be used to infer the ratio ubar(x)/dbar(x) in the proton, over the x interval between 0.03 and 0.3. Measures also the J/psi, psi', Upsilon, Upsilon', and Upsilon'' yields from both targets. Uses the Magnetic Dilepton Spectrometer, with 3 dipoles, 3 stations of wire chambers, 1 station with prop-tubes, 4 hodoscope stations, and high rate capability with better than 100 MeV resolution at the J/psi. Beam produces 10**(12) protons/spill. Targets are LH and LD. Targets for the J/psi studies were Be, Fe and W.",
         "InspireLink": "https://inspirehep.net/experiments/1108442"
     },
+    "FASER(nu)": {
+        "Class": "Forward Physics",
+        "Source(s)": "LHC (ATLAS collision point)",
+        "Beam Particle": "Proton",
+        "Beam Energy (GeV)": "6500",
+        "POT (Planned/Largest)": "",
+        "Baseline (m)": "480",
+        "Detector Tech": "tungsten/emulsion",
+        "Detector Material": "W",
+        "Detector Mass (t)": "",
+        "Fiducial Mass (t)": "",
+        "Detector Volume (m^3)": "0.25x0.30x1.05",
+        "Energy Threshold": "",
+        "Location": "CERN",
+        "Status": "Running",
+        "Reference": "https://arxiv.org/abs/1306.6327",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "",
+        "InspireLink": "https://inspirehep.net/experiments/1711193"
+    },
     "field_types": {
         "Class": "",
         "Source(s)": "",
