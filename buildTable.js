@@ -30,7 +30,7 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
 
         // Sorting: "Running" comes first, "Future" second, and all others last.
         let sortedEntries = Object.entries(data).sort((a, b) => {
-          let orderMap = { "running": 0, "future": 1 };
+          let orderMap = { "running": 0, "future": 1 , "proposed": 2, "completed": 3};
           let statusA = (a[1]["Status"] || "").toLowerCase();
           let statusB = (b[1]["Status"] || "").toLowerCase();
           let orderA = (statusA in orderMap) ? orderMap[statusA] : 2;
@@ -49,6 +49,8 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
           if (status === "Running") {
             rowColor = ' style="background-color: rgba(0, 128, 0, 0.1);"';
           } else if (status === "Future") {
+            rowColor = ' style="background-color: rgba(255, 255, 0, 0.1);"';
+          } else if (status === "Proposed") {
             rowColor = ' style="background-color: rgba(255, 255, 0, 0.1);"';
           }
   
