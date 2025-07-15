@@ -303,6 +303,38 @@
         "InspireLink": "https://inspirehep.net/experiments/2135913",
         "Known For": ""
     },
+    "muTRISTAN": {
+        "Collider": "",
+        "Collider Geometry": "Circular",
+        "Beam Particles": "(mu+,e-), (mu+,mu+)",
+        "CoM Energy √s (TeV)": "(0.346, 0.775), 2.0",
+        "Luminosity Collected": "",
+        "Detector Rapidity Coverage": "",
+        "Location": "",
+        "Status": "Future",
+        "Reference": "https://arxiv.org/abs/2201.06664",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "",
+        "InspireLink": "https://inspirehep.net/literature/2011910",
+        "Known For": ""
+    },
+    "nuSTORM": {
+        "Collider": "",
+        "Collider Geometry": "Racetrack",
+        "Beam Particles": "muon",
+        "CoM Energy √s (TeV)": "",
+        "Luminosity Collected": "",
+        "Detector Rapidity Coverage": "",
+        "Location": "",
+        "Status": "Future",
+        "Reference": "",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "",
+        "InspireLink": "",
+        "Known For": ""
+    },
     "ILC": {
         "Collider": "",
         "Collider Geometry": "Linear",
