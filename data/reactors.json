@@ -314,6 +314,27 @@
         "Notes": "The Precision Reactor Oscillation and Spectrum Experiment (PROSPECT) is a short-baseline reactor antineutrino experiment at Oak Ridge National Laboratory. The PROSPECT-I detector was deployed to search for eV-scale sterile neutrino oscillations and to make a precise measurement of the energy spectrum of antineutrinos emitted from the High Flux Isotope Reactor (HFIR) at baselines from 7 m to 9 m. PROSPECT measurements have tested our understanding of the standard model of particle physics, deepened our understanding of nuclear processes in a reactor, and achieved the highest signal-tobackground ratio for a surface-based neutrino detector.",
         "InspireLink": "https://inspirehep.net/experiments/1409204"
     },
+    "RELICS": {
+        "Class": "Reactor Neutrino Experiment",
+        "Source(s)": "Sanmen Nuclear Power Plant",
+        "Reactor Power": "3 GW",
+        "Reactor ON Exposure (kg-days)": "11680",
+        "Reactor OFF Exposure (kg-days)": "",
+        "Baseline (m)": "25",
+        "Detector Tech": "LXeTPC",
+        "Detector Material": "xenon",
+        "Detector Mass (t)": "44e-3",
+        "Fiducial Mass (t)": "32e-3",
+        "Dector Volume (m^3)": "",
+        "Energy Threshold": "0.63-1.36 keVnr",
+        "Location": "SNPP, Zhejiang, China",
+        "Status": "Future",
+        "Reference": "https://arxiv.org/abs/2405.05554",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "",
+        "InspireLink": ""
+    },
     "field_types": {
         "Class": "",
         "Source(s)": "",
