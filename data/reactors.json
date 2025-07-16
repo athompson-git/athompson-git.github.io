@@ -123,7 +123,7 @@
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": ""
+        "InspireLink": "https://inspirehep.net/experiments/1791953"
     },
     "CONUS+": {
         "Class": "Reactor",
@@ -144,7 +144,7 @@
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "CONUS+, the upgrade to CONUS operating by the KKL power reactor. Claimed the first statistically significant (3.7sigma) CEvNS measurement in 2025.",
-        "InspireLink": ""
+        "InspireLink": "https://inspirehep.net/experiments/2808844"
     },
     "nucleus": {
         "Class": "Reactor",
