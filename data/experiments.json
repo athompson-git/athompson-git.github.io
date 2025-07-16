@@ -1197,27 +1197,6 @@
         "Notes": "COMET is built at the Japan Proton Accelerator Research Complex (J-PARC), from where it will receive its 8 GeV proton beam.",
         "InspireLink": "https://inspirehep.net/experiments/1108246"
     },
-    "g-2": {
-        "Class": "Lepton Precision",
-        "Source(s)": "",
-        "Beam Particle": "Muon",
-        "Beam Energy (GeV)": "",
-        "POT (Planned/Largest)": "",
-        "Baseline (m)": "",
-        "Detector Tech": "",
-        "Detector Material": "",
-        "Detector Mass (t)": "",
-        "Fiducial Mass (t)": "",
-        "Detector Volume (m^3)": "",
-        "Energy Threshold": "",
-        "Location": "",
-        "Status": "",
-        "Reference": "",
-        "Open Data": "",
-        "Anomalies?": "",
-        "Notes": "",
-        "InspireLink": "https://inspirehep.net/experiments/1108997"
-    },
     "MEG-II": {
         "Class": "Lepton Precision",
         "Source(s)": "",
