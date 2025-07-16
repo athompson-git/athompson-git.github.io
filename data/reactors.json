@@ -322,7 +322,7 @@
         "Reactor OFF Exposure (kg-days)": "",
         "Baseline (m)": "25",
         "Detector Tech": "LXeTPC",
-        "Detector Material": "xenon",
+        "Detector Material": "Xe",
         "Detector Mass (t)": "44e-3",
         "Fiducial Mass (t)": "32e-3",
         "Dector Volume (m^3)": "",
