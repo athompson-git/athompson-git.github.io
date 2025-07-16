@@ -176,8 +176,8 @@
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    background-color: rgb(230, 226, 196);
-    border: 5px solid #5d8fbe;
+    background-color: rgb(251, 250, 241);
+    border: 5px solid #000000;
     padding: 5px;
     color: #333;
     font-size: 0.9em;
