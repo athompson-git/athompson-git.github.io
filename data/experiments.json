@@ -1351,8 +1351,8 @@
         "Beam Energy (GeV)": "~0.1-0.8",
         "POT (Planned/Largest)": "",
         "Baseline (m)": "",
-        "Detector Tech": "",
-        "Detector Material": "",
+        "Detector Tech": "Liquid Hydrogen Target, Crystal Ball, TAPS",
+        "Detector Material": "LH2, NaI, BaF2, PbWO4",
         "Detector Mass (t)": "",
         "Fiducial Mass (t)": "",
         "Detector Volume (m^3)": "",
@@ -1362,7 +1362,7 @@
         "Reference": "",
         "Open Data": "",
         "Anomalies?": "",
-        "Notes": "Liquid Hydrogen target",
+        "Notes": "",
         "InspireLink": "https://inspirehep.net/experiments/1110631"
     },
     "field_types": {
