@@ -89,23 +89,41 @@
         "Notes": "",
         "InspireLink": ""
     },
-    "SuperCDMS": {
+    "SuperCDMS (SNOLAB)": {
         "Class": "Dark Matter Detector",
         "Source(s)": "Environmental nu, DM Halo, etc",
-        "Detector Tech": "",
-        "Detector Material": "",
+        "Detector Tech": "iZIP (TES/Ionization)",
+        "Detector Material": "Ge, Si",
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "",
         "Fiducial Mass (t)": "",
         "Detector Volume m^3": "",
         "Energy Threshold": "",
-        "Location": "SLAC",
-        "Status": "",
+        "Location": "SNOLAB",
+        "Status": "Future",
         "Reference": "",
-        "Open Data": "",
+        "Open Data": "https://supercdms.slac.stanford.edu/science-results/data-releases",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": ""
+        "InspireLink": "https://inspirehep.net/experiments/1357671"
+    },
+    "SuperCDMS (Soudan)": {
+        "Class": "Dark Matter Detector",
+        "Source(s)": "Environmental nu, DM Halo, etc",
+        "Detector Tech": "iZIP (TES/Ionization)",
+        "Detector Material": "Ge",
+        "Exposure [Largest/Planned] (t-yr)": "4.63e-3",
+        "Detector Mass (t)": "9e-3",
+        "Fiducial Mass (t)": "9e-3",
+        "Detector Volume m^3": "25mm (h) x 76mm (d) cylinder",
+        "Energy Threshold": "8 keVnr",
+        "Location": "Soudan",
+        "Status": "Complete",
+        "Reference": "https://arxiv.org/abs/1708.08869",
+        "Open Data": "https://supercdms.slac.stanford.edu/science-results/data-releases",
+        "Anomalies?": "",
+        "Notes": "",
+        "InspireLink": "https://inspirehep.net/experiments/1298909"
     },
     "LZ": {
         "Class": "Dark Matter Detector",
