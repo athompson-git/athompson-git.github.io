@@ -516,13 +516,13 @@
         "Fiducial Mass (t)": "67",
         "Detector Volume (m^3)": "8.75 m x 8.73 m^2",
         "Energy Threshold": "[18, 40] (DAR), [60,200] (DIF)",
-        "Location": "",
+        "Location": "LANL, New Mexico, USA",
         "Status": "Complete",
         "Reference": "https://inspirehep.net/experiments/1108822?ui-citation-summary=true",
         "Open Data": "",
         "Anomalies?": "Yes",
         "Notes": "LSND (Proposed: Jul 3, 1989, Approved: Jan, 1990, Started: Sep, 1993, Completed: 1998): A search for neutrino oscillations to the level sin(theta)^2 = 3 x 10^(-4), where theta represents the mixing angle if there were a two-generation mixing. Uses neutrinos produced by both at-rest and in-flight decaying pions. Neutrinos then interact in a mineral oil (CH2) target. The detector consists of a tank with 167 tons of liquid scintillator and with 1220 photomultiplier tubes mounted on the inside tank surface. Other physics goals include measurements of neutrino elastic, charged-current, and neutral-current scattering. Taking data (July 96). Will continue the data taking for at least one more year, and possibly for another 5-10 years.",
-        "InspireLink": ""
+        "InspireLink": "https://inspirehep.net/experiments/1108822"
     },
     "CCM": {
         "Class": "Beam Target",
@@ -537,7 +537,7 @@
         "Fiducial Mass (t)": "7",
         "Detector Volume (m^3)": " cylinder 2m diameter, 1m height",
         "Energy Threshold": "200 keV",
-        "Location": "LANL",
+        "Location": "LANL, New Mexico, USA",
         "Status": "Running",
         "Reference": "https://inspirehep.net/literature/1865999",
         "Open Data": "",
@@ -1306,7 +1306,7 @@
         "Class": "Electron Scattering",
         "Source(s)": "Mainz Microtron (MAMI)",
         "Beam Particle": "Electron",
-        "Beam Energy (GeV)": "",
+        "Beam Energy (GeV)": "0.1-1.6",
         "POT (Planned/Largest)": "",
         "Baseline (m)": "",
         "Detector Tech": "",
