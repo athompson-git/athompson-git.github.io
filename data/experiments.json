@@ -734,6 +734,27 @@
         "Notes": "NA62 aims to measure rare Kaon decays (K to Pi nu) at the CERN SPS.",
         "InspireLink": ""
     },
+    "NA48": {
+        "Class": "Beam Target",
+        "Source(s)": "CERN SPS",
+        "Beam Particle": "Proton",
+        "Beam Energy (GeV)": "450",
+        "POT (Planned/Largest)": "",
+        "Baseline (m)": "6, 126",
+        "Detector Tech": "Spectrometer, Hodoscope, LKr Calorimeter",
+        "Detector Material": "",
+        "Detector Mass (t)": "",
+        "Fiducial Mass (t)": "",
+        "Detector Volume (m^3)": "",
+        "Energy Threshold": "",
+        "Location": "CERN, Switzerland",
+        "Status": "Complete",
+        "Reference": "",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "",
+        "InspireLink": "https://inspirehep.net/experiments/1108767"
+    },
     "E774": {
         "Class": "Beam Target",
         "Source(s)": "Fermilab",
