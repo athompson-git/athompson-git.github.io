@@ -470,20 +470,20 @@
     "Super-K": {
         "Class": "Neutrino Observatory",
         "Source(s)": "accelerator, Atmospheric, solar, cosmic",
-        "Detector Tech": "cherenkov",
-        "Detector Material": "",
+        "Detector Tech": "Water Cherenkov",
+        "Detector Material": "H20",
         "Exposure [Largest/Planned] (t-yr)": "",
-        "Detector Mass (t)": "",
-        "Fiducial Mass (t)": "",
+        "Detector Mass (t)": "50e3",
+        "Fiducial Mass (t)": "22.5e3",
         "Dector Volume (m^3)": "",
         "Energy Threshold": "3.5 MeV",
         "Location": "Mount Ikeno, Japan",
         "Status": "Complete",
-        "Reference": "",
+        "Reference": "https://arxiv.org/abs/hep-ex/9807003",
         "Open Data": "",
         "Anomalies?": "",
-        "Notes": "",
-        "InspireLink": ""
+        "Notes": "Uses a 50,000-ton ring-imaging water Cerenkov detector at a depth of 2700 meters of water equivalent (mwe) in the Kamioka Mozumi mine in Japan. The detector consists of a stainless steel tank in the shape of a right circular cylinder, 39 m diameter and 41 m height, filled with purified water. It is optically segmented into an inner volume, and an outer (anti-coincidence) region. The inner region is viewed by 11,200 photomultiplier tubes (PMT's). The outer annulus is used to tag entering muons as well as to attenuate low-energy gammas and neutrons. The outer region is viewed by 1,800 PMT's. Taking data (July 96).",
+        "InspireLink": "https://inspirehep.net/experiments/1109022"
     },
     "HYPER-K": {
         "Class": "Neutrino Observatory",
@@ -497,11 +497,11 @@
         "Energy Threshold": "~o(few MeV)",
         "Location": "Tochibora mine, Japan",
         "Status": "Future",
-        "Reference": "https://inspirehep.net/experiments/1340261?ui-citation-summary=true",
+        "Reference": "https://arxiv.org/abs/1805.04163",
         "Open Data": "",
         "Anomalies?": "",
-        "Notes": "",
-        "InspireLink": ""
+        "Notes": "The Hyper-Kamiokande (Hyper-K) detector is a next generation underground water Cherenkov detector, about 25 times larger than Super-Kamiokande. It is a multipurpose detector but it will be mainly the far detector of a future long baseline neutrino experiment, envisioned for the upgraded J-PARC beam. Hyper-Kamiokande is also able to study proton decays, atmospheric neutrinos, and neutrinos from astro-physical origins. It is currently under construction and will begin running in 2027.",
+        "InspireLink": "https://inspirehep.net/experiments/1340261"
     },
     "Borexino": {
         "Class": "Neutrino Observatory",

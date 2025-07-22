@@ -1153,7 +1153,7 @@
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "The Hyper-Kamiokande (Hyper-K) detector is a next generation underground water Cherenkov detector, about 25 times larger than Super-Kamiokande. It is a multipurpose detector but it will be mainly the far detector of a future long baseline neutrino experiment, envisioned for the upgraded J-PARC beam. Hyper-Kamiokande is also able to study proton decays, atmospheric neutrinos, and neutrinos from astro-physical origins. It is currently under construction and will begin running in 2027.",
-        "InspireLink": ""
+        "InspireLink": "https://inspirehep.net/experiments/1340261"
     },
     "ArgoNeuT": {
         "Class": "Beam Target",
