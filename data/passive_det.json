@@ -246,28 +246,28 @@
         "Location": "Capo Passero, Italy",
         "Status": "Running",
         "Reference": "https://iopscience.iop.org/article/10.1088/0954-3899/43/8/084001",
-        "Open Data": "",
+        "Open Data": "https://www.km3net.org/about-km3net/publications/open-data-and-software/",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": ""
+        "InspireLink": "https://inspirehep.net/experiments/1108236"
     },
     "KM3NeT/ORCA": {
         "Class": "Neutrino Observatory",
         "Source(s)": "Atmospheric Neutrinos",
-        "Detector Tech": "Water cherenkov",
+        "Detector Tech": "Water Cherenkov",
         "Detector Material": "seawater",
-        "Exposure [Largest/Planned] (t-yr)": "",
-        "Detector Mass (t)": "",
+        "Exposure [Largest/Planned] (t-yr)": "433e3",
+        "Detector Mass (t)": "7e6",
         "Fiducial Mass (t)": "",
         "Dector Volume (m^3)": "7*10^6 m^3",
         "Energy Threshold": "~GeV",
         "Location": "Toulon, France",
         "Status": "Running",
-        "Reference": "https://iopscience.iop.org/article/10.1088/0954-3899/43/8/084001 https://arxiv.org/pdf/2501.11336",
-        "Open Data": "",
+        "Reference": "https://arxiv.org/abs/2504.09119, https://arxiv.org/pdf/2501.11336",
+        "Open Data": "https://www.km3net.org/about-km3net/publications/open-data-and-software/",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": ""
+        "InspireLink": "https://inspirehep.net/experiments/1108236"
     },
     "ANTARES": {
         "Class": "Neutrino Observatory",
