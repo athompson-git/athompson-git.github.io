@@ -514,9 +514,9 @@
         "Dector Volume (m^3)": "",
         "Energy Threshold": "LER 190 keV, HER 3.2 MeV",
         "Location": "Gran Sasso, Italy",
-        "Status": "Running",
-        "Reference": "",
-        "Open Data": "",
+        "Status": "Complete",
+        "Reference": "https://arxiv.org/abs/0806.2400",
+        "Open Data": "https://borex.lngs.infn.it/opendata/",
         "Anomalies?": "",
         "Notes": "Phase-I, Phase-II, and Phase-III datasets have different exposures, fiducial volumes and thresholds",
         "InspireLink": "https://inspirehep.net/experiments/1110446"
