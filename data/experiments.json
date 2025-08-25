@@ -559,12 +559,12 @@
         "Detector Volume (m^3)": "",
         "Energy Threshold": "1 GeV",
         "Location": "Fermilab",
-        "Status": "",
-        "Reference": "",
-        "Open Data": "",
+        "Status": "Complete",
+        "Reference": "https://arxiv.org/abs/1305.5199",
+        "Open Data": "https://minerva.fnal.gov/data-release-page/",
         "Anomalies?": "",
         "Notes": "graphite target",
-        "InspireLink": ""
+        "InspireLink": "https://inspirehep.net/experiments/1108452?ui-citation-summary=true"
     },
     "JSNS^2": {
         "Class": "Beam Target",
