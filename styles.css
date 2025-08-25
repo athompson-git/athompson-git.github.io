@@ -1,14 +1,14 @@
 /* styles.css */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #282727;
 }
 
 header {
-    background: #004080;
+    background: #122c34;
     color: white;
     padding: 1rem 0;
     text-align: center;
@@ -26,7 +26,25 @@ section {
 }
 
 h1, h2 {
-    color: #004080;
+    color: #2a4494;
+}
+
+a:link {
+    color: #2a4494;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #224870;
+}
+
+a:hover {
+    color: #4ea5d9;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #2a4494;
 }
 
 .contact-info {
