@@ -22,7 +22,9 @@ header img {
 }
 
 section {
-    padding: 3rem;
+    padding: 3rem 0;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 h1, h2 {
@@ -96,6 +98,31 @@ a:active {
     vertical-align: middle; /* Align the image vertically with the text */
     margin-right: 10px; /* Optional: add space between the image and text */
 }
+
+/* Banner style */
+.banner-links {
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    background-color: #0e2329; /* slightly darker than header */
+}
+
+.banner-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.banner-links a:hover {
+    color: #4ea5d9;
+    text-decoration: underline;
+}
+
+
+/* Smooth in-page scrolling */
+html { scroll-behavior: smooth; }
+
+
 
 /* Mobile Responsive Layout */
 @media (max-width: 768px) {

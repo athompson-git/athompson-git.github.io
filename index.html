@@ -8,10 +8,20 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
         <img src="south_dakota_bnw.jpg" alt="Somewhere in Custer State Park, South Dakota">
         <h1 style="color: white;">Adrian Thompson</h1>
         <p>Postdoctoral Scholar, Northwestern University</p>
+
+        <nav class="banner-links">
+            <a href="index.html">Home</a>
+            <a href="#research">Research</a>
+            <a href="#projects">Tools and Codes</a>
+            <a href="https://github.com/athompson-git">GitHub</a>
+            <a href="https://athompson-git.github.io/experiments.html">eXdb</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
     <section>
@@ -34,6 +44,7 @@
 
 
     <section>
+        <div id="research">
         <h2>Selected Research</h2>
         <div class="paper">
             <div>
@@ -48,7 +59,8 @@
                     which could be seen within a single dataset from a single experimental configuration of the beam.
                 </p>
             </div>
-            <img src="images/mucol_sens.png" alt="Muon collider neutrino sensitivity">
+            <img src="images/mucol_sens.png"
+            style="width: min(600px, 30vw);" alt="Muon collider neutrino sensitivity">
         </div>
         <div class="paper">
             <div>
@@ -60,7 +72,8 @@
                     If the hyperons are indeed present in the neutron star equation of state, this decay and scattering process is strongly constrained by the observed rate of orbital period decay in the binary pulsars.
                 </p>
             </div>
-            <img src="images/bnv_param_space.png" alt="BNV">
+            <img src="images/bnv_param_space.png"
+            style="width: min(600px, 30vw);" alt="BNV">
         </div>
         <div class="paper">
             <div>
@@ -70,7 +83,8 @@
                     Charged meson decays in accelerator-based experiments can enhance sensitivity to new physics by avoiding helicity suppression, making them effective probes for dark-sector signals. This mechanism provides a plausible explanation for the MiniBooNE low-energy excess and predicts testable parameter values consistent with existing limits in current and future neutrino experiments.
                 </p>
             </div>
-            <img src="images/miniboone_feynman.png" alt="MiniBooNE">
+            <img src="images/miniboone_feynman.png"
+            style="width: min(600px, 30vw);" alt="MiniBooNE">
         </div>
         <div class="paper">
             <div>
@@ -80,7 +94,9 @@
                     Axions with dimension-5 couplings to photons can undergo coherent Primakoff scattering in crystals, but absorption effects significantly suppress the event rate, requiring corrections often overlooked in solar axion searches. By incorporating absorption effects and exploring the Borrmann effect, we refine sensitivity projections for experiments like SuperCDMS, LEGEND, and SABRE, highlighting strategies to enhance solar axion discovery potential.
                 </p>
             </div>
-            <img src="images/absorption_sum_Ge111_withBorrmann.png" alt="ALP-crystal scattering coherence">
+            <img src="images/absorption_sum_Ge111_withBorrmann.png"
+            alt="ALP-crystal scattering coherence"
+            style="width: min(600px, 30vw);">
         </div>
         <div class="paper">
             <div>
@@ -90,12 +106,16 @@
                     Neutrino non-standard interactions (NSI) can span a high-dimensional parameter space with degeneracies that require combining data from diverse experiments to constrain. By integrating scattering data from Borexino, COHERENT, and future detectors with oscillation measurements at DUNE, this analysis improves constraints on electron and quark NSI parameters by up to a factor of 2–3 using a novel copula method for posterior combination.
                 </p>
             </div>
-            <img src="images/atmospherics.png" alt="Atmospheric Neutrino Flux in Zenith angles and Energy (radial direction)">
+            <img src="images/atmospherics.png"
+            alt="Atmospheric Neutrino Flux in Zenith angles and Energy (radial direction)"
+            style="width: min(600px, 30vw);">
         </div>
+    </div>
     </section>
 
     <section>
-        <h2>Stuff I Made</h2>
+        <div id="projects">
+        <h2>Codes and Tools I made</h2>
         <p>
             <img src="images/logos/github-mark.svg", width=25px>
             <a href="https://github.com/athompson-git">GitHub:athompson-git</a>
@@ -107,7 +127,8 @@
                     <a href="experiments.html">eXdb: A Particle Physics Experiments Database</a>
                 </p>
             </div>
-            <img src="images/particle_beam.gif", align="center", style="width: min(600px, 100vw);">
+            <img src="images/particle_beam.gif",
+            align="center", style="width: min(600px, 35vw);">
         </div>
         <div class="project">
             <div>
@@ -116,7 +137,9 @@
                     Runge-Kutta transport of Charged Mesons through Magnetic Focusing Horns
                 </p>
             </div>
-            <img src="images/horn_transport_visualization.png", align="center", alt="Runge-Kutta transport visualization">
+            <img src="images/horn_transport_visualization.png", 
+                align="center", alt="Runge-Kutta transport visualization",
+                style="width: min(600px, 35vw);">
         </div>
         <div class="project">
             <div>
@@ -126,6 +149,7 @@
                 </p>
             </div>
         </div>
+    </div>
     </section>
 
     <section>
@@ -135,6 +159,12 @@
             Byckling, Kajantie, <i>Particle Kinematics</i>
         </p>
         <p>
+            Cheng & Li, <i>Gauge theory of elementary particle physics</i>
+        </p>
+        <p>
+            Interactive explainers for concepts in optimization and machine learning on <a href="https://distill.pub/">distill.pub</a>
+        </p>
+        <p>
             <a href="docs/Notes_on_SU_2__and_neutrino_masses.pdf">Notes on SU(2) Reps and Neutrino Mass Models</a> (TASI 2020)
         </p>
         <p>
@@ -142,22 +172,13 @@
         </p>
     </section>
 
-
-    <p>
-        <iframe src="https://www.metaculus.com/questions/embed/31079?theme=dark&embedTitle=When+will+a+muon+collider+turn+on+with+a+center-of-mass+beam+energy+%E2%89%A51+TeV%3F&zoom=all"
-                style="height:430px; width:100%; max-width:550px; margin: 0 auto; display: block;">
-        </iframe>
-    </p>
     <section>
+    <div id="contact">
         <h2>Contact</h2>
         <div class="contact-info">
             <p>Email: <a href="mailto:a.thompson@northwestern.edu">a.thompson@northwestern.edu</a></p>
-            <p>
-                <a href="https://bsky.app/profile/gooble-gabble.bsky.social">
-                    <img src="images/logos/Bluesky_Logo.svg", width=30px>
-                </a>
-            </p>
         </div>
+    </div>
     </section>
 </body>
 </html>
