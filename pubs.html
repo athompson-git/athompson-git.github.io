@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authored Works | Adrian Thompson</title>
+    <meta name="description" content="Publications by Adrian Thompson" />
+
+    <link rel="stylesheet" href="styles.css">
+<body>
+
+  <style>
+    :root {
+      --fg: #111;
+      --muted: #5b6b7a;
+      --link: #0a66c2;
+      --bg: #fff;
+      --card: #f8fafc;
+      --accent: #e5eef7;
+      --maxw: 1100px;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
+
+    header p { margin: 0.25rem 0 0; color: var(--muted); }
+    .toolbar {
+      max-width: var(--maxw);
+      margin: 1rem auto 1.5rem;
+      padding: 0 1rem;
+      display: flex;
+      gap: .75rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .search {
+      flex: 1 1 320px;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      background: var(--card);
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: .6rem .8rem;
+    }
+    .search input {
+      border: none;
+      outline: none;
+      background: transparent;
+      width: 100%;
+      font-size: 0.95rem;
+    }
+    main {
+      max-width: var(--maxw);
+      margin: 0 auto 4rem;
+      padding: 0 1rem;
+    }
+    section {
+      margin: 2.2rem 0;
+    }
+    section h2 {
+      font-size: 1.25rem;
+      margin: 0 0 .75rem;
+      padding-bottom: .4rem;
+      border-bottom: 2px solid var(--accent);
+      letter-spacing: .2px;
+    }
+    ol, ul { margin: 0; padding-left: 1.25rem; }
+    .pubs { list-style: decimal; }
+    .pub {
+      margin: .6rem 0 .9rem;
+      padding-left: .2rem;
+    }
+    .authors { color: var(--fg); }
+    .title { font-style: italic; }
+    .venue { color: var(--muted); }
+    .tags {
+      display: inline-flex;
+      gap: .4rem;
+      margin-left: .4rem;
+      font-size: 0.9rem;
+    }
+    .tag {
+      background: var(--accent);
+      color: #223a5e;
+      padding: .05rem .45rem;
+      border-radius: 6px;
+      border: 1px solid #d8e6f5;
+      white-space: nowrap;
+    }
+    .links { display: inline; margin-left: .5rem; }
+    .links a { margin-right: .6rem; }
+
+    /* Compact on mobile */
+    @media (max-width: 640px) {
+      .pub { margin: .5rem 0 .8rem; }
+    }
+  </style>
+</head>
+<body>
+  
+
+  <header>
+        <h1 style="color: white;">Publications and Authored Papers</h1>
+        <nav class="banner-links">
+            <a href="index.html">Home</a>
+            <a href="pubs.html">Publications</a>
+            <a href="https://github.com/athompson-git">GitHub</a>
+            <a href="https://athompson-git.github.io/experiments.html">eXdb</a>
+            <a href="projects.html">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+  <main id="pubs-root">
+
+    <!-- Primary Contributions -->
+    <section id="primary">
+      <h2>Primary Contributions</h2>
+      <ol class="pubs">
+        <li class="pub">
+          <span class="authors">V. Brdar, B. Dutta, W. Jang, D. Kim, I. M. Shoemaker, Z. Tabrizi, <u>A. T.</u>, J. Yu.</span>
+          <span class="title"> “Finding BSM Needles in Electromagnetic Haystacks at DUNE.”</span>
+          <span class="venue"> In review for <em>Phys. Rev. D</em> (2025).</span>
+          <span class="links"><a href="https://arxiv.org/abs/2507.21228" target="_blank" rel="noopener">arXiv:2507.21228</a></span>
+          <span class="tags"><span class="tag">Axions</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">A. de Gouvêa, <u>A. T.</u>.</span>
+          <span class="title"> “Electroweak Observables in Neutrino-Electron Scattering from a Muon Storage Ring.”</span>
+          <span class="venue"> In review for <em>JHEP</em> (2025).</span>
+          <span class="links"><a href="https://arxiv.org/abs/2505.00152" target="_blank" rel="noopener">arXiv:2505.00152</a></span>
+          <span class="tags"><span class="tag">Muon Colliders</span></span>
+          <span class="tags"><span class="tag">Neutrinos</span></span>
+          <span class="tags"><span class="tag">Electroweak Precision</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">F. Capozzi, B. Dutta, G. Gurung, W. Jang, I. M. Shoemaker, <u>A. T.</u>, J. Yu.</span>
+          <span class="title"> “Enhancing the Sensitivity to Seesaw Predictions in Gauged B-L Scenarios.”</span>
+          <span class="venue"> <em>Phys. Rev. D</em> <strong>111</strong> (2025) 055036.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2410.08981" target="_blank" rel="noopener">arXiv:2410.08981</a></span>
+          <span class="tags"><span class="tag">Heavy Neutral Leptons</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">R. Allahverdi, <u>A. T.</u>, M. Zakeri.</span>
+          <span class="title"> “Insights from binary pulsars and laboratories into baryon number violation: Implications for GeV dark matter.”</span>
+          <span class="venue"> <em>Phys. Rev. D</em> <strong>110</strong> (2024) 115010.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2409.08178" target="_blank" rel="noopener">arXiv:2409.08178</a></span>
+          <span class="tags"><span class="tag">B Violation</span></span>
+          <span class="tags"><span class="tag">Astrophysics</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">B. Dutta, S. Ghosh, K. J. Kelly, T. Li, <u>A. T.</u>, A. Verma.</span>
+          <span class="title"> “Non-standard neutrino interactions mediated by a light scalar at DUNE.”</span>
+          <span class="venue"> <em>JHEP</em> 07 (2024) 213.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2401.02107" target="_blank" rel="noopener">arXiv:2401.02107</a></span>
+          <span class="tags"><span class="tag">Neutrino NSI</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">B. Dutta, J. B. Dent, <u>A. T.</u>.</span>
+          <span class="title"> “Bragg-Primakoff Axion Photoconversion in Crystal Detectors.”</span>
+          <span class="venue"> <em>JHEP</em> 02 (2024) 190.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2307.04861" target="_blank" rel="noopener">arXiv:2307.04861</a></span>
+          <span class="tags"><span class="tag">Axions</span></span>
+          <span class="tags"><span class="tag">Coherence</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">F. Capozzi, B. Dutta, G. Gurung, W. Jang, I. M. Shoemaker, <u>A. T.</u>, J. Yu.</span>
+          <span class="title"> “New Constraints on ALP Electron and Photon Couplings from ArgoNeuT and the MiniBooNE Beam Dump.”</span>
+          <span class="venue"> <em>Phys. Rev. D</em> <strong>108</strong> (2023) 075019.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2307.03878" target="_blank" rel="noopener">arXiv:2307.03878</a></span>
+          <span class="tags"><span class="tag">Axions</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">B. Dutta, S. Ghosh, T. Li, <u>A. T.</u>, A. Verma.</span>
+          <span class="title"> “Non-standard neutrino interactions in light mediator models at reactor experiments.”</span>
+          <span class="venue"> <em>JHEP</em> 03 (2023) 163.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2209.13566" target="_blank" rel="noopener">arXiv:2209.13566</a></span>
+          <span class="tags"><span class="tag">Neutrino NSI</span></span>
+          <span class="tags"><span class="tag">Reactors</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">L. Waites, <u>A. T.</u>, A. Bungau, J. M. Conrad, B. Dutta, W-C. Huang, D. Kim, M. Shaevitz, J. Spitz.</span>
+          <span class="title"> “Axion-Like Particle Production at Beam Dump Experiments with Distinct Nuclear Excitation Lines.”</span>
+          <span class="venue"> <em>Phys. Rev. D</em> <strong>107</strong> (2023) 095010.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2207.13659" target="_blank" rel="noopener">arXiv:2207.13659</a></span>
+          <span class="tags"><span class="tag">Isotope Experiments</span></span>
+          <span class="tags"><span class="tag">Axions</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">A. Bhattarai, V. Brdar, B. Dutta, W. Jang, D. Kim, I. M. Shoemaker, Z. Tabrizi, <u>A. T.</u>, J. Yu.</span>
+          <span class="title"> “Probing new physics at DUNE operating in a beam-dump mode.”</span>
+          <span class="venue"> <em>Phys. Rev. D</em> <strong>107</strong> (2023) 055043.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2206.06380" target="_blank" rel="noopener">arXiv:2206.06380</a></span>
+          <span class="tags"><span class="tag">Axions</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">J. Alonso <em>et al.</em></span>
+          <span class="title"> “Neutrino physics opportunities with the IsoDAR source at Yemilab.”</span>
+          <span class="venue"> <em>Phys. Rev. D</em> <strong>105</strong> (2022) 052009.
+          <span class="tags"><span class="tag">New Gauge Forces</span></span>
+          <span class="links"><a href="https://arxiv.org/abs/2111.09480" target="_blank" rel="noopener">arXiv:2111.09480</a></span>
+          <span class="tags"><span class="tag">Isotope Experiments</span></span>
+          <span class="tags"><span class="tag">New Gauge Forces</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">B. Dutta, D. Kim, <u>A. T.</u>, R. T. Thornton, R. Van de Water.</span>
+          <span class="title"> “Solutions to the MiniBooNE Anomaly from New Physics in Charged Meson Decays.”</span>
+          <span class="venue"> <em>Phys. Rev. Lett.</em> <strong>129</strong> (2022) 111803.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2110.11944" target="_blank" rel="noopener">arXiv:2110.11944</a></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">F. Capozzi, B. Dutta, G. Gurung, W. Jang, <u>A. T.</u>, J. Yu, I. M. Shoemaker.</span>
+          <span class="title"> “Extending the Reach of Leptophilic Boson Searches at DUNE and MiniBooNE with Bremsstrahlung and Resonant Production.”</span>
+          <span class="venue"> <em>Phys. Rev. D</em> <strong>104</strong> (2021) 115010.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2108.03262" target="_blank" rel="noopener">arXiv:2108.03262</a></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">J. B. Dent, B. Dutta, A. Jastram, D. Kim, A. Kubik, R. Mahapatra, S. Rajendran, H. Ramani, <u>A. T.</u>, S. Verma.</span>
+          <span class="title"> “Pathfinder for a High Statistics Search for Missing Energy in Gamma Cascades.”</span>
+          <span class="venue"> <em>Phys. Rev. D</em> <strong>105</strong> (2022) 115030.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2105.07007" target="_blank" rel="noopener">arXiv:2105.07007</a></span>
+          <span class="tags"><span class="tag">Isotope Experiments</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">V. Brdar, B. Dutta, W. Jang, D. Kim, I. M. Shoemaker, Z. Tabrizi, <u>A. T.</u>, J. Yu.</span>
+          <span class="title"> “Axion-like Particles at Future Neutrino Experiments: Closing the Cosmological Triangle.”</span>
+          <span class="venue"> <em>Phys. Rev. Lett.</em> <strong>126</strong> (2021) 201801.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2006.15118" target="_blank" rel="noopener">arXiv:2006.15118</a></span>
+          <span class="tags"><span class="tag">Axions</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">J. B. Dent, B. Dutta, J. L. Newstead, <u>A. T.</u>.</span>
+          <span class="title"> “Inverse Primakoff Scattering as a Probe of Solar Axions at Liquid Xenon Direct Detection Experiments.”</span>
+          <span class="venue"> <em>Phys. Rev. Lett.</em> <strong>125</strong> (2020) 131805.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2006.15118" target="_blank" rel="noopener">arXiv:2006.15118</a></span>
+          <span class="tags"><span class="tag">Solar Axions</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">B. Dutta, D. Kim, S. Liao, J-C. Park, S. Shin, L. E. Strigari, <u>A. T.</u>.</span>
+          <span class="title"> “Searching for Dark Matter Signals in Timing Spectra at Neutrino Experiments.”</span>
+          <span class="venue"> <em>JHEP</em> 01 (2022) 144.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2006.09386" target="_blank" rel="noopener">arXiv:2006.09386</a></span>
+          <span class="tags"><span class="tag">Dark Matter</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">B. Dutta, R. F. Lang, S. Liao, S. Sinha, L. E. Strigari, <u>A. T.</u>.</span>
+          <span class="title"> “A global analysis strategy to resolve neutrino NSI degeneracies with scattering and oscillation data.”</span>
+          <span class="venue"> <em>JHEP</em> 09 (2020) 106.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2002.03066" target="_blank" rel="noopener">arXiv:2002.03066</a></span>
+          <span class="tags"><span class="tag">Neutrino NSI</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">J. B. Dent, B. Dutta, D. Kim, S. Liao, R. Mahapatra, K. Sinha, <u>A. T.</u>.</span>
+          <span class="title"> “New Directions for Axion Searches via Scattering at Reactor Neutrino Experiments.”</span>
+          <span class="venue"> <em>Phys. Rev. Lett.</em> <strong>124</strong> (2020) 211804.</span>
+          <span class="links"><a href="https://arxiv.org/abs/1912.05733" target="_blank" rel="noopener">arXiv:1912.05733</a></span>
+          <span class="tags"><span class="tag">Reactors</span></span>
+          <span class="tags"><span class="tag">Axions</span></span>
+        </li>
+
+        <li class="pub">
+          <span class="authors">M. Abdullah, M. Dalchenko, T. Kamon, D. Rathjens, <u>A. T.</u>.</span>
+          <span class="title"> “A heavy neutral gauge boson near the Z boson mass pole via third generation fermions at the LHC.”</span>
+          <span class="venue"> <em>Phys. Lett. B</em> <strong>803</strong> (2020) 135326.</span>
+          <span class="links"><a href="https://arxiv.org/abs/1912.00102" target="_blank" rel="noopener">arXiv:1912.00102</a></span>
+          <span class="tags"><span class="tag">New Gauge Forces</span></span>
+          <span class="tags"><span class="tag">Colliders</span></span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Contributions with Experimental Collaborations -->
+    <section id="collab">
+      <h2>Contributions with Experimental Collaborations</h2>
+      <p class="venue">I led the analysis effort for the following CCM collaboration papers.</p>
+      <ol class="pubs">
+        <li class="pub">
+          <span class="authors">CCM Collaboration.</span>
+          <span class="title"> “Testing Meson Portal Dark Sector Solutions to the MiniBooNE Anomaly at CCM.”</span>
+          <span class="venue"> <em>Phys. Rev. D</em> <strong>109</strong> (2024) 095017.</span>
+          <span class="tags"><span class="tag">Baryophillic Mediators</span></span>
+          <span class="tags"><span class="tag">MiniBooNE Anomaly</span></span>
+          <span class="links"><a href="https://arxiv.org/abs/2309.02599" target="_blank" rel="noopener">arXiv:2309.02599</a></span>
+        </li>
+        <li class="pub">
+          <span class="authors">CCM Collaboration.</span>
+          <span class="title"> “Axion-Like Particles at Coherent CAPTAIN-Mills.”</span>
+          <span class="venue"> <em>Phys. Rev. D</em> <strong>107</strong> (2023) 095036.</span>
+          <span class="tags"><span class="tag">Axions</span></span>
+          <span class="links"><a href="https://arxiv.org/abs/2112.09979" target="_blank" rel="noopener">arXiv:2112.09979</a></span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Secondary Contributions -->
+    <section id="secondary">
+      <h2>Secondary Contributions</h2>
+      <ol class="pubs">
+        <li class="pub">
+          <span class="authors">B. Dutta, A. Karthikeyan, D. Kim, <u>A. T.</u>, R. G. Van de Water.</span>
+          <span class="title"> “Photon Excess from Dark Matter and Neutrino Scattering at MiniBooNE and MicroBooNE.”</span>
+          <span class="venue"> In review for <em>Phys. Rev. Lett.</em> (2025).</span>
+          <span class="links"><a href="https://arxiv.org/abs/2504.08071" target="_blank" rel="noopener">arXiv:2504.08071</a></span>
+          <span class="tags"><span class="tag">New Gauge Forces</span></span>
+        </li>
+        <li class="pub">
+          <span class="authors">S. Sahoo, S. Verma, M. Mirzakhani, N. Mishra, <u>A. T.</u>, S. Maludze, R. Mahapatra, M. Platt.</span>
+          <span class="title"> “Reactor-based Search for Axion-Like Particles using CsI(Tl) Detector.”</span>
+          <span class="venue"> In review (2024).</span>
+          <span class="links"><a href="https://arxiv.org/abs/2407.14704" target="_blank" rel="noopener">arXiv:2407.14704</a></span>
+          <span class="tags"><span class="tag">Axions</span></span>
+        </li>
+        <li class="pub">
+          <span class="authors">A. Kaur Kalsi, T. Kamon, S. Kim, J. S. H. Lee, D. Rathjens, Y. J. Roh, <u>A. T.</u>, I. J. Watson.</span>
+          <span class="title"> “Probing bottom-associated production of a TeV scale scalar decaying to a top quark and dark matter at the LHC.”</span>
+          <span class="venue"> <em>JHEP</em> 09 (2024) 203.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2404.14844" target="_blank" rel="noopener">arXiv:2404.14844</a></span>
+          <span class="tags"><span class="tag">B Violation</span></span>
+          <span class="tags"><span class="tag">Colliders</span></span>
+        </li>
+        <li class="pub">
+          <span class="authors">M. Abdullah, M. Dalchenko, B. Dutta, R. Eusebi, P. Huang, T. Kamon, D. Rathjens, <u>A. T.</u>.</span>
+          <span class="title"> “Bottom-quark Fusion Processes at the LHC for Probing Z′ Models and B-meson Decay Anomalies.”</span>
+          <span class="venue"> <em>Phys. Rev. D</em> <strong>97</strong> (2018) 075035.</span>
+          <span class="links"><a href="https://arxiv.org/abs/1707.07016" target="_blank" rel="noopener">arXiv:1707.07016</a></span>
+          <span class="tags"><span class="tag">New Gauge Forces</span></span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- White Papers -->
+    <section id="white-papers">
+      <h2>Contributions to White Papers</h2>
+      <ol class="pubs">
+        <li class="pub">
+          <span class="authors">M. Toups <em>et al.</em></span>
+          <span class="title"> “PIP2-BD: GeV Proton Beam Dump at Fermilab’s PIP-II Linac.”</span>
+          <span class="venue"> Snowmass 2021 contribution.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2203.08079" target="_blank" rel="noopener">arXiv:2203.08079</a></span>
+        </li>
+        <li class="pub">
+          <span class="authors">M. Abdullah <em>et al.</em></span>
+          <span class="title"> “Coherent elastic neutrino-nucleus scattering: Terrestrial and astrophysical applications.”</span>
+          <span class="venue"> Snowmass 2021 contribution.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2203.07361" target="_blank" rel="noopener">arXiv:2203.07361</a></span>
+        </li>
+        <li class="pub">
+          <span class="authors">M. A. Acero <em>et al.</em></span>
+          <span class="title"> “White Paper on Light Sterile Neutrino Searches and Related Phenomenology.”</span>
+          <span class="venue"> NF02, Snowmass 2022.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2203.07323" target="_blank" rel="noopener">arXiv:2203.07323</a></span>
+        </li>
+        <li class="pub">
+          <span class="authors">A. Fuss <em>et al.</em></span>
+          <span class="title"> “EXCESS workshop: Descriptions of rising low-energy spectra.”</span>
+          <span class="venue"> <a href="https://scipost.org/10.21468/SciPostPhysProc.9.001" target="_blank" rel="noopener">SciPostPhysProc. 9.001</a>.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2202.05097" target="_blank" rel="noopener">arXiv:2202.05097</a></span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- PhD Dissertation -->
+    <section id="dissertation">
+      <h2>PhD Dissertation</h2>
+      <ol class="pubs">
+        <li class="pub">
+          <span class="authors"><u>A. T.</u></span>
+          <span class="title"> “On Coherence in Bragg-Primakoff Axion Photoconversion.”</span>
+          <span class="venue"> 2023.</span>
+          <span class="links"><a href="https://arxiv.org/abs/2309.01767" target="_blank" rel="noopener">arXiv:2309.01767</a></span>
+        </li>
+      </ol>
+    </section>
+
+  </main>
+
+    <footer>
+        Last updated: <!-- you can automate this with your build system --> September 2025.
+    </footer>
+
+<section>
+<div id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+        <p>Email: <a href="mailto:a.thompson@northwestern.edu">a.thompson@northwestern.edu</a></p>
+    </div>
+</div>
+</section>
+
+</body>
+</html>
