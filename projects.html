@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
 
 <body>
     <header>
@@ -16,6 +18,7 @@
         <nav class="banner-links">
             <a href="index.html">Home</a>
             <a href="#research">Research</a>
+            <a href="pubs.html">Publications</a>
             <a href="#projects">Tools and Codes</a>
             <a href="https://github.com/athompson-git">GitHub</a>
             <a href="https://athompson-git.github.io/experiments.html">eXdb</a>
@@ -27,8 +30,75 @@
 
     <section>
         <h2>
-            Computing neutron activation rates in fusion and fission reactors with <i>OpenMC</i>
+            Computing neutrino rates in fusion reactors with <i>OpenMC</i>
         </h2>
+
+        <p>
+            Recently, there was a nice paper out, <i>Searching for exotic scalars at fusion reactors</i>
+            (<a href="https://arxiv.org/abs/2502.12314">arXiv:2502.12314</a>) by Baruch <i>et al</i> that explored the
+            hypothetical fluxes of axion-like particles sourced by all kinds of neutron activation during the operation
+            of fusion reactors. If axion-like particles do exist, and they have couplings to nuclear matter,
+            they would be produced copiously in such environments with large fluxes of neutrons, protons, pions etc.
+            This is certainly true at fission reactors, where experiments like TEXONO () and now MINER and others
+            have conducted searches for such particles. The fission reactor as a laboratory for axion-like particle
+            searches has been successful for much of the same reason why nuclear reactors produce tons of neutrinos:
+            their large neutron fluxes.
+        </p>
+
+        <p>
+            The typical antineutrino fluxes (sourced by beta decay) emitted by power reactors can be as high as \(10^{13}\) cm\(^{-2}\) s\(^{-1}\).
+            We can ask the same question for fusion reactors: how many neutrinos/antineutrinos do they produce?
+        </p>
+
+        <p>
+            Well, if we only want to consider antineutrinos produced from beta decay sources, like in fission reactors, we need to know how many neutrons are
+            produced during a typical reactor operation -- either in testing configurations at the present day, or, if we're lucky enough to get commercial reactors,
+            in high power operating conditions in the future. Since the density and mass-by-weight of the plasmas are not expected to produce nearly as many neutrons
+            as fission reactors, we can naively expect the resulting neutrino rates to be comparatively smaller, but perhaps non-negligible.
+        </p>
+        
+        <h4>Nuclear Fuel and Neutrinos from Fusion?</h4>
+        <p>
+            Before I go on, we should also think about the fuel composition to be considered. Some fuel compositions, like the potential \(p + ^{11}\rm{B}\)
+            reaction are said to be aneutronic, although neutrons can still get produced a suppressed rates from side reactions. Therefore the fuel composition
+            appears to matter a lot for the resulting neutrino rates. In addition, we can ask the fun question: do we get any <i>neutrino</i> production directly from the
+            fusion processes themselves, like those in the Sun? In stars like our Sun, neutrinos are produced in huge amounts through the proton-proton and CNO chains. These involve
+            reactions like \( p + p \to ^2\rm{H} + e^+ + \nu_e \), measured by Borexino and other solar neutrino experiments
+            [<a href="https://www.nature.com/articles/s41586-018-0624-y">Nature paper</a>];
+        </p>
+
+        <img src="images/solarnu.png"
+        alt="Solar Neutrino rates. Credit: Borexino, Nature volume 562, pages505-510 (2018)"
+        style="display: block; margin: 0 auto; width: min(450px, 80vw);", >
+
+        <p>
+            We can think of interesting reactions that are fuel composition-dependent; for example, consider a \( D + ^3\rm{He} \) mix giving rise to
+        </p>
+        <p>
+            $$ D + ^3\rm{He} \to ^4\rm{He} + p$$
+		    $$ ^3\rm{He} + p \to ^4 \rm{He} + e^+ + \nu_e$$  
+		    $$p + p \to D + e^+ + \nu_e$$
+		    $$p + e^- + p \to ^2\rm{H} + \nu_e$$
+        </p>
+            These would be interesting especially because they are <i>neutrino</i> sources, rather than antineutrino sources at a reactor.
+            However, neutrinos talk to the rest of the Standard Model particles via the weak force -- the Sun can get away with producing
+            huge amounts of neutrinos this way, but this might be way too hard to do in the lab (especially the 3-body <i>pep</i> process).
+            Other processes that happen purely via the strong nuclear force may be too efficient at the types of densities and time scales
+            we have access to in the lab. I therefore do not expect appreciable rates of neutrinos coming directly from nuclear fusion,
+            although they are still interesting to think about. We can even check this using packages like <i>Reaclib</i> (through python
+            api <i>pynucastro</i>).
+        </p>
+
+        <p>
+            So, we turn purely to the rates from neutron activation in the reactor.
+            To answer this question, there are a number of potential codes one can use to compute particle fluxes in complex environments
+            with material geometry information, such as GEANT or FLUKA. I settled on <a href="https://openmc.org/"><i>OpenMC</i></a>,
+            a community-developed code for particle transport, specifically since it has a python api, making it more accessible.
+        </p>
+
+        <h4>Diagnostics?</h4>
+        
+
     </section>
 
 
@@ -36,6 +106,7 @@
         <h2>
             Francis Chen's <i>Intro to plasma physics and controlled fusion</i>
         </h2>
+
     </section>
 
 
