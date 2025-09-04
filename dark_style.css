@@ -1,0 +1,163 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: rgb(240, 240, 240);
+    background-color: #131313;
+}
+
+header {
+    background: #122c34;
+    color: rgb(0, 0, 0);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header img {
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 3rem 0;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #E8F7EE;
+}
+
+a:link {
+    color: #B8C4BB;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #C9D6EA;
+}
+
+a:hover {
+    color: #B8C4BB;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #B8C4BB;
+}
+
+.contact-info {
+    background: #2e3135;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.paper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    gap: 2rem;
+}
+
+.paper img {
+    max-width: 40%; /* Default smaller size for mobile and small screens */
+    height: auto;
+    transition: max-width 0.3s ease;
+}
+
+.paper div {
+    flex: 1;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    gap: 2rem;
+}
+
+.project img {
+    max-width: 50%; /* Default smaller size for mobile and small screens */
+    height: auto;
+    transition: max-width 0.5s ease;
+}
+
+.project div {
+    flex: 1;
+}
+
+.inline-image {
+    display: inline-block; /* Make the image inline with text */
+    width: 100px; /* Control the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align the image vertically with the text */
+    margin-right: 10px; /* Optional: add space between the image and text */
+}
+
+/* Banner style */
+.banner-links {
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    background-color: #050c0f; /* slightly darker than header */
+}
+
+.banner-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.banner-links a:hover {
+    color: #4ea5d9;
+    text-decoration: underline;
+}
+
+
+/* Smooth in-page scrolling */
+html { scroll-behavior: smooth; }
+
+
+
+/* Mobile Responsive Layout */
+@media (max-width: 768px) {
+    .paper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .paper img {
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+
+    .contact-info {
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+    section {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+}
