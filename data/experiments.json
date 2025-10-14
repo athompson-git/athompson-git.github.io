@@ -1407,6 +1407,27 @@
         "Notes": "After the Big Bang, matter and antimatter were produced in equal quantities through materialization of the huge energy released. Observations show that today, however, there is a nearly total absence of antimatter in the Universe. The occurrence of Charge-Parity Violation (CPV) is a necessary condition for an explanation of this absence. CPV has already been observed in the quark sector but the measured amount is insufficient to explain the observed matterantimatter asymmetry. Recent neutrino oscillation measurements indicate that the discovery of neutrino CPV becomes an important candidate to explain the observed matter dominance in the Universe. The goal of ESSnuSB project is to discover and measure neutrino CPV with unprecedented sensitivity.",
         "InspireLink": "https://inspirehep.net/experiments/1699510"
     },
+    "BDX": {
+        "Class": "Beam Target",
+        "Source(s)": "CEBAF",
+        "Beam Particle": "Electron",
+        "Beam Energy (GeV)": "11",
+        "POT (Planned/Largest)": "1e22",
+        "Baseline (m)": "20",
+        "Detector Tech": "Electromagnetic Calorimeter",
+        "Detector Material": "BGO, PbWO4",
+        "Detector Mass (t)": "",
+        "Fiducial Mass (t)": "",
+        "Detector Volume (m^3)": "1.0",
+        "Energy Threshold": "10 MeV",
+        "Location": "Jefferson Lab",
+        "Status": "Future",
+        "Reference": "https://arxiv.org/abs/2510.09652",
+        "Open Data": "",
+        "Anomalies?": "",
+        "Notes": "",
+        "InspireLink": "https://inspirehep.net/experiments/1491916"
+    },
     "field_types": {
         "Class": "",
         "Source(s)": "",
