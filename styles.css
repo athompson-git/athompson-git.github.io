@@ -1,139 +1,232 @@
 /* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+    --page-pad: clamp(1rem, 4vw, 2rem);
+    --content-max: 72rem;
+    --block-gap: clamp(1.25rem, 3vw, 2rem);
+
+    /* Palette: existing teal/blue, lightly refined */
+    --color-ink: #1c2429;
+    --color-ink-muted: #4a5560;
+    --color-heading: #264a8a;
+    --color-link: #264a8a;
+    --color-link-visited: #1e3a66;
+    --color-link-hover: #3d9bc7;
+    --color-header: #122c34;
+    --color-header-deep: #0c1f24;
+    --color-surface: #eef2f4;
+    --color-page: #fafbfc;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+    font-size: clamp(1.02rem, 0.96rem + 0.25vw, 1.125rem);
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    color: #282727;
+    color: var(--color-ink);
+    background: var(--color-page);
 }
 
 header {
-    background: #122c34;
+    background: linear-gradient(
+        145deg,
+        #2a6a78 0%,
+        #1a4a56 28%,
+        var(--color-header) 58%,
+        #0a1c22 100%
+    );
     color: white;
-    padding: 1rem 0;
+    padding: clamp(1.25rem, 3vw, 2rem) 0 0;
     text-align: center;
+}
+
+header h1,
+header p {
+    color: #fff;
+}
+
+header h1 {
+    font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.35rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0.35rem 0 0.15rem;
+}
+
+header p {
+    font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.1rem);
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 0.75rem;
 }
 
 header img {
     width: auto;
     height: auto;
-    max-width: 300px;
-    margin-bottom: 1rem;
+    max-width: min(20rem, 72vw);
+    margin-bottom: 0.75rem;
+    border-radius: 2px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
 }
 
 section {
-    padding: 3rem 0;
-    max-width: 1300px;
+    padding: clamp(1.75rem, 4vw, 3.25rem) var(--page-pad);
+    max-width: var(--content-max);
     margin: 0 auto;
 }
 
+section > h2,
+section > h4 {
+    text-align: center;
+}
+
+section > p {
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
 h1, h2 {
-    color: #2a4494;
+    color: var(--color-heading);
+}
+
+h2 {
+    font-size: clamp(1.35rem, 1.2rem + 0.5vw, 1.65rem);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    margin: 0 0 1rem;
+}
+
+h3 {
+    font-size: clamp(1.05rem, 1rem + 0.2vw, 1.2rem);
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--color-ink);
+    margin: 0 0 0.35rem;
+}
+
+h4 {
+    font-size: 0.98rem;
+    font-weight: 500;
+    color: var(--color-ink-muted);
+    margin: 0 0 0.5rem;
+}
+
+.paper h4 {
+    margin-bottom: 0.65rem;
 }
 
 a:link {
-    color: #2a4494;
+    color: var(--color-link);
     text-decoration: none;
 }
 
 a:visited {
-    color: #224870;
+    color: var(--color-link-visited);
 }
 
 a:hover {
-    color: #4ea5d9;
+    color: var(--color-link-hover);
     text-decoration: underline;
 }
 
 a:active {
-    color: #2a4494;
+    color: var(--color-link);
 }
 
 .contact-info {
-    background: #f4f4f4;
-    padding: 1rem;
-    margin-top: 2rem;
+    background: var(--color-surface);
+    padding: 1.1rem 1.25rem;
+    margin-top: 1.5rem;
+    border-radius: 4px;
 }
 
-.paper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-    gap: 2rem;
-}
-
-.paper img {
-    max-width: 40%; /* Default smaller size for mobile and small screens */
-    height: auto;
-    transition: max-width 0.3s ease;
-}
-
-.paper div {
-    flex: 1;
-}
-
+.paper,
 .project {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    margin-bottom: 1.5rem;
-    gap: 2rem;
+    gap: var(--block-gap);
+    margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
 }
 
-.project img {
-    max-width: 50%; /* Default smaller size for mobile and small screens */
-    height: auto;
-    transition: max-width 0.5s ease;
-}
-
-.project div {
+.paper > div,
+.project > div {
     flex: 1;
+    min-width: 0;
+}
+
+.paper > img,
+.project > img {
+    flex: 0 1 26rem;
+    width: min(100%, 26rem);
+    height: auto;
+    object-fit: contain;
+    border-radius: 3px;
 }
 
 .inline-image {
-    display: inline-block; /* Make the image inline with text */
-    width: 100px; /* Control the width of the image */
-    height: auto; /* Maintain aspect ratio */
-    vertical-align: middle; /* Align the image vertically with the text */
-    margin-right: 10px; /* Optional: add space between the image and text */
+    display: inline-block;
+    width: min(7.5rem, 36vw);
+    height: auto;
+    vertical-align: middle;
+    margin-right: 0.65rem;
+}
+
+.project .inline-image {
+    width: min(9.5rem, 42vw);
+    margin-bottom: 0.35rem;
+}
+
+.content-figure {
+    display: block;
+    margin: 1.5rem auto;
+    width: min(28rem, 100%);
+    height: auto;
+    border-radius: 3px;
 }
 
 /* Banner style */
 .banner-links {
-    margin-top: 1rem;
-    padding: 0.5rem 0;
-    background-color: #0e2329; /* slightly darker than header */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem 1.35rem;
+    margin-top: 1.1rem;
+    padding: 0.7rem var(--page-pad);
+    background-color: var(--color-header-deep);
 }
 
 .banner-links a {
-    color: white;
-    margin: 0 1rem;
+    color: rgba(255, 255, 255, 0.92);
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.98rem;
 }
 
 .banner-links a:hover {
-    color: #4ea5d9;
+    color: var(--color-link-hover);
     text-decoration: underline;
 }
 
-
-/* Smooth in-page scrolling */
-html { scroll-behavior: smooth; }
-
-
-
 /* Mobile Responsive Layout */
 @media (max-width: 768px) {
-    .paper {
+    .paper,
+    .project {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .paper img {
+    .paper > img,
+    .project > img {
+        width: 100%;
+        flex-basis: auto;
         max-width: 100%;
-        margin-top: 1rem;
     }
 
     .contact-info {
@@ -144,10 +237,6 @@ html { scroll-behavior: smooth; }
 
 /* Very small mobile devices */
 @media (max-width: 480px) {
-    section {
-        padding: 1rem;
-    }
-
     header h1 {
         font-size: 1.5rem;
     }

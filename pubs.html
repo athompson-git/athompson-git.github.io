@@ -7,107 +7,106 @@
     <meta name="description" content="Publications by Adrian Thompson" />
 
     <link rel="stylesheet" href="styles.css">
-<body>
+    <style>
+      /* Page-specific publication list styles (extends styles.css) */
+      main {
+        max-width: var(--content-max);
+        margin: 0 auto;
+        padding: clamp(1.75rem, 4vw, 3.25rem) var(--page-pad) 2rem;
+      }
 
-  <style>
-    :root {
-      --fg: #111;
-      --muted: #5b6b7a;
-      --link: #0a66c2;
-      --bg: #fff;
-      --card: #f8fafc;
-      --accent: #e5eef7;
-      --maxw: 1100px;
-    }
+      main section {
+        max-width: none;
+        margin: 0 0 2.4rem;
+        padding: 0;
+      }
 
-    a { color: var(--link); text-decoration: none; }
-    a:hover, a:focus { text-decoration: underline; }
+      main section > h2 {
+        text-align: left;
+        font-size: clamp(1.2rem, 1.1rem + 0.35vw, 1.4rem);
+        margin: 0 0 0.85rem;
+        padding-bottom: 0.45rem;
+        border-bottom: 2px solid var(--color-surface);
+        letter-spacing: -0.01em;
+      }
 
-    header p { margin: 0.25rem 0 0; color: var(--muted); }
-    .toolbar {
-      max-width: var(--maxw);
-      margin: 1rem auto 1.5rem;
-      padding: 0 1rem;
-      display: flex;
-      gap: .75rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .search {
-      flex: 1 1 320px;
-      display: flex;
-      align-items: center;
-      gap: .5rem;
-      background: var(--card);
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: .6rem .8rem;
-    }
-    .search input {
-      border: none;
-      outline: none;
-      background: transparent;
-      width: 100%;
-      font-size: 0.95rem;
-    }
-    main {
-      max-width: var(--maxw);
-      margin: 0 auto 4rem;
-      padding: 0 1rem;
-    }
-    section {
-      margin: 2.2rem 0;
-    }
-    section h2 {
-      font-size: 1.25rem;
-      margin: 0 0 .75rem;
-      padding-bottom: .4rem;
-      border-bottom: 2px solid var(--accent);
-      letter-spacing: .2px;
-    }
-    ol, ul { margin: 0; padding-left: 1.25rem; }
-    .pubs { list-style: decimal; }
-    .pub {
-      margin: .6rem 0 .9rem;
-      padding-left: .2rem;
-    }
-    .authors { color: var(--fg); }
-    .title { font-style: italic; }
-    .venue { color: var(--muted); }
-    .tags {
-      display: inline-flex;
-      gap: .4rem;
-      margin-left: .4rem;
-      font-size: 0.9rem;
-    }
-    .tag {
-      background: var(--accent);
-      color: #223a5e;
-      padding: .05rem .45rem;
-      border-radius: 6px;
-      border: 1px solid #d8e6f5;
-      white-space: nowrap;
-    }
-    .links { display: inline; margin-left: .5rem; }
-    .links a { margin-right: .6rem; }
+      ol, ul {
+        margin: 0;
+        padding-left: 1.35rem;
+      }
 
-    /* Compact on mobile */
-    @media (max-width: 640px) {
-      .pub { margin: .5rem 0 .8rem; }
-    }
-  </style>
+      .pubs {
+        list-style: decimal;
+      }
+
+      .pub {
+        margin: 0.65rem 0 1rem;
+        padding-left: 0.2rem;
+        line-height: 1.55;
+      }
+
+      .authors {
+        color: var(--color-ink);
+      }
+
+      .title {
+        font-style: italic;
+      }
+
+      .venue {
+        color: var(--color-ink-muted);
+      }
+
+      .tags {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+        margin-left: 0.4rem;
+        font-size: 0.88rem;
+      }
+
+      .tag {
+        background: var(--color-surface);
+        color: var(--color-heading);
+        padding: 0.08rem 0.5rem;
+        border-radius: 4px;
+        border: 1px solid #d5dee3;
+        white-space: nowrap;
+      }
+
+      .links {
+        display: inline;
+        margin-left: 0.5rem;
+      }
+
+      .links a {
+        margin-right: 0.6rem;
+      }
+
+      footer {
+        max-width: var(--content-max);
+        margin: 0 auto;
+        padding: 0 var(--page-pad) 1.5rem;
+        color: var(--color-ink-muted);
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 640px) {
+        .pub {
+          margin: 0.5rem 0 0.85rem;
+        }
+      }
+    </style>
 </head>
 <body>
-  
 
   <header>
-        <h1 style="color: white;">Publications and Authored Papers</h1>
+        <h1>Publications and Authored Papers</h1>
         <nav class="banner-links">
             <a href="index.html">Home</a>
             <a href="pubs.html">Publications</a>
             <a href="https://github.com/athompson-git">GitHub</a>
             <a href="https://athompson-git.github.io/experiments.html">eXdb</a>
-            <a href="projects.html">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -401,7 +400,7 @@
 <div id="contact">
     <h2>Contact</h2>
     <div class="contact-info">
-        <p>Email: <a href="mailto:a.thompson@northwestern.edu">a.thompson@northwestern.edu</a></p>
+        <p>Email: <a href="mailto:athomps3@uci.edu">athomps3@uci.edu</a></p>
     </div>
 </div>
 </section>

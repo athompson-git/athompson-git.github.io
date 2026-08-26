@@ -3,17 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrian Thompson</title>
-    <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="dark_style.css">
+    <title>Learning Projects | Adrian Thompson</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default"></script>
+    <style>
+      /* Shared content column — rem (not ch) so headings align with body */
+      section > h2,
+      section > h4,
+      section > p,
+      section > .content-figure {
+        max-width: 40rem;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        box-sizing: border-box;
+      }
+
+      section > h2 {
+        font-size: clamp(1.2rem, 1.1rem + 0.35vw, 1.4rem);
+        line-height: 1.35;
+        margin-bottom: 1rem;
+      }
+
+      section > h4 {
+        font-size: clamp(1.05rem, 1rem + 0.2vw, 1.15rem);
+        font-weight: 600;
+        margin-top: 1.75rem;
+        margin-bottom: 0.65rem;
+        color: var(--color-heading);
+      }
+    </style>
 </head>
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
-
-
 <body>
     <header>
-        <h1 style="color: white;">Learning Projects</h1>
+        <h1>Learning Projects</h1>
 
         <nav class="banner-links">
             <a href="index.html">Home</a>
@@ -54,7 +78,7 @@
             in high power operating conditions in the future. Since the density and mass-by-weight of the plasmas are not expected to produce nearly as many neutrons
             as fission reactors, we can naively expect the resulting neutrino rates to be comparatively smaller, but perhaps non-negligible.
         </p>
-        
+
         <h4>Nuclear Fuel and Neutrinos from Fusion?</h4>
         <p>
             Before I go on, we should also think about the fuel composition to be considered. Some fuel compositions, like the potential \(p + ^{11}\rm{B}\)
@@ -65,19 +89,20 @@
             [<a href="https://www.nature.com/articles/s41586-018-0624-y">Nature paper</a>];
         </p>
 
-        <img src="images/solarnu.png"
-        alt="Solar Neutrino rates. Credit: Borexino, Nature volume 562, pages505-510 (2018)"
-        style="display: block; margin: 0 auto; width: min(450px, 80vw);", >
+        <img class="content-figure"
+             src="images/solarnu.png"
+             alt="Solar Neutrino rates. Credit: Borexino, Nature volume 562, pages505-510 (2018)">
 
         <p>
             We can think of interesting reactions that are fuel composition-dependent; for example, consider a \( D + ^3\rm{He} \) mix giving rise to
         </p>
         <p>
             $$ D + ^3\rm{He} \to ^4\rm{He} + p$$
-		    $$ ^3\rm{He} + p \to ^4 \rm{He} + e^+ + \nu_e$$  
+		    $$ ^3\rm{He} + p \to ^4 \rm{He} + e^+ + \nu_e$$
 		    $$p + p \to D + e^+ + \nu_e$$
 		    $$p + e^- + p \to ^2\rm{H} + \nu_e$$
         </p>
+        <p>
             These would be interesting especially because they are <i>neutrino</i> sources, rather than antineutrino sources at a reactor.
             However, neutrinos talk to the rest of the Standard Model particles via the weak force -- the Sun can get away with producing
             huge amounts of neutrinos this way, but this might be way too hard to do in the lab (especially the 3-body <i>pep</i> process).
@@ -95,7 +120,6 @@
         </p>
 
         <h4>Diagnostics?</h4>
-        
 
     </section>
 
@@ -107,17 +131,14 @@
 
     </section>
 
-
-
-
-
     <section>
     <div id="contact">
         <h2>Contact</h2>
         <div class="contact-info">
-            <p>Email: <a href="mailto:a.thompson@northwestern.edu">a.thompson@northwestern.edu</a></p>
+            <p>Email: <a href="mailto:athomps3@uci.edu">athomps3@uci.edu</a></p>
         </div>
     </div>
     </section>
 
 </body>
+</html>
