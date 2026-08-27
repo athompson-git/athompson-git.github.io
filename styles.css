@@ -5,6 +5,7 @@
     --page-pad: clamp(1rem, 4vw, 2rem);
     --content-max: 72rem;
     --block-gap: clamp(1.25rem, 3vw, 2rem);
+    --figure-col: minmax(24rem, 44%);
 
     /* Palette: existing teal/blue, lightly refined */
     --color-ink: #1c2429;
@@ -148,23 +149,44 @@ a:active {
 
 .paper,
 .project {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) var(--figure-col);
     gap: var(--block-gap);
+    align-items: start;
     margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
 }
 
 .paper > div,
 .project > div {
-    flex: 1;
     min-width: 0;
 }
 
 .paper > img,
+.project > img,
+.paper-figures {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    justify-self: end;
+}
+
+.paper > img,
 .project > img {
-    flex: 0 1 26rem;
-    width: min(100%, 26rem);
+    height: auto;
+    object-fit: contain;
+    border-radius: 3px;
+}
+
+.paper-figures {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.paper-figures img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 3px;
@@ -218,15 +240,21 @@ a:active {
 @media (max-width: 768px) {
     .paper,
     .project {
-        flex-direction: column;
-        align-items: flex-start;
+        grid-template-columns: 1fr;
     }
 
     .paper > img,
-    .project > img {
+    .project > img,
+    .paper-figures {
         width: 100%;
-        flex-basis: auto;
         max-width: 100%;
+        min-width: 0;
+        justify-self: stretch;
+    }
+
+    .paper-figures {
+        max-width: min(100%, 18rem);
+        margin-inline: auto;
     }
 
     .contact-info {
@@ -248,4 +276,56 @@ a:active {
     h2 {
         font-size: 1.25rem;
     }
+}
+
+/* Home page: single contained frame */
+body.home {
+    --frame-margin: clamp(0.75rem, 3vw, 1.75rem);
+    --frame-inset: clamp(1.25rem, 4vw, 2.5rem);
+    padding: var(--frame-margin);
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: #e8edf0;
+}
+
+body.home .page-frame {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    min-height: calc(100vh - 2 * var(--frame-margin));
+    background: #fff;
+    border: 1px solid #d0d9de;
+    border-radius: 6px;
+    box-shadow: 0 4px 28px rgba(18, 44, 52, 0.08);
+    overflow: hidden;
+}
+
+body.home header {
+    padding: clamp(1.25rem, 3vw, 2rem) var(--frame-inset) 0;
+}
+
+body.home .banner-links {
+    margin-left: calc(-1 * var(--frame-inset));
+    margin-right: calc(-1 * var(--frame-inset));
+    padding-left: var(--frame-inset);
+    padding-right: var(--frame-inset);
+}
+
+body.home section {
+    max-width: none;
+    margin: 0;
+    padding: clamp(1.75rem, 4vw, 3rem) var(--frame-inset);
+}
+
+body.home section + section {
+    border-top: 1px solid var(--color-surface);
+}
+
+body.home section:first-of-type > h2 {
+    text-align: left;
+}
+
+body.home section:first-of-type > p {
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
 }
