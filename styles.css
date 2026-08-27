@@ -278,8 +278,8 @@ a:active {
     }
 }
 
-/* Home page: single contained frame */
-body.home {
+/* Framed page layout (home, CV, etc.) */
+body.framed {
     --frame-margin: clamp(0.75rem, 3vw, 1.75rem);
     --frame-inset: clamp(1.25rem, 4vw, 2.5rem);
     padding: var(--frame-margin);
@@ -288,7 +288,7 @@ body.home {
     background: #e8edf0;
 }
 
-body.home .page-frame {
+body.framed .page-frame {
     max-width: var(--content-max);
     margin: 0 auto;
     min-height: calc(100vh - 2 * var(--frame-margin));
@@ -299,17 +299,39 @@ body.home .page-frame {
     overflow: hidden;
 }
 
-body.home header {
+body.framed header {
     padding: clamp(1.25rem, 3vw, 2rem) var(--frame-inset) 0;
 }
 
-body.home .banner-links {
+body.framed .banner-links {
     margin-left: calc(-1 * var(--frame-inset));
     margin-right: calc(-1 * var(--frame-inset));
     padding-left: var(--frame-inset);
     padding-right: var(--frame-inset);
 }
 
+body.framed main {
+    max-width: none;
+    margin: 0;
+    padding: clamp(1.75rem, 4vw, 3rem) var(--frame-inset) 1rem;
+}
+
+body.framed footer {
+    max-width: none;
+    margin: 0;
+    padding: 0 var(--frame-inset) 1.25rem;
+    color: var(--color-ink-muted);
+    font-size: 0.95rem;
+}
+
+body.framed .page-frame > section {
+    max-width: none;
+    margin: 0;
+    padding: clamp(1.75rem, 4vw, 3rem) var(--frame-inset);
+    border-top: 1px solid var(--color-surface);
+}
+
+/* Home page sections inside frame */
 body.home section {
     max-width: none;
     margin: 0;
