@@ -406,6 +406,7 @@ body.framed main section {
     object-fit: contain;
     object-position: center;
     background: var(--color-surface);
+    box-sizing: border-box;
 }
 
 .photo-item figcaption {
@@ -420,25 +421,28 @@ body.framed .page-frame > section .contact-info {
     text-align: center;
 }
 
-@media (max-width: 720px) {
-    .photo-item.portrait {
-        flex: 0 0 calc(50% - 0.2rem);
-        width: calc(50% - 0.2rem);
-        max-width: calc(50% - 0.2rem);
-    }
-
-    .photo-item.landscape {
-        flex: 0 0 100%;
+@media (max-width: 768px) {
+    .photo-collage {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
         width: 100%;
         max-width: 100%;
+        overflow: hidden;
     }
-}
 
-@media (max-width: 480px) {
+    .photo-item,
     .photo-item.portrait,
-    .photo-item.landscape {
-        flex: 0 0 100%;
+    .photo-item.landscape,
+    .photo-item.full-row {
+        flex: 0 0 auto;
         width: 100%;
         max-width: 100%;
+    }
+
+    .photo-item img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 }
