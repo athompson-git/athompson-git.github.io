@@ -351,3 +351,94 @@ body.home section:first-of-type > p {
     margin-left: 0;
     margin-right: 0;
 }
+
+/* Photo collage page */
+body.framed main {
+    overflow-x: hidden;
+}
+
+body.framed main section {
+    padding: 0;
+    min-width: 0;
+}
+
+.photo-collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(0.3rem, 0.65vw, 0.45rem);
+    align-items: flex-start;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.photo-item {
+    margin: 0;
+    min-width: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.photo-item.portrait {
+    flex: 0 0 29%;
+    width: 29%;
+    max-width: 29%;
+}
+
+.photo-item.landscape {
+    flex: 0 0 48%;
+    width: 48%;
+    max-width: 48%;
+}
+
+.photo-item.full-row {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+.photo-item img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+    object-fit: contain;
+    object-position: center;
+    background: var(--color-surface);
+}
+
+.photo-item figcaption {
+    margin: 0.25rem 0 0;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    color: var(--color-ink-muted);
+    text-align: center;
+}
+
+body.framed .page-frame > section .contact-info {
+    text-align: center;
+}
+
+@media (max-width: 720px) {
+    .photo-item.portrait {
+        flex: 0 0 calc(50% - 0.2rem);
+        width: calc(50% - 0.2rem);
+        max-width: calc(50% - 0.2rem);
+    }
+
+    .photo-item.landscape {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-item.portrait,
+    .photo-item.landscape {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+}
