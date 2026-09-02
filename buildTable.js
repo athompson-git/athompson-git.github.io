@@ -19,9 +19,10 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
         let headerRow = $("#" + tableId + " thead tr");
         headerRow.empty();
         headerRow.append(`<th onclick="sortTable(0, '${tableId}')">Experiment Name</th>`);
-        columns.forEach((col, index) => {
+        columns.forEach(col => {
           if (!visible_columns.includes(col)) return;
-          headerRow.append(`<th onclick="sortTable(${index + 1}, '${tableId}')">${col}</th>`);
+          const renderedIndex = headerRow[0].cells.length;
+          headerRow.append(`<th onclick="sortTable(${renderedIndex}, '${tableId}')">${col}</th>`);
         });
         
         // Build table body.
@@ -139,42 +140,43 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
   });
 }
 
-// This function sorts the table (by tbody rows) based on column n (0-indexed) in the table with the given tableId.
+// Sort tbody rows using the values in rendered column n.
 function sortTable(n, tableId) {
-  let table = document.getElementById(tableId);
-  let switching = true;
-  let dir = "asc";
-  let switchcount = 0;
-  let rows, i, shouldSwitch; // Declare variables outside the loop
+  const table = document.getElementById(tableId);
+  const tbody = table.tBodies[0];
+  const rows = Array.from(tbody.rows);
+  const sameColumn = table.dataset.sortColumn === String(n);
+  const direction = sameColumn && table.dataset.sortDirection === "asc" ? "desc" : "asc";
+  const directionMultiplier = direction === "asc" ? 1 : -1;
+  const numberPattern = /^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i;
+  const collator = new Intl.Collator(undefined, {
+    numeric: true,
+    sensitivity: "base"
+  });
 
-  while (switching) {
-    switching = false;
-    rows = table.tBodies[0].rows;
-    // Loop through all table rows (except the header)
-    for (i = 0; i < rows.length - 1; i++) {
-      shouldSwitch = false; // Initialize for each pair of rows
-      let x = rows[i].getElementsByTagName("TD")[n];
-      let y = rows[i + 1].getElementsByTagName("TD")[n];
+  rows.sort((rowA, rowB) => {
+    const valueA = rowA.cells[n]?.innerText.trim() || "";
+    const valueB = rowB.cells[n]?.innerText.trim() || "";
 
-      if (dir === "asc" && x.innerText.toLowerCase() > y.innerText.toLowerCase()) {
-        shouldSwitch = true;
-        break;
-      } else if (dir === "desc" && x.innerText.toLowerCase() < y.innerText.toLowerCase()) {
-        shouldSwitch = true;
-        break;
-      }
-    }
-    if (shouldSwitch) {
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      switchcount++;
-    } else {
-      // If no switching has been done and direction is "asc",
-      // set the direction to "desc" and run the loop again.
-      if (switchcount === 0 && dir === "asc") {
-        dir = "desc";
-        switching = true;
-      }
-    }
-  }
+    // Keep missing values at the bottom in either direction.
+    if (!valueA && !valueB) return 0;
+    if (!valueA) return 1;
+    if (!valueB) return -1;
+
+    const normalizedA = valueA.replace(/,/g, "");
+    const normalizedB = valueB.replace(/,/g, "");
+    const bothNumeric = numberPattern.test(normalizedA) && numberPattern.test(normalizedB);
+    const comparison = bothNumeric
+      ? Number(normalizedA) - Number(normalizedB)
+      : collator.compare(valueA, valueB);
+
+    return comparison * directionMultiplier;
+  });
+
+  const fragment = document.createDocumentFragment();
+  rows.forEach(row => fragment.appendChild(row));
+  tbody.appendChild(fragment);
+
+  table.dataset.sortColumn = String(n);
+  table.dataset.sortDirection = direction;
 }
