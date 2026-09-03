@@ -139,6 +139,18 @@
     cursor: pointer;
   }
 
+  /* Decorative sort affordance; sorting still uses the th click handler. */
+  th.sortable::after {
+    content: "↕";
+    display: inline-block;
+    margin-left: 0.3em;
+    font-size: 0.8em;
+    line-height: 1;
+    opacity: 0.45;
+    vertical-align: middle;
+    pointer-events: none;
+  }
+
   /* Sticky header row: all header cells will stick at the top */
   thead {
     position: sticky;

@@ -18,11 +18,11 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
         // Find the header row within the specified table.
         let headerRow = $("#" + tableId + " thead tr");
         headerRow.empty();
-        headerRow.append(`<th onclick="sortTable(0, '${tableId}')">Experiment Name</th>`);
+        headerRow.append(`<th class="sortable" onclick="sortTable(0, '${tableId}')">Experiment Name</th>`);
         columns.forEach(col => {
           if (!visible_columns.includes(col)) return;
           const renderedIndex = headerRow[0].cells.length;
-          headerRow.append(`<th onclick="sortTable(${renderedIndex}, '${tableId}')">${col}</th>`);
+          headerRow.append(`<th class="sortable" onclick="sortTable(${renderedIndex}, '${tableId}')">${col}</th>`);
         });
         
         // Build table body.
