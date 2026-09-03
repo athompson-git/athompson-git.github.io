@@ -202,7 +202,7 @@
     },
     "KATRIN": {
         "Class": "Isotope",
-        "Source(s)": "Tritium Beta Decay",
+        "Source(s)": "Relic neutrinos",
         "Detector Tech": "MAC-E filter spectrometer + Si PIN diode",
         "Detector Material": "Tritium (windowless gaseous source)",
         "Exposure [Largest/Planned] (t-yr)": "",
@@ -215,7 +215,7 @@
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "Direct kinematic neutrino-mass measurement via tritium beta decay. Detector Mass field stores source-related scale; not a tonne-scale target detector.",
-        "InspireLink": "https://inspirehep.net/experiments/1403701",
+        "InspireLink": "https://inspirehep.net/experiments/1108400",
         "Detector Volume (m^3)": "main spectrometer ~10 m diam. vessel"
     },
     "BEST": {
