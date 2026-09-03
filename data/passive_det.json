@@ -7,7 +7,7 @@
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "",
         "Fiducial Mass (t)": "",
-        "Detector Volume m^3": "",
+        "Detector Volume (m^3)": "",
         "Energy Threshold": "",
         "Location": "",
         "Status": "",
@@ -25,7 +25,6 @@
         "Exposure [Largest/Planned] (t-yr)": "1.2",
         "Detector Mass (t)": "5.6",
         "Fiducial Mass (t)": "3.7",
-        "Detector Volume m^3": "1.2m (h) x 1.2m (d) cylinder",
         "Energy Threshold": "~0.44 keVnr / ~0.02 keVee",
         "Location": "China Jinping Underground Laboratory (CJPL)",
         "Status": "Running",
@@ -33,25 +32,26 @@
         "Open Data": "https://pandax.sjtu.edu.cn/public/data_release",
         "Anomalies?": "",
         "Notes": "PandaX-4T datasets included paired and US2 with different exposures, see reference.",
-        "InspireLink": "https://inspirehep.net/experiments/1677151"
+        "InspireLink": "https://inspirehep.net/experiments/1677151",
+        "Detector Volume (m^3)": "1.2m (h) x 1.2m (d) cylinder"
     },
     "PandaX-II": {
         "Class": "Dark Matter Detector",
         "Source(s)": "Environmental nu, DM Halo, etc",
         "Detector Tech": "LXe",
         "Detector Material": "LXe",
-        "Exposure [Largest/Planned] (t-yr)": "",
-        "Detector Mass (t)": "",
-        "Fiducial Mass (t)": "",
-        "Detector Volume m^3": "",
+        "Exposure [Largest/Planned] (t-yr)": "0.36",
+        "Detector Mass (t)": "0.58",
+        "Fiducial Mass (t)": "~0.33",
         "Energy Threshold": "",
-        "Location": "",
-        "Status": "",
-        "Reference": "",
+        "Location": "China Jinping Underground Laboratory (CJPL)",
+        "Status": "Complete",
+        "Reference": "https://arxiv.org/abs/2007.15469",
         "Open Data": "",
         "Anomalies?": "",
-        "Notes": "",
-        "InspireLink": ""
+        "Notes": "Full DM exposure 132 ton-day (~0.36 t-yr). Dual-phase LXe TPC; superseded by PandaX-4T.",
+        "InspireLink": "",
+        "Detector Volume (m^3)": "~0.65 m diameter dodecagonal TPC"
     },
     "XENON1T": {
         "Class": "Dark Matter Detector",
@@ -61,15 +61,15 @@
         "Exposure [Largest/Planned] (t-yr)": "1",
         "Detector Mass (t)": "3.2",
         "Fiducial Mass (t)": "~1",
-        "Detector Volume m^3": "",
-        "Energy Threshold": "0.2-5 keVnr, ~1 keVee",
+        "Energy Threshold": "[0.2, 5] keVnr, ~1 keVee",
         "Location": "INFN, Gran Sasso, Italy",
         "Status": "Complete",
         "Reference": "https://xenonexperiment.org/",
         "Open Data": "https://xenonexperiment.org/public-data/",
         "Anomalies?": "Yes https://arxiv.org/pdf/2006.09721",
         "Notes": "",
-        "InspireLink": "https://inspirehep.net/experiments/1386519"
+        "InspireLink": "https://inspirehep.net/experiments/1386519",
+        "Detector Volume (m^3)": ""
     },
     "XENONnT": {
         "Class": "Dark Matter Detector",
@@ -79,7 +79,6 @@
         "Exposure [Largest/Planned] (t-yr)": "3.51",
         "Detector Mass (t)": "8.3",
         "Fiducial Mass (t)": "5.9",
-        "Detector Volume m^3": "1.49m (h) x 1.33m (d) cylinder",
         "Energy Threshold": "200 eV",
         "Location": "INFN, Gran Sasso, Italy",
         "Status": "Running",
@@ -87,7 +86,8 @@
         "Open Data": "https://xenonexperiment.org/public-data/",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": "https://inspirehep.net/experiments/1807876"
+        "InspireLink": "https://inspirehep.net/experiments/1807876",
+        "Detector Volume (m^3)": "1.49m (h) x 1.33m (d) cylinder"
     },
     "SuperCDMS (SNOLAB)": {
         "Class": "Dark Matter Detector",
@@ -97,7 +97,6 @@
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "",
         "Fiducial Mass (t)": "",
-        "Detector Volume m^3": "",
         "Energy Threshold": "",
         "Location": "SNOLAB",
         "Status": "Future",
@@ -105,7 +104,8 @@
         "Open Data": "https://supercdms.slac.stanford.edu/science-results/data-releases",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": "https://inspirehep.net/experiments/1357671"
+        "InspireLink": "https://inspirehep.net/experiments/1357671",
+        "Detector Volume (m^3)": ""
     },
     "SuperCDMS (Soudan)": {
         "Class": "Dark Matter Detector",
@@ -115,7 +115,6 @@
         "Exposure [Largest/Planned] (t-yr)": "4.63e-3",
         "Detector Mass (t)": "9e-3",
         "Fiducial Mass (t)": "9e-3",
-        "Detector Volume m^3": "25mm (h) x 76mm (d) cylinder",
         "Energy Threshold": "8 keVnr",
         "Location": "Soudan",
         "Status": "Complete",
@@ -123,7 +122,8 @@
         "Open Data": "https://supercdms.slac.stanford.edu/science-results/data-releases",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": "https://inspirehep.net/experiments/1298909"
+        "InspireLink": "https://inspirehep.net/experiments/1298909",
+        "Detector Volume (m^3)": "25mm (h) x 76mm (d) cylinder"
     },
     "LZ": {
         "Class": "Dark Matter Detector",
@@ -133,105 +133,105 @@
         "Exposure [Largest/Planned] (t-yr)": "2.84",
         "Detector Mass (t)": "7",
         "Fiducial Mass (t)": "5.6",
-        "Detector Volume m^3": "",
         "Energy Threshold": "5.4 keVnr (50% efficiency)",
         "Location": "SURF, South Dakota",
         "Status": "Running",
         "Reference": "https://arxiv.org/abs/1703.09144",
         "Open Data": "https://www.hepdata.net/search/?q=lz&collaboration=LZ",
-        "Anomalies?": "https://lz.lbl.gov/wp-content/uploads/sites/6/2026/08/LZ_Preprint_260901_Dark_Matter_EFT_Nuclear_Recoil_Search_at_Higher_Energies.pdf",
-        "Notes": "",
-        "InspireLink": "https://inspirehep.net/experiments/1262631"
+        "Anomalies?": "Yes",
+        "Notes": "https://lz.lbl.gov/wp-content/uploads/sites/6/2026/08/LZ_Preprint_260901_Dark_Matter_EFT_Nuclear_Recoil_Search_at_Higher_Energies.pdf",
+        "InspireLink": "https://inspirehep.net/experiments/1262631",
+        "Detector Volume (m^3)": ""
     },
     "MADMAX": {
         "Class": "Dark Matter Detector",
         "Source(s)": "Environmental nu, DM Halo, etc",
-        "Detector Tech": "",
-        "Detector Material": "",
+        "Detector Tech": "Dielectric haloscope (disk and mirror booster)",
+        "Detector Material": "Dielectric disks (e.g. sapphire / LaAlO3) + mirror",
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "",
         "Fiducial Mass (t)": "",
-        "Detector Volume m^3": "",
         "Energy Threshold": "",
-        "Location": "",
-        "Status": "",
-        "Reference": "",
+        "Location": "DESY Hamburg (final); CERN Morpurgo magnet (prototypes)",
+        "Status": "Future",
+        "Reference": "https://arxiv.org/abs/2409.20169",
         "Open Data": "",
         "Anomalies?": "",
-        "Notes": "",
-        "InspireLink": ""
+        "Notes": "MAgnetized Disk and Mirror Axion eXperiment. Prototyping/open-booster tests at CERN; final ~9 T dipole installation planned in former H1 yoke at DESY.",
+        "InspireLink": "",
+        "Detector Volume (m^3)": ""
     },
     "LEGEND": {
-        "Class": "Dark Matter Detector",
-        "Source(s)": "Environmental nu, DM Halo, etc",
-        "Detector Tech": "",
-        "Detector Material": "",
-        "Exposure [Largest/Planned] (t-yr)": "",
-        "Detector Mass (t)": "",
-        "Fiducial Mass (t)": "",
-        "Detector Volume m^3": "",
-        "Energy Threshold": "",
-        "Location": "",
+        "Class": "Neutrino Observatory",
+        "Source(s)": "0nuBB (76Ge)",
+        "Detector Tech": "HPGe (ICPC) in LAr active shield",
+        "Detector Material": "76Ge-enriched germanium",
+        "Exposure [Largest/Planned] (t-yr)": "10",
+        "Detector Mass (t)": "1",
+        "Fiducial Mass (t)": "1",
+        "Energy Threshold": "~Q_bb (2039 keV ROI)",
+        "Location": "LNGS, Italy (baseline)",
         "Status": "Future",
-        "Reference": "",
+        "Reference": "https://arxiv.org/abs/2501.10046",
         "Open Data": "",
         "Anomalies?": "",
-        "Notes": "",
-        "InspireLink": ""
+        "Notes": "LEGEND-1000 ton-scale 0nuBB search following LEGEND-200 (~200 kg stage running at LNGS). Planned exposure ~10 t-yr.",
+        "InspireLink": "",
+        "Detector Volume (m^3)": ""
     },
     "SABRE": {
         "Class": "Dark Matter Detector",
         "Source(s)": "Environmental nu, DM Halo, etc",
-        "Detector Tech": "",
-        "Detector Material": "",
+        "Detector Tech": "NaI(Tl) scintillator array with active veto",
+        "Detector Material": "NaI(Tl)",
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "",
         "Fiducial Mass (t)": "",
-        "Detector Volume m^3": "",
-        "Energy Threshold": "",
-        "Location": "",
+        "Energy Threshold": "~1 keV",
+        "Location": "LNGS (SABRE North); SUPL Australia (SABRE South)",
         "Status": "Future",
-        "Reference": "",
+        "Reference": "https://pos.sissa.it/414/1223",
         "Open Data": "",
         "Anomalies?": "",
-        "Notes": "",
-        "InspireLink": ""
+        "Notes": "Dual-hemisphere NaI(Tl) annual-modulation dark matter search to test DAMA/LIBRA. Background goal ~0.3-0.5 cpd/kg/keV in [1, 6] keV.",
+        "InspireLink": "",
+        "Detector Volume (m^3)": ""
     },
     "KATRIN": {
         "Class": "Isotope",
         "Source(s)": "Tritium Beta Decay",
-        "Detector Tech": "",
-        "Detector Material": "",
+        "Detector Tech": "MAC-E filter spectrometer + Si PIN diode",
+        "Detector Material": "Tritium (windowless gaseous source)",
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "200",
         "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
-        "Energy Threshold": "",
-        "Location": "",
-        "Status": "",
+        "Energy Threshold": "endpoint ~18.6 keV (beta spectrum)",
+        "Location": "KIT, Karlsruhe, Germany",
+        "Status": "Running",
         "Reference": "https://arxiv.org/abs/2103.04755",
         "Open Data": "",
         "Anomalies?": "",
-        "Notes": "Measurement on upper bound of neutrino mass",
-        "InspireLink": ""
+        "Notes": "Direct kinematic neutrino-mass measurement via tritium beta decay. Detector Mass field stores source-related scale; not a tonne-scale target detector.",
+        "InspireLink": "https://inspirehep.net/experiments/1403701",
+        "Detector Volume (m^3)": "main spectrometer ~10 m diam. vessel"
     },
     "BEST": {
         "Class": "Isotope",
         "Source(s)": "51Cr",
-        "Detector Tech": "",
+        "Detector Tech": "Radiochemical Ga target (two-zone)",
         "Detector Material": "Ga",
         "Exposure [Largest/Planned] (t-yr)": "",
-        "Detector Mass (t)": "",
-        "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
-        "Energy Threshold": "",
-        "Location": "",
-        "Status": "",
-        "Reference": "",
+        "Detector Mass (t)": "47.4",
+        "Fiducial Mass (t)": "47.4",
+        "Energy Threshold": "N/A (radiochemical)",
+        "Location": "Baksan Neutrino Observatory, Russia",
+        "Status": "Complete",
+        "Reference": "https://arxiv.org/abs/2109.11482",
         "Open Data": "",
         "Anomalies?": "Yes",
-        "Notes": "",
-        "InspireLink": ""
+        "Notes": "Two-zone Ga target: inner ~7.47 t + outer ~39.96 t. Confirmed gallium anomaly with 51Cr source.",
+        "InspireLink": "",
+        "Detector Volume (m^3)": "inner sphere ~1.335 m diam.; outer cylinder ~2.18 m diam. x 2.345 m"
     },
     "KM3NeT/ARCA": {
         "Class": "Neutrino Observatory",
@@ -241,7 +241,6 @@
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "",
         "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
         "Energy Threshold": "60 TeV",
         "Location": "Capo Passero, Italy",
         "Status": "Running",
@@ -249,7 +248,8 @@
         "Open Data": "https://www.km3net.org/about-km3net/publications/open-data-and-software/",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": "https://inspirehep.net/experiments/1108236"
+        "InspireLink": "https://inspirehep.net/experiments/1108236",
+        "Detector Volume (m^3)": ""
     },
     "KM3NeT/ORCA": {
         "Class": "Neutrino Observatory",
@@ -259,7 +259,6 @@
         "Exposure [Largest/Planned] (t-yr)": "433e3",
         "Detector Mass (t)": "7e6",
         "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "7*10^6 m^3",
         "Energy Threshold": "~GeV",
         "Location": "Toulon, France",
         "Status": "Running",
@@ -267,7 +266,8 @@
         "Open Data": "https://www.km3net.org/about-km3net/publications/open-data-and-software/",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": "https://inspirehep.net/experiments/1108236"
+        "InspireLink": "https://inspirehep.net/experiments/1108236",
+        "Detector Volume (m^3)": "7*10^6 m^3"
     },
     "ANTARES": {
         "Class": "Neutrino Observatory",
@@ -277,7 +277,6 @@
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "",
         "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
         "Energy Threshold": "1e5 MeV",
         "Location": "Mediterranean",
         "Status": "Complete",
@@ -285,7 +284,8 @@
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "Astronomy With a Neutrino Telescope and Abyss Environmental Research. 2006-2022",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Detector Volume (m^3)": ""
     },
     "AMANDA": {
         "Class": "Neutrino Observatory",
@@ -293,17 +293,17 @@
         "Detector Tech": "Ice Cherenkov",
         "Detector Material": "Ice",
         "Exposure [Largest/Planned] (t-yr)": "",
-        "Detector Mass (t)": "",
+        "Detector Mass (t)": "~1e7",
         "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
-        "Energy Threshold": "",
+        "Energy Threshold": "~50 GeV",
         "Location": "South Pole",
         "Status": "Complete",
-        "Reference": "",
+        "Reference": "https://arxiv.org/abs/astro-ph/0009242",
         "Open Data": "",
         "Anomalies?": "",
-        "Notes": "AMANDA: Antarctic Muon and Neutrino Detector; AMANDA is a high-energy neutrino observatory which uses the deep South Pole ice as a target and a track-sensitive, transparent detecting medium. Upward moving neutrinos, having passed through the Earth, interact with ice and produce muons. The muons generate Cerenkov radiation which can be recorded by photomultiplier tubes (PMT). The tubes are placed in vertical shafts melted into the icecap to the depth of 1720 m. The data acquisition is handled in a counting facility at the surface. As of July 96, a total of 173 operating PMTs has been installed. The plan is to have at least 800 optical modules operating before the end of the century. Under construction (July 96).",
-        "InspireLink": ""
+        "Notes": "AMANDA: Antarctic Muon and Neutrino Detector; AMANDA is a high-energy neutrino observatory which uses the deep South Pole ice as a target and a track-sensitive, transparent detecting medium. Upward mo Predecessor to IceCube; strings of optical modules in South Pole ice.",
+        "InspireLink": "",
+        "Detector Volume (m^3)": "~0.015 km^3 instrumented (AMANDA-II)"
     },
     "SNO+": {
         "Class": "Neutrino Observatory",
@@ -311,17 +311,17 @@
         "Detector Tech": "Liquid Scintillator",
         "Detector Material": "LS",
         "Exposure [Largest/Planned] (t-yr)": "",
-        "Detector Mass (t)": "",
-        "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "6 m radius sphere",
+        "Detector Mass (t)": "780",
+        "Fiducial Mass (t)": "~390",
         "Energy Threshold": "",
         "Location": "Creighton Mine, Sudbury, Ontario",
         "Status": "Running",
         "Reference": "https://arxiv.org/abs/2407.17595",
         "Open Data": "",
         "Anomalies?": "",
-        "Notes": "",
-        "InspireLink": "https://inspirehep.net/experiments/1108233"
+        "Notes": "12 m diameter acrylic vessel (AV, 6 m radius) holds ~780 t LAB-based liquid scintillator. Fiducial mass is analysis-dependent (~50% volume cut ≈390 t common; 0nuBB analyses often use R_fid ~3.3 m, ~100 t). ~7000 t ultra-pure water outside AV.",
+        "InspireLink": "https://inspirehep.net/experiments/1108233",
+        "Detector Volume (m^3)": "6 m radius sphere"
     },
     "SNO Phase I": {
         "Class": "Neutrino Observatory",
@@ -331,15 +331,15 @@
         "Exposure [Largest/Planned] (t-yr)": "840",
         "Detector Mass (t)": "1000",
         "Fiducial Mass (t)": "1000",
-        "Dector Volume (m^3)": "12m diameter acrylic vessel",
-        "Energy Threshold": "~1-10 MeVee",
+        "Energy Threshold": "[1, 10] MeVee",
         "Location": "Creighton Mine, Sudbury, Ontario",
         "Status": "Complete",
         "Reference": "",
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": "https://inspirehep.net/experiments/1109110"
+        "InspireLink": "https://inspirehep.net/experiments/1109110",
+        "Detector Volume (m^3)": "12m diameter acrylic vessel"
     },
     "SNO Phase II (Salt)": {
         "Class": "Neutrino Observatory",
@@ -349,15 +349,15 @@
         "Exposure [Largest/Planned] (t-yr)": "1314",
         "Detector Mass (t)": "1002",
         "Fiducial Mass (t)": "1002",
-        "Dector Volume (m^3)": "12m diameter acrylic vessel",
-        "Energy Threshold": "~1-10 MeVee",
+        "Energy Threshold": "[1, 10] MeVee",
         "Location": "Creighton Mine, Sudbury, Ontario",
         "Status": "Complete",
         "Reference": "",
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "SNO Phase II: Salt phase; 2 tons (0.2% by mass) of NaCl added",
-        "InspireLink": "https://inspirehep.net/experiments/1109110"
+        "InspireLink": "https://inspirehep.net/experiments/1109110",
+        "Detector Volume (m^3)": "12m diameter acrylic vessel"
     },
     "SNO Phase III (NCD)": {
         "Class": "Neutrino Observatory",
@@ -367,15 +367,15 @@
         "Exposure [Largest/Planned] (t-yr)": "1061",
         "Detector Mass (t)": "1000",
         "Fiducial Mass (t)": "1000",
-        "Dector Volume (m^3)": "12m diameter acrylic vessel",
-        "Energy Threshold": "~1-10 MeVee",
+        "Energy Threshold": "[1, 10] MeVee",
         "Location": "Creighton Mine, Sudbury, Ontario",
         "Status": "Complete",
         "Reference": "https://arxiv.org/abs/2007.08018",
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "Also known as the Neutral Current Detector (NCD) phase. Added 3^He and 4^He counters for neutron detection.",
-        "InspireLink": "https://inspirehep.net/experiments/1109110"
+        "InspireLink": "https://inspirehep.net/experiments/1109110",
+        "Detector Volume (m^3)": "12m diameter acrylic vessel"
     },
     "Homestake": {
         "Class": "Neutrino Observatory",
@@ -385,7 +385,6 @@
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "650",
         "Fiducial Mass (t)": "650",
-        "Dector Volume (m^3)": "",
         "Energy Threshold": "",
         "Location": "Homestake Mine, South Dakota",
         "Status": "Complete",
@@ -393,7 +392,8 @@
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Detector Volume (m^3)": ""
     },
     "IceCube": {
         "Class": "Neutrino Observatory",
@@ -403,7 +403,6 @@
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "",
         "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "1000e3",
         "Energy Threshold": "1e5 MeV",
         "Location": "South Pole",
         "Status": "Running",
@@ -411,7 +410,8 @@
         "Open Data": "https://icecube.wisc.edu/science/data-releases/",
         "Anomalies?": "Yes",
         "Notes": "IceCube is a one-cubic-kilometer international high-energy neutrino observatory to be built and installed in the clear deep ice below the South Pole Station. IceCube will open unexplored bands for astronomy, including the PeV (1015 eV) energy region, where the universe is opaque, to high-energy gamma rays originating from beyond the edge of our own galaxy, and where cosmic rays do not carry directional information because of their deflection by magnetic fields. The instrument may, for example, answer the question of whether the fascinating multi-TeV photons, originating in the Crab supernova remnant and near the supermassive black holes of active galaxies, are of hadronic or electromagnetic origin. IceCube will provide a totally novel viewpoint on the multi-messenger astronomy of gamma ray bursts, which have been identified as a possible source of the highest energy particles in nature. IceCube also occupies a unique place in the multi-prong attack on the particle nature of dark matter, with unmatched sensitivity to cold dark matter particles approaching TeV masses. As a particle physics experiment with the capacity to detect neutrinos with energies far beyond those produced at accelerators, IceCube will join the race to discover supersymmetric particles and the topological defects created in grand unified phase transitions in the early universe. The detection of cosmic neutrino beams would open the opportunity to study neutrino oscillations over Megaparsec baselines.",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Detector Volume (m^3)": "1000e3"
     },
     "IceCube-Gen2": {
         "Class": "Neutrino Observatory",
@@ -421,7 +421,6 @@
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "",
         "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
         "Energy Threshold": "",
         "Location": "South Pole",
         "Status": "Running",
@@ -429,7 +428,8 @@
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "Bigger and icy-er",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Detector Volume (m^3)": ""
     },
     "GALLEX": {
         "Class": "Neutrino Observatory",
@@ -439,7 +439,6 @@
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "30",
         "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
         "Energy Threshold": "",
         "Location": "LNGS",
         "Status": "Complete",
@@ -447,7 +446,8 @@
         "Open Data": "",
         "Anomalies?": "Yes",
         "Notes": "",
-        "InspireLink": ""
+        "InspireLink": "",
+        "Detector Volume (m^3)": ""
     },
     "SAGE": {
         "Class": "Neutrino Observatory",
@@ -456,16 +456,16 @@
         "Detector Material": "Ga",
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "50",
-        "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
-        "Energy Threshold": "",
-        "Location": "",
+        "Fiducial Mass (t)": "50",
+        "Energy Threshold": "N/A (radiochemical)",
+        "Location": "Baksan Neutrino Observatory, Russia",
         "Status": "Complete",
-        "Reference": "",
+        "Reference": "https://arxiv.org/abs/nucl-ex/9907031",
         "Open Data": "",
         "Anomalies?": "Yes",
-        "Notes": "",
-        "InspireLink": ""
+        "Notes": "Soviet-American Gallium Experiment; solar neutrinos + 51Cr/37Ar source calibrations (gallium anomaly).",
+        "InspireLink": "",
+        "Detector Volume (m^3)": ""
     },
     "Super-K": {
         "Class": "Neutrino Observatory",
@@ -475,7 +475,6 @@
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "50e3",
         "Fiducial Mass (t)": "22.5e3",
-        "Dector Volume (m^3)": "",
         "Energy Threshold": "3.5 MeV",
         "Location": "Mount Ikeno, Japan",
         "Status": "Complete",
@@ -483,7 +482,8 @@
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "Uses a 50,000-ton ring-imaging water Cerenkov detector at a depth of 2700 meters of water equivalent (mwe) in the Kamioka Mozumi mine in Japan. The detector consists of a stainless steel tank in the shape of a right circular cylinder, 39 m diameter and 41 m height, filled with purified water. It is optically segmented into an inner volume, and an outer (anti-coincidence) region. The inner region is viewed by 11,200 photomultiplier tubes (PMT's). The outer annulus is used to tag entering muons as well as to attenuate low-energy gammas and neutrons. The outer region is viewed by 1,800 PMT's. Taking data (July 96).",
-        "InspireLink": "https://inspirehep.net/experiments/1109022"
+        "InspireLink": "https://inspirehep.net/experiments/1109022",
+        "Detector Volume (m^3)": ""
     },
     "HYPER-K": {
         "Class": "Neutrino Observatory",
@@ -493,7 +493,6 @@
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "258000",
         "Fiducial Mass (t)": "187000",
-        "Dector Volume (m^3)": "74 m diameter x 60 m",
         "Energy Threshold": "~o(few MeV)",
         "Location": "Tochibora mine, Japan",
         "Status": "Future",
@@ -501,17 +500,17 @@
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "The Hyper-Kamiokande (Hyper-K) detector is a next generation underground water Cherenkov detector, about 25 times larger than Super-Kamiokande. It is a multipurpose detector but it will be mainly the far detector of a future long baseline neutrino experiment, envisioned for the upgraded J-PARC beam. Hyper-Kamiokande is also able to study proton decays, atmospheric neutrinos, and neutrinos from astro-physical origins. It is currently under construction and will begin running in 2027.",
-        "InspireLink": "https://inspirehep.net/experiments/1340261"
+        "InspireLink": "https://inspirehep.net/experiments/1340261",
+        "Detector Volume (m^3)": "74 m diameter x 60 m"
     },
     "Borexino": {
         "Class": "Neutrino Observatory",
         "Source(s)": "Solar/Atmospheric",
         "Detector Tech": "Liquid Scintillator",
         "Detector Material": "Gd-LS",
-        "Exposure [Largest/Planned] (t-yr)": "258.3, 1287",
+        "Exposure [Largest/Planned] (t-yr)": "[258.3, 1287]",
         "Detector Mass (t)": "278",
-        "Fiducial Mass (t)": "73, 227.8",
-        "Dector Volume (m^3)": "",
+        "Fiducial Mass (t)": "[73, 227.8]",
         "Energy Threshold": "LER 190 keV, HER 3.2 MeV",
         "Location": "Gran Sasso, Italy",
         "Status": "Complete",
@@ -519,7 +518,8 @@
         "Open Data": "https://borex.lngs.infn.it/opendata/",
         "Anomalies?": "",
         "Notes": "Phase-I, Phase-II, and Phase-III datasets have different exposures, fiducial volumes and thresholds",
-        "InspireLink": "https://inspirehep.net/experiments/1110446"
+        "InspireLink": "https://inspirehep.net/experiments/1110446",
+        "Detector Volume (m^3)": ""
     },
     "JUNO": {
         "Class": "Neutrino Observatory",
@@ -529,7 +529,6 @@
         "Detector Mass (t)": "20000",
         "Exposure [Largest/Planned] (t-yr)": "200 kt-yr",
         "Fiducial Mass (t)": "20000",
-        "Dector Volume (m^3)": "35.4 m diameter sphere",
         "Energy Threshold": "~MeV",
         "Location": "Kaiping, Jiangmen, China",
         "Status": "Future",
@@ -537,7 +536,8 @@
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "The Jiangmen Underground Neutrino Observatory (JUNO) is a multipurpose neutrino experiment designed to determine neutrino mass hierarchy and precisely measure oscillation parametersby detecting reactor neutrinos from the Yangjiang and Taishan Nuclear Power Plants, observe supernova neutrinos, study the atmospheric, solar neutrinos and geo-neutrinos, and perform exotic searches, with a 20-thousand-ton liquid scintillator detector of unprecedented 3% energy resolution (at 1 MeV) at 700-meter deep underground.",
-        "InspireLink": "https://inspirehep.net/experiments/1288789"
+        "InspireLink": "https://inspirehep.net/experiments/1288789",
+        "Detector Volume (m^3)": "35.4 m diameter sphere"
     },
     "DUNE-FD": {
         "Class": "Neutrino Observatory",
@@ -545,17 +545,17 @@
         "Detector Tech": "LAr-TPC",
         "Detector Material": "LAr",
         "Exposure [Largest/Planned] (t-yr)": "",
-        "Detector Mass (t)": "40000",
-        "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
-        "Energy Threshold": "",
+        "Detector Mass (t)": "17500",
+        "Fiducial Mass (t)": "10000",
+        "Energy Threshold": "~10 MeV (SN); ~O(100 MeV) beam",
         "Location": "SURF, South Dakota",
         "Status": "Future",
-        "Reference": "",
+        "Reference": "https://arxiv.org/abs/2002.03005",
         "Open Data": "",
         "Anomalies?": "",
-        "Notes": "",
-        "InspireLink": ""
+        "Notes": "Per module: ~17.5 kt LAr in cryostat (Detector Mass); ≥10 kt fiducial/active LArTPC mass (Fiducial Mass; SP nominal 10 kt, VD up to ~12.1 kt). Four modules → ~70 kt LAr total, ≥40 kt fiducial total.",
+        "InspireLink": "https://inspirehep.net/experiments/1403707",
+        "Detector Volume (m^3)": "four ~12x14x58 m LArTPC modules"
     },
     "COSINE-100": {
         "Class": "Dark Matter Detector",
@@ -565,7 +565,6 @@
         "Exposure [Largest/Planned] (t-yr)": "0.175",
         "Detector Mass (t)": "0.106",
         "Fiducial Mass (t)": "0.0613",
-        "Dector Volume (m^3)": "",
         "Energy Threshold": "0.7",
         "Location": "Yangyang Underground Laboratory (Y2L), South Korea",
         "Status": "Running",
@@ -573,7 +572,8 @@
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "The COSINE-100 dark matter search experiment has started taking physics data with the goal of performing an independent measurement of the annual modulation signal observed by DAMA/LIBRA. A muon detector was constructed by using plastic scintillator panels in the outermost layer of the shield surrounding the COSINE-100 detector. It is used to detect cosmic ray muons in order to understand the impact of the muon annual modulation on dark matter analysis. Assembly and initial performance test of each module have been performed at a ground laboratory. The installation of the detector in Yangyang Underground Laboratory (Y2L) was completed in the summer of 2016. Using three months of data, the muon underground flux was measured to be 328 ±± 1(stat.)±± 10(syst.) muons/m22/day. In this report, the assembly of the muon detector and the results from the analysis are presented.",
-        "InspireLink": "https://inspirehep.net/experiments/1641535"
+        "InspireLink": "https://inspirehep.net/experiments/1641535",
+        "Detector Volume (m^3)": ""
     },
     "COSINE-200": {
         "Class": "Dark Matter Detector",
@@ -583,7 +583,6 @@
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "0.2",
         "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
         "Energy Threshold": "",
         "Location": "",
         "Status": "Future",
@@ -591,7 +590,8 @@
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "Even though COSINE-100 will result interesting outputs for DAMA/LIBRA's annual modulation signal, it is necessary to develop low background NaI(Tl) crystals. It is mainly due to crystal background of COSINE-100 that are 2-3 times higher than DAMA/LIBRA. This may result not to explain all the possibilities to interpret the modulation signals. We are currently developing ultra low background NaI(Tl) crystals and eventually launch next phase COSINE-200 experiment. Basic strategy of the COSINE-200 experiment is to do every process related with low background NaI(Tl) detectors by ourselves that include raw powder purification, crystal growing, and detector assembly.",
-        "InspireLink": "https://inspirehep.net/experiments/1791609"
+        "InspireLink": "https://inspirehep.net/experiments/1791609",
+        "Detector Volume (m^3)": ""
     },
     "XLZD": {
         "Class": "Dark Matter Detector",
@@ -601,7 +601,6 @@
         "Exposure [Largest/Planned] (t-yr)": "200",
         "Detector Mass (t)": "60-80",
         "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
         "Energy Threshold": "1 keVnr",
         "Location": "",
         "Status": "Future",
@@ -609,7 +608,8 @@
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "XENON-LUX-ZEPLIN-DARWIN collaboration",
-        "InspireLink": "https://inspirehep.net/experiments/2832946"
+        "InspireLink": "https://inspirehep.net/experiments/2832946",
+        "Detector Volume (m^3)": ""
     },
     "KamLAND": {
         "Class": "Neutrino Observatory",
@@ -619,7 +619,6 @@
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "1000",
         "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
         "Energy Threshold": "1.8 MeV",
         "Location": "Kamioka Mine",
         "Status": "Running",
@@ -627,7 +626,8 @@
         "Open Data": "",
         "Anomalies?": "",
         "Notes": "KamLAND is a large neutrino detector built in the Kamioka mine, under 2700 m.w.e. of rock. The neutrino detector/target is 1 kton of ultra pure liquid scintillator contained in a 13-m-diameter spherical balloon made of 135-micrometer-thick transparent nylon/EVOH (ethylene vinyl alcohol copolymer) composite fi lm. A network of Kevlar ropes supports and constrains the balloon. The liquid scintillator is 80% dodecane, 20% pseudocumene (1,2,4-trimethylbenzene), and 1.52 g/liter of PPO (2,5-diphenyloxazole) used as a fluor. A buffer mixture of dodecane and isoparaffin oils fills the volume b etween the balloon and the 18-m-diameter spherical stainless-steel containment vessel. The entire inner sur face of the vessel is covered by an array of a total of 1879 photomultiplier tubes (PMTs), 1325 of which ar e specially developed 17-in. and 554 of which are the old Kamiokande 20-in. devices. The total photocathode coverage is 34 %. The containment vessel is surrounded by a 3.2 kton water-Cherenkov detector. The data taking has been continuing since January 22, 2002.",
-        "InspireLink": "https://inspirehep.net/experiments/1110499"
+        "InspireLink": "https://inspirehep.net/experiments/1110499",
+        "Detector Volume (m^3)": ""
     },
     "DAMIC": {
         "Class": "Dark Matter Detector",
@@ -637,7 +637,6 @@
         "Exposure [Largest/Planned] (t-yr)": "3.01e-5",
         "Detector Mass (t)": "",
         "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
         "Energy Threshold": "~50 eV --> 23 eV",
         "Location": "SNOLAB, Canada",
         "Status": "Running",
@@ -645,7 +644,8 @@
         "Open Data": "",
         "Anomalies?": "Yes",
         "Notes": "",
-        "InspireLink": "https://inspirehep.net/experiments/1401315"
+        "InspireLink": "https://inspirehep.net/experiments/1401315",
+        "Detector Volume (m^3)": ""
     },
     "SENSEI": {
         "Class": "Dark Matter Detector",
@@ -655,7 +655,6 @@
         "Exposure [Largest/Planned] (t-yr)": "",
         "Detector Mass (t)": "",
         "Fiducial Mass (t)": "",
-        "Dector Volume (m^3)": "",
         "Energy Threshold": "",
         "Location": "SNOLAB, Canada",
         "Status": "Running",
@@ -663,6 +662,7 @@
         "Open Data": "https://github.com/sensei-skipper/DataReleases",
         "Anomalies?": "",
         "Notes": "",
-        "InspireLink": "https://inspirehep.net/experiments/1662255"
+        "InspireLink": "https://inspirehep.net/experiments/1662255",
+        "Detector Volume (m^3)": ""
     }
 }
