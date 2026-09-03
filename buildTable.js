@@ -91,6 +91,14 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
               cellData = refs.join("<br>");
             }
 
+            // Hyperlink positive anomaly markers when AnomalyLink is provided.
+            if (col === "Anomalies?" && cellData) {
+              let anomalyLink = details["AnomalyLink"] || "";
+              if (anomalyLink.trim() !== "") {
+                cellData = `<a href="${anomalyLink}" target="_blank">${cellData}</a>`;
+              }
+            }
+
             // Apply color coding for beam particle type
             if (col === "Beam Particle") {
               let lowerData = cellData.toLowerCase();

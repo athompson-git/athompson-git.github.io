@@ -14,6 +14,7 @@
         "Reference": "",
         "Open Data": "",
         "Anomalies?": "",
+        "AnomalyLink": "",
         "Notes": "",
         "InspireLink": ""
     },
@@ -66,7 +67,8 @@
         "Status": "Complete",
         "Reference": "https://xenonexperiment.org/",
         "Open Data": "https://xenonexperiment.org/public-data/",
-        "Anomalies?": "Yes https://arxiv.org/pdf/2006.09721",
+        "Anomalies?": "Yes",
+        "AnomalyLink": "https://arxiv.org/pdf/2006.09721",
         "Notes": "",
         "InspireLink": "https://inspirehep.net/experiments/1386519",
         "Detector Volume (m^3)": ""
@@ -139,7 +141,8 @@
         "Reference": "https://arxiv.org/abs/1703.09144",
         "Open Data": "https://www.hepdata.net/search/?q=lz&collaboration=LZ",
         "Anomalies?": "Yes",
-        "Notes": "https://lz.lbl.gov/wp-content/uploads/sites/6/2026/08/LZ_Preprint_260901_Dark_Matter_EFT_Nuclear_Recoil_Search_at_Higher_Energies.pdf",
+        "AnomalyLink": "https://lz.lbl.gov/wp-content/uploads/sites/6/2026/08/LZ_Preprint_260901_Dark_Matter_EFT_Nuclear_Recoil_Search_at_Higher_Energies.pdf",
+        "Notes": "",
         "InspireLink": "https://inspirehep.net/experiments/1262631",
         "Detector Volume (m^3)": ""
     },
@@ -643,6 +646,7 @@
         "Reference": "",
         "Open Data": "",
         "Anomalies?": "Yes",
+        "AnomalyLink": "https://inspirehep.net/literature/1809457",
         "Notes": "",
         "InspireLink": "https://inspirehep.net/experiments/1401315",
         "Detector Volume (m^3)": ""

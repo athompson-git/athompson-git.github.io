@@ -13,7 +13,8 @@
         "InspireLink": "",
         "Open Data": "",
         "Notes": "",
-        "Anomalies?": ""
+        "Anomalies?": "",
+        "AnomalyLink": ""
     },
     "LIGO": {
         "Class": "Terrestrial Laser Interferometer GW Observatory",
