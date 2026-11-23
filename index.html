@@ -7,20 +7,20 @@
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="styles.css?v=responsive-banner">
     <style>
-        .research-banner {
-            width: min(70%, 700px);
-            margin: 0 auto;
+        .project-figure {
+            min-width: 0;
+            margin: 0;
             text-align: center;
         }
 
-        .research-banner figcaption {
+        .project-figure figcaption {
             margin-top: 0.25rem;
             color: #666;
             font-size: 0.85rem;
             font-style: italic;
         }
 
-        .research-banner img {
+        .project-figure img {
             display: block;
             width: 100%;
             max-width: 100%;
@@ -76,10 +76,6 @@
 
 
     <section>
-        <figure class="research-banner">
-            <img src="images/bnb_pulse.gif" width="1000" height="459" alt="Animation of a Booster Neutrino Beam pulse">
-            <figcaption>RKHorn simulation</figcaption>
-        </figure>
         <div id="research">
         <h2>Selected Research</h2>
         <div class="paper">
@@ -188,7 +184,10 @@
                     Runge-Kutta transport of Charged Mesons through Magnetic Focusing Horns
                 </p>
             </div>
-            <img src="images/horn_transport_visualization.png" alt="Runge-Kutta transport visualization">
+            <figure class="project-figure">
+                <img src="images/bnb_pulse.gif" width="1000" height="459" alt="Animation of a Booster Neutrino Beam pulse">
+                <figcaption>RKHorn simulation</figcaption>
+            </figure>
         </div>
         <div class="project">
             <div>
