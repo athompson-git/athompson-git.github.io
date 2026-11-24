@@ -240,7 +240,7 @@ a:active {
 @media (max-width: 768px) {
     .paper,
     .project {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .paper > img,
