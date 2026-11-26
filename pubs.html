@@ -6,28 +6,8 @@
     <title>CV / Publications | Adrian Thompson</title>
     <meta name="description" content="CV, education, and publications by Adrian Thompson" />
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=evergreen-contact">
     <style>
-      main section {
-        max-width: none;
-        margin: 0 0 2.4rem;
-        padding: 0;
-      }
-
-      main section:not(:last-child) {
-        padding-bottom: 2.4rem;
-        border-bottom: 1px solid var(--color-surface);
-      }
-
-      main section > h2 {
-        text-align: left;
-        font-size: clamp(1.2rem, 1.1rem + 0.35vw, 1.4rem);
-        margin: 0 0 0.85rem;
-        padding-bottom: 0.45rem;
-        border-bottom: 2px solid var(--color-surface);
-        letter-spacing: -0.01em;
-      }
-
       .cv-intro {
         margin: 0 0 2rem;
         color: var(--color-ink-muted);
@@ -98,11 +78,11 @@
       }
 
       .tag {
-        background: var(--color-surface);
+        background: var(--color-pale-olive);
         color: var(--color-heading);
         padding: 0.08rem 0.5rem;
         border-radius: 4px;
-        border: 1px solid #d5dee3;
+        border: 1px solid var(--color-olive);
         white-space: nowrap;
       }
 
@@ -137,36 +117,54 @@
       }
     </style>
 </head>
-<body class="framed">
+<body>
 
   <div class="page-frame">
 
-  <header>
-        <h1>Adrian Thompson</h1>
-        <p>CV / Publications</p>
-        <nav class="banner-links">
+    <header class="site-header">
+        <nav class="banner-links" aria-label="Main navigation">
             <a href="index.html">Home</a>
-            <a href="pubs.html">CV / Publications</a>
+            <a href="pubs.html" aria-current="page">CV / Publications</a>
             <a href="photos.html">Photos</a>
+            <a href="experiments.html">eXdb</a>
             <a href="https://github.com/athompson-git">GitHub</a>
-            <a href="https://athompson-git.github.io/experiments.html">eXdb</a>
             <a href="https://inspire-graph-chrono-b2c564.gitlab.io/paper-network/">InspireGraphChrono</a>
             <a href="https://hymnoptera.bandcamp.com/">Bandcamp</a>
             <a href="#contact">Contact</a>
         </nav>
+        <h1 class="page-title">CV / Publications</h1>
     </header>
 
-  <main id="pubs-root">
+  <main class="site-main" id="pubs-root">
 
     <p class="cv-intro"><a href="docs/cv.pdf">Download full CV (PDF)</a></p>
 
-    <section id="education">
-      <h2>Education</h2>
+    <section class="content-section" id="background">
+      <h2 class="section-heading">Background</h2>
+      <p>
+          I started in physics at UC Santa Cruz, where I got my bachelors in physics and math in 2015. I contracted at Google X working
+          in software quality for the self-driving car (now Waymo) for a few years.
+          I then did my doctorate at Texas A&M from 2017-2023, where I worked initially on the CMS experiment doing alignment of the muon system and Z-prime phenomenology with Dr. Teruki Kamon,
+          and then on particle theory and phenomenology with my advisor, Professor Bhaskar Dutta.
+      </p>
+      <p>
+          My thesis was on the Bragg-Primakoff scattering of solar axions using crystal detectors, and the treatment of absorption and Borrmann effects on coherence in the diffraction theory.
+          I collaborated there with experimental physicists on reactor experiments like MINER, accelerator experiments like COHERENT, IsoDAR, and CCM, and future neutrino
+          experiments like DUNE, and figured out how to test theories of physics beyond the Standard Model at those experiments (and propose a few new models myself).
+      </p>
+      <p>
+          I then worked as a postdoctoral researcher with Professor André de Gouvêa at Northwestern University, where I began thinking more deeply about neutrino physics.
+          I am now a Neutrino Theory Network postdoctoral fellow at UC Irvine, working with Professor Shirley Li.
+      </p>
+    </section>
+
+    <section class="content-section" id="education">
+      <h2 class="section-heading">Education</h2>
       <ul class="cv-history">
         <li class="cv-entry">
           <div class="cv-entry-text">
             <strong>Ph.D. Physics</strong>, Texas A&amp;M University, 2023
-            <br><span class="venue">Advisor: Dr. Bhaskar Dutta</span>
+            <br><span class="venue">Advisor: Professor Bhaskar Dutta</span>
           </div>
           <img src="images/school_logos/Texas_A&amp;M_University_logo.svg.png" alt="Texas A&amp;M University" class="school-logo">
         </li>
@@ -180,8 +178,8 @@
       </ul>
     </section>
 
-    <section id="experience">
-      <h2>Research Appointments</h2>
+    <section class="content-section" id="experience">
+      <h2 class="section-heading">Research Appointments</h2>
       <ul class="cv-history">
         <li class="cv-entry">
           <div class="cv-entry-text">
@@ -204,8 +202,8 @@
       </ul>
     </section>
 
-    <section id="primary">
-      <h2>Primary Contributions</h2>
+    <section class="content-section" id="primary">
+      <h2 class="section-heading">Primary Contributions</h2>
       <ol class="pubs">
         <li class="pub">
           <span class="authors">T. Cheng, M. Hostert, P. A. N. Machado, N. Mishra, <u>A. T.</u></span>
@@ -368,8 +366,8 @@
       </ol>
     </section>
 
-    <section id="collab">
-      <h2>CCM Collaboration</h2>
+    <section class="content-section" id="collab">
+      <h2 class="section-heading">CCM Collaboration</h2>
       <p class="venue">I led the analysis effort for the following Coherent CAPTAIN Mills (CCM) collaboration papers.</p>
       <ol class="pubs">
         <li class="pub">
@@ -387,8 +385,8 @@
       </ol>
     </section>
 
-    <section id="secondary">
-      <h2>Secondary Contributions</h2>
+    <section class="content-section" id="secondary">
+      <h2 class="section-heading">Secondary Contributions</h2>
       <p class="venue">Advisory or non-leading author contributions.</p>
       <ol class="pubs">
         <li class="pub">
@@ -430,8 +428,8 @@
       </ol>
     </section>
 
-    <section id="dissertation">
-      <h2>PhD Dissertation</h2>
+    <section class="content-section" id="dissertation">
+      <h2 class="section-heading">PhD Dissertation</h2>
       <ol class="pubs">
         <li class="pub">
           <span class="authors"><u>A. T.</u></span>
@@ -448,12 +446,10 @@
         Last updated: August 2026.
     </footer>
 
-<section>
-<div id="contact">
-    <h2>Contact</h2>
-    <div class="contact-info">
-        <p>Email: <a href="mailto:athomps3@uci.edu">athomps3@uci.edu</a></p>
-    </div>
+<section class="page-contact">
+<div id="contact" class="contact-banner">
+    <h2 class="section-heading">Contact</h2>
+    <p>Email: <a href="mailto:athomps3@uci.edu">athomps3@uci.edu</a></p>
 </div>
 </section>
 

@@ -10,7 +10,8 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Table CSS -->
-  <link rel="stylesheet" href="table_style.css">
+  <link rel="stylesheet" href="styles.css?v=link-policy">
+  <link rel="stylesheet" href="table_style.css?v=small-disclaimer">
 
   <!-- Meta Tags for SEO, Open Graph, Twitter, etc. -->
   <meta name="description" content="eXdb, the searchable table of Particle Physics Experiments">
@@ -27,160 +28,160 @@
   <meta name="twitter:description" content="Searchable table of particle physics and gravitational wave experiments.">
   <meta name="twitter:image" content="https://athompson-git.github.io/images/logos/exdb_twitter_card_2-1.png">
 </head>
-<body>
-  <header>
-    <div class="header">
-      <div class="logo-container">
-        <img src="images/logos/exdb_logo.png" alt="eXdb Logo">
-      </div>
-      <div class="title-container">
+<body class="database">
+  <div class="page-frame database-header">
+    <header class="site-header">
+      <nav class="banner-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="pubs.html">CV / Publications</a>
+        <a href="photos.html">Photos</a>
+      </nav>
+      <div class="database-title">
+        <img src="images/logos/exdb_logo.png" width="1295" height="492" alt="eXdb">
         <h1>The Particle Physics Experiments Database</h1>
       </div>
-    </div>
-  </header>
-
-  <div class="header">
-    <nav>
-      <p><a href="experiments.html">All Experiments</a></p>
-      <p><a href="fixed_target.html">I: Fixed Target and Forward Physics</a></p>
-      <p><a href="passive_det.html">II: Neutrino Observatories & DM Direct Detectors</a></p>
-      <p><a href="reactors.html">III: Reactors</a></p>
-      <p><a href="gw.html">IV: Gravitational Waves & Haloscopes</a></p>
-      <p><a href="colliders.html">V: Collider and Storage Ring Experiments</a></p>
-    </nav>
+      <nav class="banner-links database-categories" aria-label="Experiment categories">
+        <a href="experiments.html" aria-current="page">All Experiments</a>
+        <a href="fixed_target.html">I. Fixed Target and Forward Physics</a>
+        <a href="passive_det.html">II. Neutrino Observatories &amp; DM Direct Detectors</a>
+        <a href="reactors.html">III. Reactors</a>
+        <a href="gw.html">IV. Gravitational Waves &amp; Haloscopes</a>
+        <a href="colliders.html">V. Collider and Storage Ring Experiments</a>
+      </nav>
+    </header>
   </div>
 
-  <p style="font-style: italic;">
-    Disclaimer: This table is maintained individually and supported by community feedback.
-    The information within is sourced only by public references. Please check the source references for the most accurate representation of the aggregate information.
-    To suggest corrections or provide new data, see contact information at the bottom of the page.
-  </p>
-  <input type="text" id="search" placeholder="Search experiments...">
+  <main>
+    <div class="page-frame database-overview">
+      <div class="database-intro">
+        <p class="database-note">
+          Disclaimer: This table is maintained individually and supported by community feedback.
+          The information within is sourced only by public references. Please check the source references for the most accurate representation of the aggregate information.
+          To suggest corrections or provide new data, see contact information at the bottom of the page.
+        </p>
+      </div>
+    </div>
 
-  <h2 id="tableTitle_ft" align="center">I: Fixed Target and Forward Physics Experiments</h2>
-  <table id="fixedTargetTable">
-    <thead>
-      <tr id="tableHeader_ft"></tr>
-    </thead>
-    <tbody></tbody>
-  </table>
-  
-  <h2 id="tableTitle_dd" align="center">II: Dark Matter Direct Detectors and Neutrino Observatories</h2>
-  <table id="ddTable">
-    <thead>
-      <tr id="tableHeader_dd"></tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+    <div class="database-results">
+      <input type="text" id="search" placeholder="Search experiments..." aria-label="Search experiments">
 
-  <h2 id="tableTitle_reactors" align="center">III: Reactor Experiments</h2>
-  <table id="reactorTable">
-    <thead>
-      <tr id="tableHeader_reactors"></tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+      <h2 id="tableTitle_ft" class="database-centered">I: Fixed Target and Forward Physics Experiments</h2>
+      <table id="fixedTargetTable">
+        <thead>
+          <tr id="tableHeader_ft"></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
 
-  <h2 id="tableTitle_gw" align="center">IV: Gravitational Wave and Haloscope Experiments</h2>
-  <table id="gwTable">
-    <thead>
-      <tr id="tableHeader_gw"></tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+      <h2 id="tableTitle_dd" class="database-centered">II: Dark Matter Direct Detectors and Neutrino Observatories</h2>
+      <table id="ddTable">
+        <thead>
+          <tr id="tableHeader_dd"></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
 
-  <h2 id="tableTitle_collider" align="center">V: Collider and Storage Ring Experiments</h2>
-  <table id="colliderTable">
-    <thead>
-      <tr id="tableHeader_collider"></tr>
-    </thead>
-    <tbody></tbody>
-  </table>
+      <h2 id="tableTitle_reactors" class="database-centered">III: Reactor Experiments</h2>
+      <table id="reactorTable">
+        <thead>
+          <tr id="tableHeader_reactors"></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
 
-  <!-- Call the external buildTable function -->
-  <script src="buildTable.js"></script>
-  <script>
-    // Build first table for fixed target experiments
-    let visible_columns_ft = ["Source(s)", "Beam Particle", "Beam Energy (GeV)", "POT (Planned/Largest)", "Baseline (m)",
-                           "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
-                           "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
-    buildTable(visible_columns_ft, "data/experiments.json", "fixedTargetTable", "tableTitle_ft");
-    
-    // Build second table for direct detection experiments
-    let visible_columns_dd = ["Source(s)", "Detector Tech", "Detector Material", "Exposure [Largest/Planned] (t-yr)", "Detector Mass (t)", "Fiducial Mass (t)",
-                           "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
-    buildTable(visible_columns_dd, "data/passive_det.json", "ddTable", "tableTitle_dd");
+      <h2 id="tableTitle_gw" class="database-centered">IV: Gravitational Wave and Haloscope Experiments</h2>
+      <table id="gwTable">
+        <thead>
+          <tr id="tableHeader_gw"></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
 
-    // Build second table for reactor experiments
-    let visible_columns_reactors = ["Source(s)", "Reactor Power", "Reactor ON Exposure (kg-days)", "Reactor OFF Exposure (kg-days)", "Baseline (m)",
-                           "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
-                           "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
-    buildTable(visible_columns_reactors, "data/reactors.json", "reactorTable", "tableTitle_reactors");
+      <h2 id="tableTitle_collider" class="database-centered">V: Collider and Storage Ring Experiments</h2>
+      <table id="colliderTable">
+        <thead>
+          <tr id="tableHeader_collider"></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
 
-    let visible_columns_gw = ["Class", "Signals of Interest", "Length Scale (km)", "Technology",
-                                    "Frequency Band (Hz)", "Minimum Strain Sensitivity (1/Hz^1/2)", "Minimum Strain Sensitivity (h^2 Ω_GW)",
-                                    "Location", "Status", "Reference", "Open Data", "Anomalies?"];
-    buildTable(visible_columns_gw, "data/gw.json", "gwTable", "tableTitle_gw");
+      <!-- Call the external buildTable function -->
+      <script src="buildTable.js?v=future-highlight"></script>
+      <script>
+        // Build first table for fixed target experiments
+        let visible_columns_ft = ["Source(s)", "Beam Particle", "Beam Energy (GeV)", "POT (Planned/Largest)", "Baseline (m)",
+                               "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
+                               "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
+        buildTable(visible_columns_ft, "data/experiments.json", "fixedTargetTable", "tableTitle_ft");
 
-    let visible_columns_col = ["Collider", "Collider Geometry", "Beam Particles", "CoM Energy √s (TeV)", "Luminosity Collected",
-                                "Detector Rapidity Coverage", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
-    buildTable(visible_columns_col, "data/colliders.json", "colliderTable", "tableTitle_collider");
+        // Build second table for direct detection experiments
+        let visible_columns_dd = ["Source(s)", "Detector Tech", "Detector Material", "Exposure [Largest/Planned] (t-yr)", "Detector Mass (t)", "Fiducial Mass (t)",
+                               "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
+        buildTable(visible_columns_dd, "data/passive_det.json", "ddTable", "tableTitle_dd");
 
+        // Build second table for reactor experiments
+        let visible_columns_reactors = ["Source(s)", "Reactor Power", "Reactor ON Exposure (kg-days)", "Reactor OFF Exposure (kg-days)", "Baseline (m)",
+                               "Detector Tech", "Detector Material", "Detector Mass (t)", "Fiducial Mass (t)",
+                               "Detector Volume (m^3)", "Energy Threshold", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
+        buildTable(visible_columns_reactors, "data/reactors.json", "reactorTable", "tableTitle_reactors");
 
-  </script>
+        let visible_columns_gw = ["Class", "Signals of Interest", "Length Scale (km)", "Technology",
+                                        "Frequency Band (Hz)", "Minimum Strain Sensitivity (1/Hz^1/2)", "Minimum Strain Sensitivity (h^2 Ω_GW)",
+                                        "Location", "Status", "Reference", "Open Data", "Anomalies?"];
+        buildTable(visible_columns_gw, "data/gw.json", "gwTable", "tableTitle_gw");
 
-  <br><br>
-  <h3>Supplementary References</h3>
-  <p>
-    <ul>
-      <li>
-        <a href="https://programplanning.fnal.gov/experimentslist/">List of Fermilab experiments</a>
-      </li>
-      <li>
-        <a href="https://github.com/alfkoehn/fusion_plots/blob/master/fusion_companies/fusion_companies.md">Table of fusion reactor experiments</a>
-      </li>
-    </ul>
-  </p>
-
-  <!-- Community feedback section and about data, etc. -->
-  <br><br>
-  <h2>Community Feedback and Contact</h2>
-  <p>
-    To contact the owner for any corrections, improvements or feedback please email:
-  </p>
-  <p>
-    athomps3@uci.edu
-  </p>
-
-  <br><br><br><br>
+        let visible_columns_col = ["Collider", "Collider Geometry", "Beam Particles", "CoM Energy √s (TeV)", "Luminosity Collected",
+                                    "Detector Rapidity Coverage", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
+        buildTable(visible_columns_col, "data/colliders.json", "colliderTable", "tableTitle_collider");
 
 
-  <h2>About the data</h2>
-  <h4>Links to JSON:</h4>
-  <p>
-    Fixed target: <a href="data/experiments.json">experiments.json</a>
-  </p>
-  <p>
-    DM Direct Detectors and Nu Observatories: <a href="data/passive_det.json">passive_det.json</a>
-  </p>
-  <p>
-    Reactors: <a href="data/reactors.json">reactors.json</a>
-  </p>
-  <p>
-    Gravitational Waves and Haloscopes: <a href="data/gw.json">gw.json</a>
-  </p>
-  <p>
-    Colliders: <a href="data/colliders.json">colliders.json</a>
-  </p>
+      </script>
+    </div>
+  </main>
 
-  <br><br><br><br>
+  <footer class="database-results">
+    <br><br>
+    <h3>Supplementary References</h3>
+    <p><a href="https://programplanning.fnal.gov/experimentslist/">List of Fermilab experiments</a></p>
+    <p><a href="https://github.com/alfkoehn/fusion_plots/blob/master/fusion_companies/fusion_companies.md">Table of fusion reactor experiments</a></p>
 
+    <!-- Community feedback section and about data, etc. -->
+    <br><br>
+    <h2>Community Feedback and Contact</h2>
+    <p>
+      To contact the owner for any corrections, improvements or feedback please email:
+    </p>
+    <p>
+      athomps3@uci.edu
+    </p>
 
-  <p align="center" style="font-style: italic;">
-    About the Author: <a href="index.html">Adrian Thompson</a>
-  </p>
+    <br><br><br><br>
 
 
+    <h2>About the data</h2>
+    <h4>Links to JSON:</h4>
+    <p>
+      Fixed target: <a href="data/experiments.json">experiments.json</a>
+    </p>
+    <p>
+      DM Direct Detectors and Nu Observatories: <a href="data/passive_det.json">passive_det.json</a>
+    </p>
+    <p>
+      Reactors: <a href="data/reactors.json">reactors.json</a>
+    </p>
+    <p>
+      Gravitational Waves and Haloscopes: <a href="data/gw.json">gw.json</a>
+    </p>
+    <p>
+      Colliders: <a href="data/colliders.json">colliders.json</a>
+    </p>
 
+    <br><br><br><br>
+
+
+    <p class="database-centered" style="font-style: italic;">
+      About the Author: <a href="index.html">Adrian Thompson</a>
+    </p>
+  </footer>
 </body>
 </html>

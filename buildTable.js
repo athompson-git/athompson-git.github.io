@@ -50,7 +50,7 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
           if (status === "Running") {
             rowColor = ' style="background-color: rgba(0, 128, 0, 0.1);"';
           } else if (status === "Future") {
-            rowColor = ' style="background-color: rgba(255, 255, 0, 0.1);"';
+            rowColor = ' style="background-color: #eff1c5;"';
           } else if (status === "Proposed") {
             rowColor = ' style="background-color: rgba(255, 255, 0, 0.1);"';
           }
@@ -64,7 +64,7 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
           let inspireLink = details["InspireLink"] || "";
           let inspireAnchor = "";
           if (inspireLink.trim() !== "") {
-            inspireAnchor = `<a href="${inspireLink}" target="_blank" style="color: blue; text-decoration: underline;">[iN]</a>`;
+            inspireAnchor = `<a href="${inspireLink}" target="_blank">[iN]</a>`;
           }
   
           let rowStr = `<tr class="${anomalyClass}" ${rowColor}>
@@ -126,21 +126,24 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
           tableBody.append(rowStr);
         });
   
-        $("#search").on("keyup", function() {
-          let value = $(this).val().toLowerCase();
-          $("#" + tableId + " tbody tr").each(function() {
-            let rowText = $(this).text().toLowerCase();
-            $(this).toggle(rowText.includes(value));
+        const search = $("#search");
+        const table = $("#" + tableId);
+
+        function filterTable() {
+          const value = search.val().toLowerCase();
+          let hasMatches = false;
+
+          table.find("tbody tr").each(function() {
+            const matches = $(this).text().toLowerCase().includes(value);
+            $(this).toggle(matches);
+            hasMatches ||= matches;
           });
-          // If no rows are visible, hide the header; otherwise, show it.
-          if ($("#" + tableId + " tbody tr:visible").length === 0) {
-            $("#" + tableId + " thead").hide();
-            $("#" + titleId).hide();
-          } else {
-            $("#" + tableId + " thead").show();
-            $("#" + titleId).show();
-          }
-        });
+          table.find("thead").toggle(hasMatches);
+          $("#" + titleId).toggle(hasMatches);
+        }
+
+        search.on("input", filterTable);
+        filterTable();
       })
       .fail(function(jqxhr, textStatus, error) {
         console.error("Error loading JSON from " + jsonFile, textStatus, error);

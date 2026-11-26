@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>InspireHEP Research Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css?v=link-policy">
+  <style>
+    .research-map {
+      --content-max: 87rem;
+    }
+
+    .map-controls {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .map-controls label {
+      color: var(--color-heading);
+      font-size: 0.9rem;
+      font-weight: 650;
+    }
+
+    .map-controls select {
+      padding: 0.4rem 0.65rem;
+      border: 1px solid #849f9f;
+      border-radius: 3px;
+      background: var(--color-page);
+      color: var(--color-ink);
+      font: inherit;
+    }
+
+    #map {
+      width: 100%;
+      height: 70vh;
+      height: clamp(20rem, 70svh, 56rem);
+      background: var(--color-surface);
+      font-family: var(--font-site);
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-frame research-map">
+  <header class="site-header">
+    <nav class="banner-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+    </nav>
+    <h1 class="page-title">InspireHEP Research Map</h1>
+  </header>
+  <main class="site-main">
+    <div class="map-controls">
+      <label for="topic">Select a topic</label>
+      <select id="topic">
+        <option value="neutrino">Neutrino</option>
+        <option value="dark matter">Dark Matter</option>
+        <option value="cosmology">Cosmology</option>
+        <option value="lattice">Lattice</option>
+        <option value="eft">EFT</option>
+        <option value="string">String</option>
+        <option value="holography">Holography</option>
+      </select>
+    </div>
+    <div id="map" aria-label="Research map"></div>
+  </main>
+</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  const map = L.map('map').setView([20, 0], 2);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  const markerColor = getComputedStyle(document.body).getPropertyValue('--color-link').trim();
+  const topicSelect = document.getElementById('topic');
+  let markersLayer = L.layerGroup().addTo(map);
+
+  topicSelect.addEventListener('change', () => {
+    loadTopic(topicSelect.value);
+  });
+
+  async function loadTopic(keyword) {
+    markersLayer.clearLayers();
+    const query = `https://inspirehep.net/api/literature?q=title%3A${encodeURIComponent(keyword)}%20AND%20date%3A%3E2009&size=1000`;
+
+    const resp = await fetch(query);
+    const data = await resp.json();
+
+    const institutionCounts = {};
+
+    for (const hit of data.hits.hits) {
+      const authors = hit.metadata.authors || [];
+      for (const author of authors) {
+        const affs = author?.affiliations || [];
+        for (const aff of affs) {
+          const name = aff.value;
+          if (!name) continue;
+          institutionCounts[name] = (institutionCounts[name] || 0) + 1;
+        }
+      }
+    }
+
+    const topInstitutions = Object.entries(institutionCounts)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 100); // Limit for performance
+
+    for (const [name, count] of topInstitutions) {
+      const coords = await geocodeInstitution(name);
+      if (coords) {
+        const marker = L.circleMarker(coords, {
+          radius: Math.log(count + 1) * 2.5,
+          color: markerColor,
+          fillOpacity: 0.5,
+        }).bindPopup(`<b>${name}</b><br>${count} papers on ${keyword}`);
+        marker.addTo(markersLayer);
+      }
+    }
+  }
+
+  async function geocodeInstitution(name) {
+    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(name)}`;
+    const resp = await fetch(url, { headers: { 'User-Agent': 'InspireHEP-Map/1.0' } });
+    const results = await resp.json();
+    if (results && results[0]) {
+      return [parseFloat(results[0].lat), parseFloat(results[0].lon)];
+    }
+    return null;
+  }
+
+  // Load default topic
+  loadTopic(topicSelect.value);
+</script>
+
+</body>
+</html>

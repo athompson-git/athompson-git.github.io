@@ -4,171 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adrian Thompson</title>
-    <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="styles.css?v=responsive-banner">
-    <style>
-        .project-figure {
-            min-width: 0;
-            margin: 0;
-            text-align: center;
-        }
-
-        .project-figure figcaption {
-            margin-top: 0.25rem;
-            color: #666;
-            font-size: 0.85rem;
-            font-style: italic;
-        }
-
-        .project-figure img {
-            display: block;
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-            margin: 0 auto;
-        }
-
-    </style>
+    <link rel="stylesheet" href="styles.css?v=wide-booster-gif">
 </head>
-<body class="framed home">
+<body>
 
     <div class="page-frame">
 
-    <header>
-        <img src="images/south_dakota.jpg" alt="Somewhere in Custer State Park, South Dakota">
-        <h1>Adrian Thompson</h1>
-        <p>Neutrino Theory Network Fellow, UC Irvine</p>
-
-        <nav class="banner-links">
-            <a href="index.html">Home</a>
+    <header class="site-header">
+        <nav class="banner-links" aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Home</a>
             <a href="pubs.html">CV / Publications</a>
             <a href="photos.html">Photos</a>
+            <a href="experiments.html">eXdb</a>
             <a href="https://github.com/athompson-git">GitHub</a>
-            <a href="https://athompson-git.github.io/experiments.html">eXdb</a>
             <a href="https://inspire-graph-chrono-b2c564.gitlab.io/paper-network/">InspireGraphChrono</a>
             <a href="https://hymnoptera.bandcamp.com/">Bandcamp</a>
             <a href="#contact">Contact</a>
         </nav>
+        <div class="profile-banner">
+            <div class="profile">
+                <img src="images/south_dakota.jpg" width="4032" height="2268" alt="Adrian Thompson in Custer State Park, South Dakota">
+                <h1>Adrian Thompson</h1>
+                <p>Neutrino Theory Network Fellow, UC Irvine</p>
+            </div>
+            <section class="about" aria-labelledby="about-title">
+                <h2 id="about-title" class="section-heading">About</h2>
+                <p>
+                    I work on particle phenomenology in a number of areas related to questions about dark matter, axions, and the nature of the neutrino masses.
+                    I enjoy collaborating with many experimentalists and theorists to discover new fundamental properties of our universe and its particle content.
+                </p>
+                <p>
+                    <a href="https://inspirehep.net/authors/1671410?ui-citation-summary=true">
+                        <img src="images/logos/inspire.png" class="inline-image" alt="INSPIRE">
+                    </a>
+                </p>
+            </section>
+        </div>
     </header>
 
-    <section>
-        <h2>About</h2>
-        <p>
-            I work on particle phenomenology in a number of areas related to questions about dark matter, axions, and the nature of the neutrino masses.
-            I enjoy collaborating with many experimentalists and theorists to discover new fundamental properties of our universe and its particle content.
-        </p>
-        <p>
-            I started in physics at UC Santa Cruz, where I got my bachelors in physics and math in 2015. I contracted at Google X working
-            in software quality for the self-driving car (now Waymo) for a few years.
-            I then did my doctorate at Texas A&M from 2017-2023, where I worked initially on the CMS experiment doing alignment of the muon system and Z-prime phenomenology with Dr. Teruki Kamon,
-            and then on particle theory and phenomenology with my advisor Dr. Bhaskar Dutta.
-            My thesis was on the Bragg-Primakoff scattering of solar axions using crystal detectors, and the treatment of absorption and Borrmann effects on coherence in the diffraction theory.
-            I collaborated there with experimental physicists on reactor experiments like MINER, accelerator experiments like COHERENT, IsoDAR, and CCM, and future neutrino 
-            experiments like DUNE, and figured out how to test theories of physics beyond the Standard Model at those experiments (and propose a few new models myself).
-            Now I enjoy working on neutrino physics at future muon colliders, first-order phase transitions in the early universe, chiral perturbation theory and nuclear
-            physics, and racking my brain over the cosmic neutrino background.
-        </p>
-        <p>
-            <a href="https://inspirehep.net/authors/1671410?ui-citation-summary=true">
-                <img src="images/logos/inspire.png" class="inline-image" alt="INSPIRE">
-            </a>
-        </p>
+    <main class="site-main">
+    <section class="content-section" id="research" aria-labelledby="research-title">
+        <h2 class="section-heading" id="research-title">Research Areas</h2>
+
+        <section class="research-area">
+            <div>
+                <h3>Neutrino Phenomenology</h3>
+                <p>I study how neutrino experiments can reveal interactions beyond those predicted by the Standard Model. Combining measurements of neutrino scattering and oscillations helps distinguish effects that can look nearly identical in any one experiment. I also study how light mediators could change neutrino signals at reactors and DUNE, and how new forces could make heavy neutrinos easier to detect.</p>
+            </div>
+            <figure class="paper-figure">
+                <img src="images/prior_flow.JPG" alt="Diagram showing how measurements are combined to constrain neutrino interactions">
+                <figcaption>
+                    <cite class="paper-title">A global analysis strategy to resolve neutrino NSI degeneracies with scattering and oscillation data</cite>
+                    <i class="paper-authors">B. Dutta, R. F. Lang, S. Liao, S. Sinha, L. Strigari, A. Thompson</i>
+                    <a href="https://inspirehep.net/literature/1779446" aria-label="View the neutrino interactions paper on INSPIRE">INSPIRE</a>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="research-area">
+            <div>
+                <h3>Chiral perturbation theory in neutrino phenomenology and searches for new physics</h3>
+                <p>
+                    I am interested in using chiral perturbation theory to interpret neutrino scattering data and search for new physics.
+                    In the quasielastic region, chiral methods help model how neutrinos scatter from individual protons and neutrons and how interactions with nucleon pairs affect the measured energy and angle of the outgoing lepton.
+                    Beyond the quasielastic channel, chiral perturbation theory can also describe single-pion production near threshold.
+                    Rare kaon decays offer another way to test for new particles and forces.
+                </p>
+                <p>
+                    I also use chiral perturbation theory to connect baryon-number-violating interactions at the quark level to possible decays of neutrons and hyperons into dark-sector particles.
+                    I compare limits from binary pulsar timing, which is sensitive to neutron-star mass loss, with laboratory searches for two-nucleon decay.
+                </p>
+            </div>
+            <figure class="paper-figure">
+                <img src="images/kaons.JPG" alt="Kaon decay constraints on light vector bosons">
+                <figcaption>
+                    <cite class="paper-title">Kaon decay constraints on vector bosons coupled to nonconserved currents</cite>
+                    <i class="paper-authors">M. Hostert, M. Pospelov, A. Thompson</i>
+                    <a href="https://inspirehep.net/literature/3122943" aria-label="View the kaon decay paper on INSPIRE">INSPIRE</a>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="research-area">
+            <div>
+                <h3>Intersection of Astrophysics, Cosmology, and Particle Theory</h3>
+                <p>I study how particle physics in the early universe can leave signals we can look for today. In particular, I ask when a phase transition could produce both gravitational waves and primordial black holes.</p>
+                <p>
+                    I also study baryogenesis, which asks how the early universe came to contain more matter than antimatter.
+                    I investigate models in which interactions that violate baryon number could help explain both this imbalance and the abundance of dark matter.
+                </p>
+            </div>
+            <figure class="paper-figure">
+                <img src="images/B-L_FOPT.png" alt="Scalar potential curves at different temperatures during a first-order phase transition">
+                <figcaption>
+                    <cite class="paper-title">PBH formation and Gravitational Waves as Multi-messenger Signals of First-order Phase Transitions</cite>
+                    <i class="paper-authors">B. Dutta, C. Hauptmann, P. Huang, A. Thompson</i>
+                    <a href="https://inspirehep.net/literature/3181498" aria-label="View the paper on primordial black holes and gravitational waves on INSPIRE">INSPIRE</a>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="research-area">
+            <div>
+                <h3>Axion-like particles</h3>
+                <p>
+                    I develop strategies to search for axion-like particles at reactors, spallation sources, and accelerator beam dumps, and led the theory and signal modeling for a Coherent CAPTAIN-Mills search.
+                    I also study how to detect solar axions in crystals and liquid xenon.
+                </p>
+            </div>
+            <figure class="paper-figure">
+                <img src="images/ge_crystal.JPG" alt="Germanium crystal lattice and the orientation of one of its planes">
+                <figcaption>
+                    <cite class="paper-title">Bragg-Primakoff axion photoconversion in crystal detectors</cite>
+                    <i class="paper-authors">J. B. Dent, B. Dutta, A. Thompson</i>
+                    <a href="https://inspirehep.net/literature/2676039" aria-label="View the solar axion paper on INSPIRE">INSPIRE</a>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="research-area">
+            <div>
+                <h3>Muon Colliders</h3>
+                <p>I study the neutrino beams produced when muons decay in storage rings and colliders. These beams could let us measure neutrino scattering precisely and test how the weak interaction changes with the scale of the collision.</p>
+            </div>
+            <figure class="paper-figure">
+                <img src="images/mucol_sens.png" alt="Projected precision of neutrino measurements from a muon storage ring">
+                <figcaption>
+                    <cite class="paper-title">Electroweak observables in neutrino-electron scattering from a muon storage ring</cite>
+                    <i class="paper-authors">A. de Gouvêa, A. Thompson</i>
+                    <a href="https://inspirehep.net/literature/2917228" aria-label="View the muon storage ring paper on INSPIRE">INSPIRE</a>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section class="research-area">
+            <div>
+                <h3>Studying Anomalies</h3>
+                <p>
+                    I use unexpected features in experimental data to guide the development of new theories.
+                    The MiniBooNE excess motivated us to ask whether new particles produced in charged meson decays could explain the signal and how other experiments could test that idea.
+                </p>
+            </div>
+            <figure class="paper-figure">
+                <img src="images/mb_feynman1.JPG" alt="Feynman diagrams for new particle production in charged pion and kaon decays">
+                <img src="images/mb_feynman2.JPG" alt="Feynman diagrams for dark-sector particles scattering in a detector to produce an electron-positron pair or a photon">
+                <figcaption>
+                    <cite class="paper-title">Solutions to the MiniBooNE Anomaly from New Physics in Charged Meson Decays</cite>
+                    <i class="paper-authors">B. Dutta, D. Kim, A. Thompson, R. T. Thornton, R. G. Van de Water</i>
+                    <a href="https://inspirehep.net/literature/1950189" aria-label="View the MiniBooNE paper on INSPIRE">INSPIRE</a>
+                </figcaption>
+            </figure>
+        </section>
     </section>
 
-
-    <section>
-        <div id="research">
-        <h2>Selected Research</h2>
-        <div class="paper">
-            <div>
-                <h3>B. Dutta, C. Hauptmann, P. Huang, AT, "PBH formation and Gravitational Waves as Multi-messenger Signals of First-order Phase Transitions"</h3>
-                <h4><a href="https://arxiv.org/abs/2607.15479">arXiv:2607.15479</a></h4>
-                <p>
-                    First-order phase transitions in the early Universe can produce both gravitational waves and primordial black holes when shrinking false-vacuum domains gravitationally collapse.
-                    We develop a junction-condition formalism that tracks Schwarzschild collapse dynamically, without relying on post-inflationary overdensity thresholds, and map regions of phase-transition parameter space that yield observable GWs, PBHs, or both.
-                    In polynomial and classically conformal scalar benchmarks, vacuum expectation values of order 1–100 MeV leave the largest room for these multi-messenger signals, which upcoming GW observatories, Hawking-radiation searches, and gravitational-lensing surveys can test.
-                </p>
-            </div>
-            <img src="images/B-L_FOPT.png" alt="First-order phase transition parameter space for PBHs and gravitational waves">
-        </div>
-        <div class="paper">
-            <div>
-                <h3>M. Hostert, M. Pospelov, AT, "Kaon decay constraints on vector bosons coupled to nonconserved currents", Phys. Rev. D 113 (2026) 11, 115003</h3>
-                <h4><a href="https://arxiv.org/abs/2602.19479">arXiv:2602.19479</a></h4>
-                <p>
-                    Rare three- and four-body kaon decays probe light vector and axial-vector bosons coupled to nonconserved quark currents.
-                    Searches for KL→π0π0(X→e+e−) set O(10−5) limits on X couplings to light quarks, while charged-kaon modes constrain complementary combinations of u, d, and s quark couplings at the O(10−4) level.
-                    Double X emission in K→πXX decays adds further sensitivity through a (mK/mX)² enhancement, sharpening the tension between spin-1 interpretations of the ATOMKI anomaly and existing meson decay data.
-                </p>
-            </div>
-            <img src="images/kaons.JPG" alt="Kaon decay constraints on light vector bosons">
-        </div>
-        <div class="paper">
-            <div>
-                <h3>de Gouvêa, AT, "Electroweak Observables in Neutrino-Electron Scattering from a Muon Storage Ring"</h3>
-                <h4><a href="https://arxiv.org/abs/2505.00152">arXiv:2505.00152</a></h4>
-                <p>
-                    A kilometer-sized, TeV-scale muon storage ring or collider can do many things for fundamental physics from the nature of the Higgs sector to probing beyond the electroweak scale.
-                    The fact that muons decay also means that such a machine is a ultra precise neutrino factory. In this work we sought to clarify the physics potential of such neutrino factories to
-                    probe electroweak observables with neutrino-electron elastic scattering (EvES). By proposing a large-scale neutrino detector lying in the plane of the muon ring, shaped like a giant hockey puck
-                    to catch the pinpoint-like neutrino beams that rotate with the muon bunches like a <i>neutrino lighthouse</i>, we found that the large statistics available
-                    can be used to make this an electroweak precision test of the neutrino sector. In addition, we carved out a way to demonstrate the renormalization group running of the weak mixing angle
-                    which could be seen within a single dataset from a single experimental configuration of the beam.
-                </p>
-            </div>
-            <img src="images/mucol_sens.png" alt="Muon collider neutrino sensitivity">
-        </div>
-        <div class="paper">
-            <div>
-                <h3>R. Allahverdi, AT, M. Zakeri, "Insights from binary pulsars and laboratories into baryon number violation: Implications for GeV dark matter", Phys.Rev.D 110 (2024) 11, 115010</h3>
-                <h4><a href="https://arxiv.org/abs/2409.08178">arXiv:2409.08178</a></h4>
-                <p>
-                    We study a toy model of Baryogenesis with color-charged scalars and a Majorana fermion and see how binary pulsars - systems comprised of a neutron star and a white dwarf or neutron star companion -
-                    can constrain such models. We find that this model allows for hyperon decays into a photon and the Majorana fermion, which can subsequently scatter into pions leading to a significant mass loss in the star.
-                    If the hyperons are indeed present in the neutron star equation of state, this decay and scattering process is strongly constrained by the observed rate of orbital period decay in the binary pulsars.
-                </p>
-            </div>
-            <img src="images/bnv_param_space.png" alt="BNV">
-        </div>
-        <div class="paper">
-            <div>
-                <h3>B. Dutta, D. Kim, AT, R. Thornton, R. Van de Water, "Solutions to the MiniBooNE Anomaly from New Physics in Charged Meson Decays", Phys. Rev. Lett. 129 (2022) 11, 111803</h3>
-                <h4><a href="https://arxiv.org/abs/2110.11944">arXiv:2110.11944</a></h4>
-                <p>
-                    Charged meson decays in accelerator-based experiments can enhance sensitivity to new physics by avoiding helicity suppression, making them effective probes for dark-sector signals. This mechanism provides a plausible explanation for the MiniBooNE low-energy excess and predicts testable parameter values consistent with existing limits in current and future neutrino experiments.
-                </p>
-            </div>
-            <div class="paper-figures">
-                <img src="images/mb_feynman1.JPG" alt="MiniBooNE Feynman diagram 1">
-                <img src="images/mb_feynman2.JPG" alt="MiniBooNE Feynman diagram 2">
-            </div>
-        </div>
-        <div class="paper">
-            <div>
-                <h3>J.B. Dent, B. Dutta, AT "Bragg-Primakoff axion photoconversion in crystal detectors", JHEP 02 (2024) 190</h3>
-                <h4><a href="https://arxiv.org/abs/2307.04861">arXiv:2307.04861</a></h4>
-                <p>
-                    Axions with dimension-5 couplings to photons can undergo coherent Primakoff scattering in crystals, but absorption effects significantly suppress the event rate, requiring corrections often overlooked in solar axion searches. By incorporating absorption effects and exploring the Borrmann effect, we refine sensitivity projections for experiments like SuperCDMS, LEGEND, and SABRE, highlighting strategies to enhance solar axion discovery potential.
-                </p>
-            </div>
-            <img src="images/ge_crystal.JPG" alt="Germanium crystal lattice and Ge(111) plane">
-        </div>
-        <div class="paper">
-            <div>
-                <h3>B. Dutta, R. Lang, S. Liao, S. Sinha, L. Strigari, AT, "A global analysis strategy to resolve neutrino NSI degeneracies with scattering and oscillation data", JHEP 09 (2020) 106</h3>
-                <h4><a href="https://arxiv.org/abs/2002.03066">arXiv:2002.03066</a></h4>
-                <p>
-                    Neutrino non-standard interactions (NSI) can span a high-dimensional parameter space with degeneracies that require combining data from diverse experiments to constrain. By integrating scattering data from Borexino, COHERENT, and future detectors with oscillation measurements at DUNE, this analysis improves constraints on electron and quark NSI parameters by up to a factor of 2–3 using a novel copula method for posterior combination.
-                </p>
-            </div>
-            <img src="images/prior_flow.JPG" alt="Neutrino NSI global analysis and prior flow">
-        </div>
-    </div>
-    </section>
-
-    <section>
+    <section class="content-section">
         <div id="projects">
-        <h2>Codes and Tools I made</h2>
+        <h2 class="section-heading">Codes and Tools I made</h2>
         <div class="project">
             <div>
                 <img src="images/logos/exdb_logo.png" class="inline-image" alt="eXdb logo">
@@ -178,7 +169,7 @@
             </div>
             <img src="images/particle_beam.gif" alt="Particle beam visualization">
         </div>
-        <div class="project">
+        <div class="project project-wide-figure">
             <div>
                 <h3><a href="https://github.com/athompson-git/RKHorn">RKHorn</a></h3>
                 <p>
@@ -187,7 +178,6 @@
             </div>
             <figure class="project-figure">
                 <img src="images/bnb_pulse.gif" width="1000" height="459" alt="Animation of a Booster Neutrino Beam pulse">
-                <figcaption>RKHorn simulation</figcaption>
             </figure>
         </div>
         <div class="project">
@@ -201,8 +191,8 @@
     </div>
     </section>
 
-    <section>
-        <h2>Resources</h2>
+    <section class="content-section">
+        <h2 class="section-heading">Resources</h2>
         <h4><i>Reccommended reading</i></h4>
         <p>
             Byckling, Kajantie, <i>Particle Kinematics</i>
@@ -224,14 +214,13 @@
         </p>
     </section>
 
-    <section>
-    <div id="contact">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:athomps3@uci.edu">athomps3@uci.edu</a></p>
-        </div>
+    <section class="content-section">
+    <div id="contact" class="contact-banner">
+        <h2 class="section-heading">Contact</h2>
+        <p>Email: <a href="mailto:athomps3@uci.edu">athomps3@uci.edu</a></p>
     </div>
     </section>
+    </main>
 
     </div>
 </body>

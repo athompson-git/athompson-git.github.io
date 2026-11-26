@@ -4,57 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beam Energy vs. POT Bubble Plot</title>
+  <link rel="stylesheet" href="styles.css?v=link-policy">
   <!-- jQuery for JSON loading -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Chart.js library -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  
-  <style>
-    /* Ensure the canvas container is centered and takes 80% of the page width */
-    #chartContainer {
-      width: 80%;
-      margin: 0 auto;
-    }
-    /* Let the canvas fill the container */
-    #bubbleChart {
-      width: 100% !important;
-      height: auto !important;
-    }
-  </style>
 
 </head>
 <body>
-  <h2>Beam Energy vs. POT Bubble Plot</h2>
-  <div id="chartContainer">
-    <canvas id="bubbleChart"></canvas>
+  <div class="page-frame">
+    <header class="site-header">
+      <nav class="banner-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="experiments.html">eXdb</a>
+      </nav>
+      <h1 class="page-title">Beam Energy vs. POT Bubble Plot</h1>
+    </header>
+    <main class="site-main">
+      <canvas id="bubbleChart" role="img" aria-label="Bubble plot of beam energy in GeV versus planned or largest protons on target"></canvas>
+    </main>
   </div>
   
   <script>
-    $(document).ready(function(){
+    $(document).ready(async function() {
+      await document.fonts.ready;
+      const theme = getComputedStyle(document.body);
+      Chart.defaults.font.family = theme.getPropertyValue('--font-site').trim();
+      Chart.defaults.color = theme.getPropertyValue('--color-ink').trim();
       $.getJSON("data/experiments.json")
         .done(function(data) {
           // Remove the field_types entry if present.
           delete data.field_types;
           
-          // Prepare data points for the bubble plot.
-          // x: Beam Energy (GeV)
-          // y: POT/EOT or Runtime
-          // r: Fixed bubble radius (adjust as needed)
-          let dataPoints = [];
-          $.each(data, function(experiment, details) {
-            // Convert strings to numbers
-            let beamEnergy = parseFloat(details["Beam Energy (GeV)"]);
-            let pot = parseFloat(details["POT"]);
-            console.log("Got pot, energy, exp:", beamEnergy, pot, experiment)
-            if (!isNaN(beamEnergy) && !isNaN(pot)) {
-              dataPoints.push({
-                x: beamEnergy,
-                y: pot,
-                r: 5  // fixed bubble radius; adjust if desired
-              });
+          const dataPoints = Object.values(data).flatMap(details => {
+            const beamEnergy = Number(details["Beam Energy (GeV)"]);
+            const pot = Number(details["POT (Planned/Largest)"] ?? details.POT);
+            if (!Number.isFinite(beamEnergy) || !Number.isFinite(pot) || beamEnergy <= 0 || pot <= 0) {
+              return [];
             }
+            return [{ x: beamEnergy, y: pot, r: 5 }];
           });
-          
+
           // Create the bubble chart
           var ctx = document.getElementById('bubbleChart').getContext('2d');
           var bubbleChart = new Chart(ctx, {
@@ -63,8 +53,8 @@
               datasets: [{
                 label: 'Beam Energy vs POT',
                 data: dataPoints,
-                backgroundColor: 'rgba(75, 192, 192, 0.6)',
-                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(3, 94, 123, 0.45)',
+                borderColor: theme.getPropertyValue('--color-link').trim(),
                 borderWidth: 1
               }]
             },
@@ -81,7 +71,7 @@
                   type: 'logarithmic',
                   title: {
                     display: true,
-                    text: 'POT/EOT or Runtime'
+                    text: 'POT (Planned/Largest)'
                   }
                 }
               },

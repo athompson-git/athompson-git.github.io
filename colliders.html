@@ -8,71 +8,78 @@
     <!-- Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <link rel="stylesheet" href="table_style.css">
+    <link rel="stylesheet" href="styles.css?v=link-policy">
+    <link rel="stylesheet" href="table_style.css?v=small-disclaimer">
 
 </head>
 
-
-
-
-<body>
-    <header>
-        <div class="header">
-            <div class="logo-container">
-                <img src="images/logos/exdb_logo.png" alt="xDB Logo", align="left">
-            </div>
-            <div class="title-container">
-                <h1>The Particle Physics Experiments Database</h1>
-            </div>
-        </div>
+<body class="database">
+  <div class="page-frame database-header">
+    <header class="site-header">
+      <nav class="banner-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="pubs.html">CV / Publications</a>
+        <a href="photos.html">Photos</a>
+      </nav>
+      <div class="database-title">
+        <img src="images/logos/exdb_logo.png" width="1295" height="492" alt="eXdb">
+        <h1>The Particle Physics Experiments Database</h1>
+      </div>
+      <nav class="banner-links database-categories" aria-label="Experiment categories">
+        <a href="experiments.html">All Experiments</a>
+        <a href="fixed_target.html">I. Fixed Target and Forward Physics</a>
+        <a href="passive_det.html">II. Neutrino Observatories &amp; DM Direct Detectors</a>
+        <a href="reactors.html">III. Reactors</a>
+        <a href="gw.html">IV. Gravitational Waves &amp; Haloscopes</a>
+        <a href="colliders.html" aria-current="page">V. Collider and Storage Ring Experiments</a>
+      </nav>
     </header>
+  </div>
 
-    <div class="header">
-        <nav>
-            <p><a href="experiments.html">All Experiments</a></p>
-            <p><a href="fixed_target.html">I: Fixed Target and Forward Physics</a></p>
-            <p><a href="passive_det.html">II: Neutrino Observatories & DM Direct Detectors</a></p>
-            <p><a href="reactors.html">III: Reactors </a></p>
-            <p><a href="gw.html">IV: Gravitational Waves & Haloscopes</a></p>
-            <p><a href="colliders.html">V: Collider and Storage Ring Experiments</a></p>
-        </nav>
+  <main>
+    <div class="page-frame database-overview">
+      <div class="database-intro">
+        <p>
+            Here we collect collider experiments. <b>Hover over experiment names for more information.</b>
+        </p>
+        <p class="database-note">
+            Disclaimer: This table is maintained individually and supported by community feedback.
+            The information within is sourced only by public references. Please check the source references for the most accurate representation of the aggregate information.
+            To suggest corrections or provide new data, see contact information at the bottom of the page.
+        </p>
+      </div>
     </div>
 
-    <p>
-        Here we collect collider experiments. <b>Hover over experiment names for more information.</b>
-    </p>
-    <p style="font-style: italic;">
-        Disclaimer: This table is maintained individually and supported by community feedback.
-        The information within is sourced only by public references. Please check the source references for the most accurate representation of the aggregate information.
-        To suggest corrections or provide new data, see contact information at the bottom of the page.
-    </p>
-    <input type="text" id="search" placeholder="Search experiments...">
+    <div class="database-results">
+      <input type="text" id="search" placeholder="Search experiments..." aria-label="Search experiments">
 
-    <h2 id="tableTitle_collider" align="center">V: Collider and Storage Ring Experiments</h2>
-    <table id="colliderTable">
-      <thead>
-        <tr id="tableHeader_collider"></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-  
-    <!-- Call the external buildTable function -->
-    <script src="buildTable.js"></script>
-    <script>
-      // Build the table
-      let visible_columns_col = ["Collider", "Collider Geometry", "Beam Particles", "CoM Energy √s (TeV)", "Luminosity Collected",
-                                  "Detector Rapidity Coverage", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
-      buildTable(visible_columns_col, "data/colliders.json", "colliderTable", "tableTitle_collider");
-    </script>
+      <h2 id="tableTitle_collider" class="database-centered">V: Collider and Storage Ring Experiments</h2>
+      <table id="colliderTable">
+        <thead>
+          <tr id="tableHeader_collider"></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
 
+      <!-- Call the external buildTable function -->
+      <script src="buildTable.js?v=future-highlight"></script>
+      <script>
+        // Build the table
+        let visible_columns_col = ["Collider", "Collider Geometry", "Beam Particles", "CoM Energy √s (TeV)", "Luminosity Collected",
+                                    "Detector Rapidity Coverage", "Location", "Status", "Reference", "Open Data", "Anomalies?"];
+        buildTable(visible_columns_col, "data/colliders.json", "colliderTable", "tableTitle_collider");
+      </script>
+    </div>
+  </main>
 
+  <footer class="database-results">
     <br>
     <br>
-    <h2 align="center">Community Feedback and Contact</h4>
-    <p align="center">
+    <h2 class="database-centered">Community Feedback and Contact</h2>
+    <p class="database-centered">
         To contact the owner for any corrections, improvements or feedback please email:
     </p>
-    <p align="center">
+    <p class="database-centered">
         a.thompson AT northwestern DOT edu
     </p>
 
@@ -85,11 +92,9 @@
     <br>
     <br>
 
-    <p align="center" style="font-style: italic;">
+    <p class="database-centered" style="font-style: italic;">
         About the Author: <a href="index.html">Adrian Thompson</a>
     </p>
-
-
+  </footer>
 </body>
-
 </html>

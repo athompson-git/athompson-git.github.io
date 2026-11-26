@@ -4,56 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Projects | Adrian Thompson</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=evergreen-contact">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default"></script>
     <style>
-      /* Shared content column — rem (not ch) so headings align with body */
-      section > h2,
-      section > h4,
-      section > p,
-      section > .content-figure {
-        max-width: 40rem;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
-        box-sizing: border-box;
+      .article-content {
+        max-width: 43rem;
       }
 
-      section > h2 {
-        font-size: clamp(1.2rem, 1.1rem + 0.35vw, 1.4rem);
-        line-height: 1.35;
-        margin-bottom: 1rem;
+      .article-content h3 {
+        margin-top: 1.45rem;
       }
 
-      section > h4 {
-        font-size: clamp(1.05rem, 1rem + 0.2vw, 1.15rem);
-        font-weight: 600;
-        margin-top: 1.75rem;
-        margin-bottom: 0.65rem;
-        color: var(--color-heading);
+      .article-content .MathJax_Display {
+        overflow-x: auto;
+        overflow-y: hidden;
       }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Learning Projects</h1>
 
-        <nav class="banner-links">
+    <div class="page-frame">
+    <header class="site-header">
+        <nav class="banner-links" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="pubs.html">CV / Publications</a>
             <a href="photos.html">Photos</a>
-            <a href="projects.html">Projects</a>
+            <a href="projects.html" aria-current="page">Projects</a>
+            <a href="experiments.html">eXdb</a>
             <a href="https://github.com/athompson-git">GitHub</a>
-            <a href="https://athompson-git.github.io/experiments.html">eXdb</a>
             <a href="https://inspire-graph-chrono-b2c564.gitlab.io/paper-network/">InspireGraphChrono</a>
             <a href="https://hymnoptera.bandcamp.com/">Bandcamp</a>
             <a href="#contact">Contact</a>
         </nav>
+        <h1 class="page-title">Learning Projects</h1>
     </header>
 
-
-    <section>
+    <main class="site-main article-content">
+    <section class="content-section">
         <h2>
             Computing neutrino rates in fusion reactors with <i>OpenMC</i>
         </h2>
@@ -82,7 +69,7 @@
             as fission reactors, we can naively expect the resulting neutrino rates to be comparatively smaller, but perhaps non-negligible.
         </p>
 
-        <h4>Nuclear Fuel and Neutrinos from Fusion?</h4>
+        <h3>Nuclear Fuel and Neutrinos from Fusion?</h3>
         <p>
             Before I go on, we should also think about the fuel composition to be considered. Some fuel compositions, like the potential \(p + ^{11}\rm{B}\)
             reaction are said to be aneutronic, although neutrons can still get produced a suppressed rates from side reactions. Therefore the fuel composition
@@ -122,26 +109,26 @@
             a community-developed code for particle transport, specifically since it has a python api, making it more accessible.
         </p>
 
-        <h4>Diagnostics?</h4>
+        <h3>Diagnostics?</h3>
 
     </section>
 
 
-    <section>
+    <section class="content-section">
         <h2>
             Francis Chen's <i>Intro to plasma physics and controlled fusion</i>
         </h2>
 
     </section>
 
-    <section>
-    <div id="contact">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:athomps3@uci.edu">athomps3@uci.edu</a></p>
-        </div>
+    <section class="content-section">
+    <div id="contact" class="contact-banner">
+        <h2 class="section-heading">Contact</h2>
+        <p>Email: <a href="mailto:athomps3@uci.edu">athomps3@uci.edu</a></p>
     </div>
     </section>
 
+    </main>
+    </div>
 </body>
 </html>
