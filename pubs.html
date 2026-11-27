@@ -3,10 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="theme.js?v=local-time"></script>
     <title>CV / Publications | Adrian Thompson</title>
     <meta name="description" content="CV, education, and publications by Adrian Thompson" />
 
-    <link rel="stylesheet" href="styles.css?v=evergreen-contact">
+    <link rel="stylesheet" href="styles.css?v=custard-section-titles">
     <style>
       .cv-intro {
         margin: 0 0 2rem;
@@ -86,6 +87,10 @@
         white-space: nowrap;
       }
 
+      :root[data-theme="dark"] .tag {
+        background: var(--color-surface);
+      }
+
       .links {
         display: inline;
         margin-left: 0.5rem;
@@ -140,7 +145,7 @@
     <p class="cv-intro"><a href="docs/cv.pdf">Download full CV (PDF)</a></p>
 
     <section class="content-section" id="background">
-      <h2 class="section-heading">Background</h2>
+      <h2 class="section-heading"><span class="section-label">Background</span></h2>
       <p>
           I started in physics at UC Santa Cruz, where I got my bachelors in physics and math in 2015. I contracted at Google X working
           in software quality for the self-driving car (now Waymo) for a few years.
@@ -159,7 +164,7 @@
     </section>
 
     <section class="content-section" id="education">
-      <h2 class="section-heading">Education</h2>
+      <h2 class="section-heading"><span class="section-label">Education</span></h2>
       <ul class="cv-history">
         <li class="cv-entry">
           <div class="cv-entry-text">
@@ -179,7 +184,7 @@
     </section>
 
     <section class="content-section" id="experience">
-      <h2 class="section-heading">Research Appointments</h2>
+      <h2 class="section-heading"><span class="section-label">Research Appointments</span></h2>
       <ul class="cv-history">
         <li class="cv-entry">
           <div class="cv-entry-text">
@@ -203,7 +208,7 @@
     </section>
 
     <section class="content-section" id="primary">
-      <h2 class="section-heading">Primary Contributions</h2>
+      <h2 class="section-heading"><span class="section-label">Primary Contributions</span></h2>
       <ol class="pubs">
         <li class="pub">
           <span class="authors">T. Cheng, M. Hostert, P. A. N. Machado, N. Mishra, <u>A. T.</u></span>
@@ -367,7 +372,7 @@
     </section>
 
     <section class="content-section" id="collab">
-      <h2 class="section-heading">CCM Collaboration</h2>
+      <h2 class="section-heading"><span class="section-label">CCM Collaboration</span></h2>
       <p class="venue">I led the analysis effort for the following Coherent CAPTAIN Mills (CCM) collaboration papers.</p>
       <ol class="pubs">
         <li class="pub">
@@ -386,7 +391,7 @@
     </section>
 
     <section class="content-section" id="secondary">
-      <h2 class="section-heading">Secondary Contributions</h2>
+      <h2 class="section-heading"><span class="section-label">Secondary Contributions</span></h2>
       <p class="venue">Advisory or non-leading author contributions.</p>
       <ol class="pubs">
         <li class="pub">
@@ -429,7 +434,7 @@
     </section>
 
     <section class="content-section" id="dissertation">
-      <h2 class="section-heading">PhD Dissertation</h2>
+      <h2 class="section-heading"><span class="section-label">PhD Dissertation</span></h2>
       <ol class="pubs">
         <li class="pub">
           <span class="authors"><u>A. T.</u></span>
@@ -448,7 +453,7 @@
 
 <section class="page-contact">
 <div id="contact" class="contact-banner">
-    <h2 class="section-heading">Contact</h2>
+    <h2 class="section-heading"><span class="section-label">Contact</span></h2>
     <p>Email: <a href="mailto:athomps3@uci.edu">athomps3@uci.edu</a></p>
 </div>
 </section>

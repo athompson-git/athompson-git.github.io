@@ -3,13 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="theme.js?v=local-time"></script>
   <title>Beam Energy vs. POT Bubble Plot</title>
-  <link rel="stylesheet" href="styles.css?v=link-policy">
+  <link rel="stylesheet" href="styles.css?v=sage-section-labels">
   <!-- jQuery for JSON loading -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Chart.js library -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+  <style>
+    #bubbleChart {
+      --plot-text: var(--color-ink);
+      --plot-point-fill: rgba(3, 94, 123, 0.45);
+      --plot-grid: rgba(0, 0, 0, 0.1);
+    }
+
+    :root[data-theme="dark"] #bubbleChart {
+      --plot-text: var(--color-cream);
+      --plot-point-fill: rgba(227, 231, 175, 0.45);
+      --plot-grid: var(--color-rule);
+    }
+  </style>
 </head>
 <body>
   <div class="page-frame">
@@ -28,9 +42,6 @@
   <script>
     $(document).ready(async function() {
       await document.fonts.ready;
-      const theme = getComputedStyle(document.body);
-      Chart.defaults.font.family = theme.getPropertyValue('--font-site').trim();
-      Chart.defaults.color = theme.getPropertyValue('--color-ink').trim();
       $.getJSON("data/experiments.json")
         .done(function(data) {
           // Remove the field_types entry if present.
@@ -45,18 +56,29 @@
             return [{ x: beamEnergy, y: pot, r: 5 }];
           });
 
-          // Create the bubble chart
-          var ctx = document.getElementById('bubbleChart').getContext('2d');
-          var bubbleChart = new Chart(ctx, {
+          const canvas = document.getElementById('bubbleChart');
+          const theme = getComputedStyle(canvas);
+          const themeValue = name => theme.getPropertyValue(name).trim();
+
+          function applyThemeDefaults() {
+            Chart.defaults.color = themeValue('--plot-text');
+            Chart.defaults.borderColor = themeValue('--plot-grid');
+          }
+
+          Chart.defaults.font.family = themeValue('--font-site');
+          applyThemeDefaults();
+
+          const dataset = {
+            label: 'Beam Energy vs POT',
+            data: dataPoints,
+            backgroundColor: themeValue('--plot-point-fill'),
+            borderColor: themeValue('--color-link'),
+            borderWidth: 1
+          };
+          const bubbleChart = new Chart(canvas, {
             type: 'bubble',
             data: {
-              datasets: [{
-                label: 'Beam Energy vs POT',
-                data: dataPoints,
-                backgroundColor: 'rgba(3, 94, 123, 0.45)',
-                borderColor: theme.getPropertyValue('--color-link').trim(),
-                borderWidth: 1
-              }]
+              datasets: [dataset]
             },
             options: {
               scales: {
@@ -86,6 +108,20 @@
                 }
               }
             }
+          });
+
+          window.addEventListener('site-theme-change', () => {
+            applyThemeDefaults();
+            dataset.backgroundColor = themeValue('--plot-point-fill');
+            dataset.borderColor = themeValue('--color-link');
+            for (const axis of Object.values(bubbleChart.config.options.scales)) {
+              axis.ticks.color = Chart.defaults.color;
+              axis.title.color = Chart.defaults.color;
+              axis.grid.color = Chart.defaults.borderColor;
+              axis.grid.tickColor = Chart.defaults.borderColor;
+              axis.border.color = Chart.defaults.borderColor;
+            }
+            bubbleChart.update('none');
           });
         })
         .fail(function(jqxhr, textStatus, error) {

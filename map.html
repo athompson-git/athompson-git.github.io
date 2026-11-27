@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <title>InspireHEP Research Map</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="theme.js?v=local-time"></script>
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <link rel="stylesheet" href="styles.css?v=link-policy">
+  <link rel="stylesheet" href="styles.css?v=sage-section-labels">
   <style>
     .research-map {
       --content-max: 87rem;
@@ -42,6 +43,14 @@
       height: clamp(20rem, 70svh, 56rem);
       background: var(--color-surface);
       font-family: var(--font-site);
+    }
+    :root[data-theme="dark"] .research-map .leaflet-tile-pane {
+      filter: invert(1) hue-rotate(180deg) brightness(0.8);
+    }
+
+    :root[data-theme="dark"] .research-map :is(.leaflet-bar a, .leaflet-control-attribution, .leaflet-popup-content-wrapper, .leaflet-popup-tip) {
+      background: var(--color-surface);
+      color: var(--color-ink);
     }
   </style>
 </head>
@@ -80,9 +89,15 @@
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
-  const markerColor = getComputedStyle(document.body).getPropertyValue('--color-link').trim();
+  const mapStyle = getComputedStyle(map.getContainer());
+  let markerColor = mapStyle.getPropertyValue('--color-link').trim();
   const topicSelect = document.getElementById('topic');
   let markersLayer = L.layerGroup().addTo(map);
+
+  window.addEventListener('site-theme-change', () => {
+    markerColor = mapStyle.getPropertyValue('--color-link').trim();
+    markersLayer.eachLayer(marker => marker.setStyle({ color: markerColor }));
+  });
 
   topicSelect.addEventListener('change', () => {
     loadTopic(topicSelect.value);

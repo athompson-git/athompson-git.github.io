@@ -3,6 +3,17 @@
     padding-bottom: 15px;
 }
 
+:root[data-theme="dark"] .database {
+    --table-rule: var(--color-rule);
+    --table-tooltip: var(--color-surface);
+    --table-row-running: #62bd7e29;
+    --table-row-future: #eff1c524;
+    --table-row-proposed: #ffd76429;
+    --beam-proton: #ff9b95;
+    --beam-electron: #adc5ff;
+    --beam-muon: #9bd9a7;
+}
+
 .database-header {
     padding-bottom: 0;
 }
@@ -78,6 +89,11 @@
     text-align: center;
 }
 
+:root[data-theme="dark"] .database h2 {
+    color: var(--color-ink);
+    text-align: left;
+}
+
 #search {
     width: 100%;
     padding: 12px;
@@ -103,7 +119,7 @@
 }
 
 .database-results :is(th, td) {
-    border: 1px solid var(--color-link);
+    border: 1px solid var(--table-rule, var(--color-link));
     padding: 2px;
     text-align: center;
     overflow-wrap: break-word;
@@ -138,8 +154,8 @@
     position: sticky;
     left: 0;
     z-index: 3;
-    background: var(--color-link);
-    color: var(--color-page);
+    background: var(--color-baltic-blue);
+    color: var(--color-white);
 }
 
 .database-results th:first-child.sortable::after {
@@ -165,8 +181,8 @@
     width: min(500px, 80vw);
     padding: 5px;
     transform: translateY(-50%);
-    border: 5px solid var(--color-link);
-    background: var(--color-pale-olive);
+    border: 5px solid var(--table-rule, var(--color-link));
+    background: var(--table-tooltip, var(--color-pale-olive));
     color: var(--color-ink);
     font-size: 0.9em;
     overflow-wrap: break-word;

@@ -39,8 +39,11 @@
     --content-max: 62rem;
     --color-ink: #233332;
     --color-ink-muted: #4a605e;
-    --color-heading: #002e2c;
+    --color-evergreen: #002e2c;
+    --color-heading: var(--color-evergreen);
     --color-baltic-blue: #035e7b;
+    --color-section-heading: var(--color-baltic-blue);
+    --color-contact-surface: var(--color-evergreen);
     --color-link: var(--color-baltic-blue);
     --color-rule: #035e7b40;
     --color-olive: #a2a77f;
@@ -48,8 +51,31 @@
     --color-pale-olive: #e3e7af;
     --color-cream: #eff1c5;
     --color-surface: #f1f7f7;
-    --color-page: #fff;
+    --color-white: #fff;
+    --color-page: var(--color-white);
     --font-site: Exo, "Segoe UI", sans-serif;
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --color-page: #363636;
+    --color-ink: #e8e9eb;
+    --color-ink-muted: var(--color-pale-olive);
+    --color-heading: var(--color-ink);
+    --color-contact-surface: #002321;
+    --color-link: var(--color-pale-olive);
+    --color-rule: #a2a77f80;
+    --color-surface: #013b42;
+    --divider: 1px solid var(--color-rule);
+}
+
+:root[data-theme="dark"] :is(strong, b):not(a *) {
+    color: var(--color-ink);
+}
+
+:root[data-theme="dark"] .theme-invert {
+    filter: invert(1) hue-rotate(180deg) brightness(1.18);
+    mix-blend-mode: screen;
 }
 
 * {
@@ -82,7 +108,7 @@ h1 {
 }
 
 h2 {
-    color: var(--color-baltic-blue);
+    color: var(--color-section-heading);
     font-size: clamp(1.08rem, 1.03rem + 0.3vw, 1.3rem);
 }
 
@@ -128,7 +154,7 @@ a:active {
 
 ::selection {
     background: var(--color-pale-olive);
-    color: var(--color-heading);
+    color: var(--color-evergreen);
 }
 
 :focus-visible {
@@ -164,6 +190,48 @@ a:active {
 .banner-links a[aria-current="page"] {
     text-decoration-color: var(--color-link);
     text-decoration-thickness: 2px;
+}
+
+:root[data-theme="dark"] .banner-links a {
+    color: var(--color-cream);
+}
+
+.theme-navigation {
+    position: relative;
+    padding-inline-end: 2.5rem;
+}
+
+.theme-toggle {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    display: grid;
+    place-items: center;
+    width: 1.875rem;
+    height: 1.875rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color-ink-muted);
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background: var(--color-surface);
+}
+
+.theme-toggle::before {
+    content: "";
+    width: 0.875rem;
+    height: 0.875rem;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    background: linear-gradient(to right, currentColor 50%, transparent 50%);
+}
+
+.theme-toggle[aria-pressed="true"]::before {
+    transform: rotate(180deg);
 }
 
 .page-title {
@@ -228,6 +296,26 @@ a:active {
     background: var(--color-pale-olive);
 }
 
+:root[data-theme="dark"] h2:has(> .section-label)::before {
+    content: "";
+    width: 0.9rem;
+    height: 3px;
+    background: var(--color-olive);
+}
+
+:root[data-theme="dark"] h2:not(.section-heading):has(> .section-label)::before {
+    display: inline-block;
+    margin-inline-end: 0.55rem;
+    vertical-align: middle;
+}
+
+:root[data-theme="dark"] h2 > .section-label {
+    display: inline-block;
+    max-width: calc(100% - 1.45rem);
+    color: var(--color-pale-olive);
+    vertical-align: middle;
+}
+
 .site-main {
     padding-block: clamp(1.5rem, 3vw, 2rem);
     min-width: 0;
@@ -243,9 +331,13 @@ a:active {
 .contact-banner {
     --color-link: var(--color-pale-olive);
     padding: clamp(1rem, 3vw, 1.5rem) clamp(0.65rem, 2.5vw, 1.75rem);
-    background: var(--color-heading);
-    color: var(--color-page);
+    background: var(--color-contact-surface);
+    color: var(--color-white);
     font-size: 0.95rem;
+}
+
+:root[data-theme="dark"] .contact-banner p {
+    color: var(--color-ink);
 }
 
 .contact-banner .section-heading {
@@ -364,6 +456,10 @@ a:active {
 }
 
 @media (max-width: 42rem) {
+    .theme-navigation {
+        column-gap: 0.6rem;
+    }
+
     .profile-banner {
         display: flow-root;
     }

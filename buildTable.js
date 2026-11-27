@@ -48,11 +48,11 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
           let status = details["Status"] || "";
           let rowColor = "";
           if (status === "Running") {
-            rowColor = ' style="background-color: rgba(0, 128, 0, 0.1);"';
+            rowColor = ' style="background-color: var(--table-row-running, rgba(0, 128, 0, 0.1));"';
           } else if (status === "Future") {
-            rowColor = ' style="background-color: #eff1c5;"';
+            rowColor = ' style="background-color: var(--table-row-future, var(--color-cream));"';
           } else if (status === "Proposed") {
-            rowColor = ' style="background-color: rgba(255, 255, 0, 0.1);"';
+            rowColor = ' style="background-color: var(--table-row-proposed, rgba(255, 255, 0, 0.1));"';
           }
   
           // Mark anomalies
@@ -103,11 +103,11 @@ function buildTable(visible_columns, jsonFile, tableId, titleId) {
             if (col === "Beam Particle") {
               let lowerData = cellData.toLowerCase();
               if (lowerData.includes("proton")) {
-                cellData = `<span style="color: red;">${cellData}</span>`;
+                cellData = `<span style="color: var(--beam-proton, red);">${cellData}</span>`;
               } else if (lowerData.includes("electron")) {
-                cellData = `<span style="color: blue;">${cellData}</span>`;
+                cellData = `<span style="color: var(--beam-electron, blue);">${cellData}</span>`;
               } else if (lowerData.includes("muon")) {
-                cellData = `<span style="color: green;">${cellData}</span>`;
+                cellData = `<span style="color: var(--beam-muon, green);">${cellData}</span>`;
               } else if (lowerData.includes("photon")) {
                 cellData = `<span style="color: cyan;">${cellData}</span>`;
               }

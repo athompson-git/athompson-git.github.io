@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="theme.js?v=local-time"></script>
     <title>eXdb: Particle Physics Experiment Database</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
  
-    <link rel="stylesheet" href="styles.css?v=link-policy">
-    <link rel="stylesheet" href="table_style.css?v=small-disclaimer">
+    <link rel="stylesheet" href="styles.css?v=sage-section-labels">
+    <link rel="stylesheet" href="table_style.css?v=plain-headings">
 
 </head>
 
@@ -23,7 +24,7 @@
         <a href="photos.html">Photos</a>
       </nav>
       <div class="database-title">
-        <img src="images/logos/exdb_logo.png" width="1295" height="492" alt="eXdb">
+        <img class="theme-invert" src="images/logos/exdb_logo.png" width="1295" height="492" alt="eXdb">
         <h1>The Particle Physics Experiments Database</h1>
       </div>
       <nav class="banner-links database-categories" aria-label="Experiment categories">
@@ -63,7 +64,7 @@
       </table>
 
       <!-- Call the external buildTable function -->
-      <script src="buildTable.js?v=future-highlight"></script>
+      <script src="buildTable.js?v=dark-mode"></script>
       <script>
           // Build second table for direct detection experiments
           let visible_columns_dd = ["Source(s)", "Detector Tech", "Detector Material", "Exposure [Largest/Planned] (t-yr)", "Detector Mass (t)", "Fiducial Mass (t)",
